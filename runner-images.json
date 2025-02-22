@@ -1,0 +1,92 @@
+{
+  "categories": {
+    "ubuntu": [
+      {
+        "image": "Ubuntu 24.04",
+        "yamlLabels": [
+          "ubuntu-latest",
+          "ubuntu-24.04"
+        ]
+      },
+      {
+        "image": "Ubuntu 22.04",
+        "yamlLabels": [
+          "ubuntu-22.04"
+        ]
+      },
+      {
+        "image": "Ubuntu 20.04",
+        "yamlLabels": [
+          "ubuntu-20.04"
+        ]
+      }
+    ],
+    "windows": [
+      {
+        "image": "Windows Server 2025",
+        "yamlLabels": [
+          "windows-2025"
+        ]
+      },
+      {
+        "image": "Windows Server 2022",
+        "yamlLabels": [
+          "windows-latest",
+          "windows-2022"
+        ]
+      },
+      {
+        "image": "Windows Server 2019",
+        "yamlLabels": [
+          "windows-2019"
+        ]
+      }
+    ],
+    "macos": [
+      {
+        "image": "macOS 15",
+        "yamlLabels": [
+          "macos-15-large"
+        ]
+      },
+      {
+        "image": "macOS 15 Arm64",
+        "yamlLabels": [
+          "macos-15",
+          "macos-15-xlarge"
+        ]
+      },
+      {
+        "image": "macOS 14",
+        "yamlLabels": [
+          "macos-latest-large",
+          "macos-14-large"
+        ]
+      },
+      {
+        "image": "macOS 14 Arm64",
+        "yamlLabels": [
+          "macos-latest",
+          "macos-14",
+          "macos-latest-xlarge",
+          "macos-14-xlarge"
+        ]
+      },
+      {
+        "image": "macOS 13",
+        "yamlLabels": [
+          "macos-13",
+          "macos-13-large"
+        ]
+      },
+      {
+        "image": "macOS 13 Arm64",
+        "yamlLabels": [
+          "macos-13-xlarge"
+        ]
+      }
+    ],
+    "other": []
+  },
+  "updated": "2025-02-22T12:41:53.934Z"
+}

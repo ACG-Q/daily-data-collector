@@ -4,164 +4,272 @@
       "repo": "actions/checkout",
       "latest": "v4.2.2",
       "major": "4",
-      "description": "Action for checking out a repo"
+      "description": "Action for checking out a repo",
+      "status": "active",
+      "releaseDate": "2024-10-23T14:46:00Z",
+      "changelog": "## What's Changed\r\n* `url-helper.ts` now leverages well-known environment variables by @jww3 in https://github.com/actions/checkout/pull/1941\r\n* Expand unit test coverage for `isGhes` by @jww3 in https://github.com/actions/checkout/pull/1946\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v4.2.1...v4.2.2",
+      "docsUrl": "https://github.com/actions/checkout"
     },
     {
       "repo": "actions/setup-node",
       "latest": "v4.2.0",
       "major": "4",
-      "description": "Set up your GitHub Actions workflow with a specific version of node.js"
+      "description": "Set up your GitHub Actions workflow with a specific version of node.js",
+      "status": "active",
+      "releaseDate": "2025-01-27T03:41:24Z",
+      "changelog": "## What's Changed\r\n*  Enhance workflows and upgrade publish-actions from 0.2.2 to 0.3.0 by @aparnajyothi-y in https://github.com/actions/setup-node/pull/1174\r\n* Add recommended permissions section to readme by @benwells in https://github.com/actions/setup-node/pull/1193\r\n* Configure Dependabot settings by @HarithaVattikuti in https://github.com/actions/setup-node/pull/1192\r\n* Upgrade `@actions/cache` to `^4.0.0` by @priyagupta108 in https://github.com/actions/setup-node/pull/1191\r\n* Upgrade pnpm/action-setup from 2 to 4 by @dependabot in https://github.com/actions/setup-node/pull/1194\r\n* Upgrade actions/publish-immutable-action from 0.0.3 to 0.0.4 by @dependabot in https://github.com/actions/setup-node/pull/1195\r\n* Upgrade semver from 7.6.0 to 7.6.3 by @dependabot in https://github.com/actions/setup-node/pull/1196\r\n* Upgrade @types/jest from 29.5.12 to 29.5.14 by @dependabot in https://github.com/actions/setup-node/pull/1201\r\n* Upgrade undici from 5.28.4 to 5.28.5 by @dependabot in https://github.com/actions/setup-node/pull/1205\r\n\r\n\r\n## New Contributors\r\n* @benwells made their first contribution in https://github.com/actions/setup-node/pull/1193\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v4...v4.2.0",
+      "docsUrl": "https://github.com/actions/setup-node"
     },
     {
       "repo": "actions/setup-python",
       "latest": "v5.4.0",
       "major": "5",
-      "description": "Set up your GitHub Actions workflow with a specific version of Python"
+      "description": "Set up your GitHub Actions workflow with a specific version of Python",
+      "status": "active",
+      "releaseDate": "2025-01-28T03:28:18Z",
+      "changelog": "## What's Changed\r\n### Enhancements:\r\n* Update cache error message by @aparnajyothi-y in https://github.com/actions/setup-python/pull/968\r\n* Enhance Workflows: Add Ubuntu-24, Remove Python 3.8  by @priya-kinthali in https://github.com/actions/setup-python/pull/985\r\n* Configure Dependabot settings by @HarithaVattikuti in https://github.com/actions/setup-python/pull/1008\r\n### Documentation changes:\r\n* Readme update - recommended permissions by @benwells in https://github.com/actions/setup-python/pull/1009\r\n* Improve Advanced Usage examples by @lrq3000 in https://github.com/actions/setup-python/pull/645\r\n### Dependency updates:\r\n* Upgrade `undici` from 5.28.4 to 5.28.5 by @dependabot in https://github.com/actions/setup-python/pull/1012\r\n* Upgrade `urllib3` from 1.25.9 to 1.26.19 in /__tests__/data by @dependabot in https://github.com/actions/setup-python/pull/895\r\n* Upgrade `actions/publish-immutable-action` from 0.0.3 to 0.0.4 by @dependabot in https://github.com/actions/setup-python/pull/1014\r\n* Upgrade `@actions/http-client` from 2.2.1 to 2.2.3 by @dependabot in https://github.com/actions/setup-python/pull/1020\r\n* Upgrade `requests` from 2.24.0 to 2.32.2 in /__tests__/data by @dependabot in https://github.com/actions/setup-python/pull/1019\r\n* Upgrade `@actions/cache` to `^4.0.0` by @priyagupta108 in https://github.com/actions/setup-python/pull/1007\r\n\r\n## New Contributors\r\n* @benwells made their first contribution in https://github.com/actions/setup-python/pull/1009\r\n* @HarithaVattikuti made their first contribution in https://github.com/actions/setup-python/pull/1008\r\n* @lrq3000 made their first contribution in https://github.com/actions/setup-python/pull/645\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v5...v5.4.0",
+      "docsUrl": "https://github.com/actions/setup-python"
     },
     {
       "repo": "actions/setup-dotnet",
       "latest": "v4.3.0",
       "major": "4",
-      "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk"
+      "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk",
+      "status": "active",
+      "releaseDate": "2025-01-30T03:20:58Z",
+      "changelog": "## What's Changed\r\n* README update - add permissions section by @benwells in https://github.com/actions/setup-dotnet/pull/587\r\n* Configure Dependabot settings by @HarithaVattikuti in https://github.com/actions/setup-dotnet/pull/585\r\n* Upgrade **cache** from 3.2.4 to 4.0.0 by @aparnajyothi-y in https://github.com/actions/setup-dotnet/pull/586\r\n* Upgrade **actions/publish-immutable-action** from 0.0.3 to 0.0.4 by @dependabot in https://github.com/actions/setup-dotnet/pull/590\r\n* Upgrade **@actions/http-client** from 2.2.1 to 2.2.3 by @dependabot in https://github.com/actions/setup-dotnet/pull/592\r\n* Upgrade **undici** from 5.28.4 to 5.28.5 by @dependabot in https://github.com/actions/setup-dotnet/pull/596\r\n\r\n## New Contributors\r\n* @benwells made their first contribution in https://github.com/actions/setup-dotnet/pull/587\r\n* @aparnajyothi-y made their first contribution in https://github.com/actions/setup-dotnet/pull/586\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v4...v4.3.0",
+      "docsUrl": "https://github.com/actions/setup-dotnet"
     },
     {
       "repo": "actions/setup-java",
       "latest": "v4.7.0",
       "major": "4",
-      "description": "Set up your GitHub Actions workflow with a specific version of Java"
+      "description": "Set up your GitHub Actions workflow with a specific version of Java",
+      "status": "active",
+      "releaseDate": "2025-01-29T03:24:46Z",
+      "changelog": "## What's Changed\r\n\r\n* Configure Dependabot settings by @HarithaVattikuti in https://github.com/actions/setup-java/pull/722\r\n* README Update: Added a permissions section by @benwells in https://github.com/actions/setup-java/pull/723\r\n* Upgrade `cache` from version 3.2.4 to 4.0.0 by @aparnajyothi-y in https://github.com/actions/setup-java/pull/724\r\n* Upgrade `@actions/http-client` from 2.2.1 to 2.2.3 by @dependabot in https://github.com/actions/setup-java/pull/728\r\n* Upgrade `actions/publish-immutable-action` from 0.0.3 to 0.0.4 by @dependabot in https://github.com/actions/setup-java/pull/727\r\n* Upgrade `@types/jest` from 29.5.12 to 29.5.14 by @dependabot in https://github.com/actions/setup-java/pull/729\r\n\r\n## New Contributors\r\n* @benwells made their first contribution in https://github.com/actions/setup-java/pull/723\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v4...v4.7.0",
+      "docsUrl": "https://github.com/actions/setup-java"
     },
     {
       "repo": "actions/cache",
       "latest": "v4.2.1",
       "major": "4",
-      "description": "Cache dependencies and build outputs in GitHub Actions"
+      "description": "Cache dependencies and build outputs in GitHub Actions",
+      "status": "active",
+      "releaseDate": "2025-02-18T17:44:12Z",
+      "changelog": "## What's Changed\r\n\r\n> [!IMPORTANT]\r\n> As a reminder, there were important backend changes to release v4.2.0, see [those release notes](https://github.com/actions/cache/releases/tag/v4.2.0) and [the announcement](https://github.com/actions/cache/discussions/1510) for more details.\r\n\r\n* docs: GitHub is spelled incorrectly in caching-strategies.md by @janco-absa in https://github.com/actions/cache/pull/1526\r\n* docs: Make the \"always save prime numbers\" example more clear by @Tobbe in https://github.com/actions/cache/pull/1525\r\n* Update force deletion docs due a recent deprecation by @sebbalex in https://github.com/actions/cache/pull/1500\r\n* Bump @actions/cache to v4.0.1 by @robherley in https://github.com/actions/cache/pull/1554\r\n\r\n## New Contributors\r\n* @janco-absa made their first contribution in https://github.com/actions/cache/pull/1526\r\n* @Tobbe made their first contribution in https://github.com/actions/cache/pull/1525\r\n* @sebbalex made their first contribution in https://github.com/actions/cache/pull/1500\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v4.2.0...v4.2.1",
+      "docsUrl": "https://github.com/actions/cache"
     },
     {
       "repo": "actions/upload-artifact",
       "latest": "v4.6.1",
       "major": "4",
-      "description": null
+      "description": null,
+      "status": "active",
+      "releaseDate": "2025-02-21T19:00:26Z",
+      "changelog": "## What's Changed\r\n* Update to use artifact 2.2.2 package by @yacaovsnc in https://github.com/actions/upload-artifact/pull/673\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/upload-artifact/compare/v4...v4.6.1",
+      "docsUrl": "https://github.com/actions/upload-artifact"
     },
     {
       "repo": "actions/download-artifact",
       "latest": "v4.1.8",
       "major": "4",
-      "description": null
+      "description": null,
+      "status": "active",
+      "releaseDate": "2024-07-05T15:12:41Z",
+      "changelog": "## What's Changed\r\n* Update @actions/artifact version, bump dependencies by @robherley in https://github.com/actions/download-artifact/pull/341\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v4...v4.1.8",
+      "docsUrl": "https://github.com/actions/download-artifact"
     },
     {
       "repo": "codecov/codecov-action",
       "latest": "v5.3.1",
       "major": "5",
-      "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: "
+      "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: ",
+      "status": "active",
+      "releaseDate": "2025-01-24T16:13:50Z",
+      "changelog": "## What's Changed\r\n* fix: add docs and copy over dist by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1752\r\n\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.3.0...v5.3.1",
+      "docsUrl": "https://github.com/codecov/codecov-action"
     },
     {
       "repo": "dorny/test-reporter",
       "latest": "v1.9.1",
       "major": "1",
-      "description": "Displays test results from popular testing frameworks directly in GitHub"
+      "description": "Displays test results from popular testing frameworks directly in GitHub",
+      "status": "active",
+      "releaseDate": "2024-05-08T11:29:56Z",
+      "changelog": "## What's Changed\r\n* fix: reporting wrong number of tests in Dart by @dominicmh in https://github.com/dorny/test-reporter/pull/426\r\n* Fix problematic retransmission of authentication token (alternative solution) by @JojOatXGME in https://github.com/dorny/test-reporter/pull/438\r\n* Update development dependencies by @jozefizso in https://github.com/dorny/test-reporter/pull/442\r\n\r\n## New Contributors\r\n* @dominicmh made their first contribution in https://github.com/dorny/test-reporter/pull/426\r\n* @JojOatXGME made their first contribution in https://github.com/dorny/test-reporter/pull/438\r\n\r\n**Full Changelog**: https://github.com/dorny/test-reporter/compare/v1.9.0...v1.9.1",
+      "docsUrl": "https://github.com/dorny/test-reporter"
     },
     {
       "repo": "super-linter/super-linter",
       "latest": "v7.2.1",
       "major": "7",
-      "description": "Combination of multiple linters to run as a GitHub Action or standalone"
+      "description": "Combination of multiple linters to run as a GitHub Action or standalone",
+      "status": "active",
+      "releaseDate": "2024-12-13T16:05:41Z",
+      "changelog": "## [7.2.1](https://github.com/super-linter/super-linter/compare/v7.2.0...v7.2.1) (2024-12-12)\n\n\n### 🐛 Bugfixes\n\n* define command options function before use ([#6375](https://github.com/super-linter/super-linter/issues/6375)) ([6b60f4c](https://github.com/super-linter/super-linter/commit/6b60f4c968c6ef706f82d77c242d2e6d398868ff)), closes [#6372](https://github.com/super-linter/super-linter/issues/6372)\n* downgrade npm-groovy-lint to 15.0.0 ([#6373](https://github.com/super-linter/super-linter/issues/6373)) ([ffccf2d](https://github.com/super-linter/super-linter/commit/ffccf2d49dce2b1e051e081cc7ee743bdda723fc))\n* ensure setting /github/workdir as Git safe directory works always ([#6242](https://github.com/super-linter/super-linter/issues/6242)) ([ec05515](https://github.com/super-linter/super-linter/commit/ec05515e93ce545506111700d06865e66fed8295))\n* make git conflict markers check more precise ([#6379](https://github.com/super-linter/super-linter/issues/6379)) ([d929d04](https://github.com/super-linter/super-linter/commit/d929d049cb8f37aaea41733aee6e456e5c74362a))\n\n\n### ⬆️ Dependency updates\n\n* **bundler:** bump standard from 1.42.0 to 1.42.1 in /dependencies ([#6383](https://github.com/super-linter/super-linter/issues/6383)) ([6776692](https://github.com/super-linter/super-linter/commit/67766920118161891152d9d62eab96f3591a860d))\n* **docker:** bump the docker group across 1 directory with 4 updates ([#6381](https://github.com/super-linter/super-linter/issues/6381)) ([0fe8b07](https://github.com/super-linter/super-linter/commit/0fe8b0796b19c6a444b674a3bb5c03af34d17bc2))\n* **npm:** bump @stoplight/spectral-cli in /dependencies ([#6389](https://github.com/super-linter/super-linter/issues/6389)) ([39b1577](https://github.com/super-linter/super-linter/commit/39b1577f18b72e5383e36aae4d8bb3dba11bd98a))\n* **npm:** bump renovate from 39.15.4 to 39.31.3 in /dependencies ([#6397](https://github.com/super-linter/super-linter/issues/6397)) ([70a684d](https://github.com/super-linter/super-linter/commit/70a684deb66fa53eb5dab2eca96205cc66c2f576))\n* **npm:** bump renovate from 39.31.3 to 39.58.1 in /dependencies ([#6432](https://github.com/super-linter/super-linter/issues/6432)) ([71cc525](https://github.com/super-linter/super-linter/commit/71cc52518beb7ed70eb232c6462c51bad363a9fe))\n* **php:** bump phpstan/phpstan ([#6419](https://github.com/super-linter/super-linter/issues/6419)) ([24a53df](https://github.com/super-linter/super-linter/commit/24a53df7ba9bc8af3e609b4e5598d91458dbf250))\n* **php:** bump the composer group across 1 directory with 2 updates ([#6365](https://github.com/super-linter/super-linter/issues/6365)) ([de5f8a4](https://github.com/super-linter/super-linter/commit/de5f8a47e6a34056a23bbafae950b293569f4771))\n\n\n### 🧰 Maintenance\n\n* disable fail-fast in ci ([#6399](https://github.com/super-linter/super-linter/issues/6399)) ([102ceb6](https://github.com/super-linter/super-linter/commit/102ceb6a8d60feb91e93a674e48700cc0bbc4c1d))\n* move npm audit to a dedicate task ([#6297](https://github.com/super-linter/super-linter/issues/6297)) ([b2d0953](https://github.com/super-linter/super-linter/commit/b2d0953bfc5705a3deda9c2340acf6fe14e3e434))\n* update npm deps ([#6401](https://github.com/super-linter/super-linter/issues/6401)) ([7b18a58](https://github.com/super-linter/super-linter/commit/7b18a58c9429b53d6f376f8150daf491e9f21b0c)), closes [#6400](https://github.com/super-linter/super-linter/issues/6400)",
+      "docsUrl": "https://github.com/super-linter/super-linter"
     },
     {
       "repo": "sonarsource/sonarqube-scan-action",
       "latest": "v5.0.0",
       "major": "5",
-      "description": null
+      "description": null,
+      "status": "active",
+      "releaseDate": "2025-02-17T10:13:40Z",
+      "changelog": "## What's Changed\r\n* SQSCANGHA-81 Update SonarScanner CLI to 7.0.2.4839 by @github-actions in https://github.com/SonarSource/sonarqube-scan-action/pull/175\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v4...v5.0.0",
+      "docsUrl": "https://github.com/SonarSource/sonarqube-scan-action"
     },
     {
       "repo": "aquasecurity/trivy-action",
-      "latest": "v0.0.10",
+      "latest": "0.29.0",
       "major": "0",
-      "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities"
+      "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities",
+      "status": "active",
+      "releaseDate": "2024-11-20T00:12:52Z",
+      "changelog": "## What's Changed\r\n* feat: Allow skipping setup by @rvesse in https://github.com/aquasecurity/trivy-action/pull/414\r\n* Fix oras command not found in \"Update Trivy Cache\" action by @Tiryoh in https://github.com/aquasecurity/trivy-action/pull/413\r\n* Update README.md by @simar7 in https://github.com/aquasecurity/trivy-action/pull/420\r\n* feat: add token for `setup-trivy` by @DmitriyLewen in https://github.com/aquasecurity/trivy-action/pull/421\r\n* fix: bump `setup-trivy` and add new `contrib` directory path info by @DmitriyLewen in https://github.com/aquasecurity/trivy-action/pull/424\r\n* docs: remove ignore-unfixed from IaC scan example by @nikpivkin in https://github.com/aquasecurity/trivy-action/pull/429\r\n* chore(deps): Bump trivy to v0.57.1 by @simar7 in https://github.com/aquasecurity/trivy-action/pull/434\r\n\r\n## New Contributors\r\n* @rvesse made their first contribution in https://github.com/aquasecurity/trivy-action/pull/414\r\n* @Tiryoh made their first contribution in https://github.com/aquasecurity/trivy-action/pull/413\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.28.0...0.29.0",
+      "docsUrl": "https://github.com/aquasecurity/trivy-action"
     },
     {
       "repo": "actions/deploy-pages",
       "latest": "v4.0.5",
       "major": "4",
-      "description": "GitHub Action to publish artifacts to GitHub Pages for deployments"
+      "description": "GitHub Action to publish artifacts to GitHub Pages for deployments",
+      "status": "active",
+      "releaseDate": "2024-03-18T15:43:13Z",
+      "changelog": "# Changelog\r\n\r\n- On API error, the error message will surface the API request ID @TooManyBees (#324)\r\n- Bump the non-breaking-changes group with 2 updates @dependabot (#318)\r\n- Bump the non-breaking-changes group with 1 update @dependabot (#316)\r\n- Bump the non-breaking-changes group with 3 updates @dependabot (#314)\r\n- Bump release-drafter/release-drafter from 5.25.0 to 6.0.0 @dependabot (#311)\r\n\r\n---\r\n\r\nSee details of [all code changes](https://github.com/actions/deploy-pages/compare/v4.0.4...v4.0.5) since previous release.\r\n\r\n:warning: For use with products other than GitHub.com, such as GitHub Enterprise Server, please consult the [compatibility table](https://github.com/actions/deploy-pages/#compatibility).\r\n",
+      "docsUrl": "https://github.com/actions/deploy-pages"
     },
     {
       "repo": "JamesIves/github-pages-deploy-action",
       "latest": "v4.7.3",
       "major": "4",
-      "description": "🚀 Automatically deploy your project to GitHub Pages using GitHub Actions. This action can be configured to push your production-ready code into any branch you'd like."
+      "description": "🚀 Automatically deploy your project to GitHub Pages using GitHub Actions. This action can be configured to push your production-ready code into any branch you'd like.",
+      "status": "active",
+      "releaseDate": "2025-02-19T14:23:34Z",
+      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at releases/v4 -->\r\n\r\n## What's Changed\r\n### Build 🔧\r\n* build(deps-dev): bump prettier from 3.4.1 to 3.4.2 in the misc group by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1760\r\n* build(deps-dev): bump the eslint group with 2 updates by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1759\r\n* build(deps): bump codecov/codecov-action from 5.0.7 to 5.1.1 by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1761\r\n* build(deps): bump typescript-eslint from 8.17.0 to 8.18.0 in the typescript group by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1764\r\n* build(deps-dev): bump @types/node from 22.10.1 to 22.10.2 in the misc group by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1765\r\n* build(deps-dev): bump the eslint group with 2 updates by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1763\r\n* build(deps-dev): bump eslint from 9.16.0 to 9.17.0 in the misc group by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1767\r\n* build(deps): bump codecov/codecov-action from 5.1.1 to 5.1.2 by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1770\r\n* build(deps): bump typescript-eslint from 8.18.0 to 8.19.0 in the typescript group across 1 directory by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1778\r\n* build(deps-dev): bump the eslint group across 1 directory with 3 updates by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1779\r\n* build(deps-dev): bump @types/node from 22.10.2 to 22.10.5 in the misc group across 1 directory by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1781\r\n* build(deps-dev): bump typescript from 5.7.2 to 5.7.3 in the misc group by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1788\r\n* build(deps-dev): bump the eslint group with 2 updates by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1787\r\n* build(deps): bump typescript-eslint from 8.19.0 to 8.19.1 in the typescript group by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1786\r\n* build(deps): bump undici from 5.28.4 to 5.28.5 by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1796\r\n* build(deps): bump codecov/codecov-action from 5.1.2 to 5.3.1 by @dependabot in https://github.com/JamesIves/github-pages-deploy-action/pull/1801\r\n### Other Changes\r\n* fix unexpected input attempt-limit warning annotation by @databasedav in https://github.com/JamesIves/github-pages-deploy-action/pull/1806\r\n\r\n\r\n**Full Changelog**: https://github.com/JamesIves/github-pages-deploy-action/compare/v4...v4.7.3",
+      "docsUrl": "https://github.com/JamesIves/github-pages-deploy-action"
     },
     {
       "repo": "docker/login-action",
       "latest": "v3.3.0",
       "major": "3",
-      "description": "GitHub Action to login against a Docker registry"
+      "description": "GitHub Action to login against a Docker registry",
+      "status": "active",
+      "releaseDate": "2024-07-22T09:07:15Z",
+      "changelog": "* Bump @docker/actions-toolkit from 0.24.0 to 0.35.0 in https://github.com/docker/login-action/pull/754\r\n* Bump https-proxy-agent from 7.0.4 to 7.0.5 in https://github.com/docker/login-action/pull/741\r\n* Bump braces from 3.0.2 to 3.0.3 in https://github.com/docker/login-action/pull/730\r\n\r\n**Full Changelog**: https://github.com/docker/login-action/compare/v3.2.0...v3.3.0",
+      "docsUrl": "https://github.com/docker/login-action"
     },
     {
       "repo": "docker/setup-buildx-action",
       "latest": "v3.9.0",
       "major": "3",
-      "description": "GitHub Action to set up Docker Buildx"
+      "description": "GitHub Action to set up Docker Buildx",
+      "status": "active",
+      "releaseDate": "2025-02-06T13:27:36Z",
+      "changelog": "* Bump @docker/actions-toolkit from 0.48.0 to 0.54.0 in https://github.com/docker/setup-buildx-action/pull/402 https://github.com/docker/setup-buildx-action/pull/404\r\n\r\n**Full Changelog**: https://github.com/docker/setup-buildx-action/compare/v3.8.0...v3.9.0",
+      "docsUrl": "https://github.com/docker/setup-buildx-action"
     },
     {
       "repo": "docker/build-push-action",
       "latest": "v6.14.0",
       "major": "6",
-      "description": "GitHub Action to build and push Docker images with Buildx"
+      "description": "GitHub Action to build and push Docker images with Buildx",
+      "status": "active",
+      "releaseDate": "2025-02-19T15:23:54Z",
+      "changelog": "* Bump @docker/actions-toolkit from 0.53.0 to 0.55.0 in https://github.com/docker/build-push-action/pull/1324\r\n\r\n**Full Changelog**: https://github.com/docker/build-push-action/compare/v6.13.0...v6.14.0",
+      "docsUrl": "https://github.com/docker/build-push-action"
     },
     {
       "repo": "google-github-actions/deploy-appengine",
       "latest": "v2.1.5",
       "major": "2",
-      "description": "A GitHub Action that deploys source code to Google App Engine."
+      "description": "A GitHub Action that deploys source code to Google App Engine.",
+      "status": "active",
+      "releaseDate": "2025-02-01T14:14:05Z",
+      "changelog": "## What's Changed\n* security: bump undici from 5.28.4 to 5.28.5 in the npm_and_yarn group by @dependabot in https://github.com/google-github-actions/deploy-appengine/pull/379\n* Update deps by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/380\n* Release: v2.1.5 by @google-github-actions-bot in https://github.com/google-github-actions/deploy-appengine/pull/381\n\n\n**Full Changelog**: https://github.com/google-github-actions/deploy-appengine/compare/v2...v2.1.5",
+      "docsUrl": "https://github.com/google-github-actions/deploy-appengine"
     },
     {
       "repo": "azure/webapps-deploy",
-      "latest": "v3.0.2",
-      "major": "3",
-      "description": "Enable GitHub developers to deploy to Azure WebApps using GitHub Actions"
+      "latest": "v2",
+      "major": "2",
+      "description": "Enable GitHub developers to deploy to Azure WebApps using GitHub Actions",
+      "status": "active",
+      "releaseDate": "2020-07-16T04:35:01Z",
+      "changelog": "Automate your GitHub Actions workflow to deploy [Azure Web Apps](https://azure.microsoft.com/services/app-service/web/) and [Azure Web app for Containers](https://azure.microsoft.com/services/app-service/containers/) using [Azure Web App Publish Profile](https://github.com/projectkudu/kudu/wiki/Deployment-credentials#site-credentials-aka-publish-profile-credentials) or using [Azure Login](https://github.com/Azure/login). \r\n\r\nAction supports publish profile for [Azure Web Apps](https://azure.microsoft.com/en-us/services/app-service/web/) (both Windows and Linux) and [Azure Web Apps for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/) (Linux only).\r\n\r\n## Usage\r\n\r\nSample workflow to build and deploy a Web App to Azure using publish profile\r\n\r\n```yaml\r\n\r\n# File: .github/workflows/workflow.yml\r\n\r\non: push\r\n\r\njobs:\r\n  build-and-deploy:\r\n    runs-on: ubuntu-latest\r\n    steps:\r\n    # checkout the repo\r\n    - name: 'Checkout Github Action' \r\n      uses: actions/checkout@master\r\n    \r\n    - name: Setup Node 10.x\r\n      uses: actions/setup-node@v1\r\n      with:\r\n        node-version: '10.x'\r\n    - name: 'npm install, build, and test'\r\n      run: |\r\n        npm install\r\n        npm run build --if-present\r\n        npm run test --if-present\r\n       \r\n    - name: 'Run Azure webapp deploy action using publish profile credentials'\r\n      uses: azure/webapps-deploy@v2\r\n      with: \r\n        app-name: node-rn\r\n        publish-profile: ${{ secrets.azureWebAppPublishProfile }}\r\n        \r\n\r\n```\r\n\r\n## License\r\n\r\nGitHub Action for Azure Web App is licensed under the [MIT License](https://github.com/Azure/webapps-deploy/blob/master/LICENSE).",
+      "docsUrl": "https://github.com/Azure/webapps-deploy"
     },
     {
       "repo": "aws-actions/configure-aws-credentials",
       "latest": "v4.1.0",
       "major": "4",
-      "description": "Configure AWS credential environment variables for use in other GitHub Actions."
+      "description": "Configure AWS credential environment variables for use in other GitHub Actions.",
+      "status": "active",
+      "releaseDate": "2025-02-10T23:09:32Z",
+      "changelog": "## [4.1.0](https://github.com/aws-actions/configure-aws-credentials/compare/v4.0.3...v4.1.0) (2025-02-08)\r\n\r\n\r\n### Features\r\n\r\n* idempotent fetch ([#1289](https://github.com/aws-actions/configure-aws-credentials/issues/1289)) ([eb70354](https://github.com/aws-actions/configure-aws-credentials/commit/eb70354fb423a380b6e4ab4b9f15d2ee9ffae911))\r\n\r\n\r\n### Bug Fixes\r\n\r\n* build failure due to tests ([#1283](https://github.com/aws-actions/configure-aws-credentials/issues/1283)) ([134d71e](https://github.com/aws-actions/configure-aws-credentials/commit/134d71efe0ecbe9ad6965f2f766c0cae63a7685f))\r\n* Dependabot autoapprove ([#1284](https://github.com/aws-actions/configure-aws-credentials/issues/1284)) ([b9ee51d](https://github.com/aws-actions/configure-aws-credentials/commit/b9ee51dc600fe38c892e24f60ca26476e0e0b6de))\r\n* Dependabot autoapprove id-token write permission ([#1285](https://github.com/aws-actions/configure-aws-credentials/issues/1285)) ([f0af89b](https://github.com/aws-actions/configure-aws-credentials/commit/f0af89b102390dcf10ce402195d74a98f24861f3))\r\n* typo ([#1281](https://github.com/aws-actions/configure-aws-credentials/issues/1281)) ([39fd91c](https://github.com/aws-actions/configure-aws-credentials/commit/39fd91c08ed8bf770034de4e62662503e8007d76))",
+      "docsUrl": "https://github.com/aws-actions/configure-aws-credentials"
     },
     {
       "repo": "aws-actions/aws-cloudformation-github-deploy",
       "latest": "v1.3.0",
       "major": "1",
-      "description": "Deploys AWS CloudFormation Stacks"
+      "description": "Deploys AWS CloudFormation Stacks",
+      "status": "active",
+      "releaseDate": "2024-02-06T16:29:39Z",
+      "changelog": "See the CHANGELOG for more details on the release.",
+      "docsUrl": "https://github.com/aws-actions/aws-cloudformation-github-deploy"
     },
     {
       "repo": "appleboy/ssh-action",
       "latest": "v1.2.1",
       "major": "1",
-      "description": "GitHub Actions for executing remote ssh commands."
+      "description": "GitHub Actions for executing remote ssh commands.",
+      "status": "active",
+      "releaseDate": "2025-02-19T09:50:29Z",
+      "changelog": "## Changelog\n### Features\n* 102c0d2e5f9f4ec3afb6392f674a1ae9e970dea9: feat: capture stdout and store as output (#287) (@GammaGames)\n### Enhancements\n* 8fdfeb034ef6e9033a8a4407975aedbc12a08737: chore(github): update `appleboy/ssh-action` to version `v1.2.0` across workflows (@appleboy)\n* 43d4ebbb72699ed0e9e8aeead91adfc4eac75ed6: chore: Add test to stable workflow for script_path (#347) (@kyle-leonhard)\n* 8faa84277b88b6cd1455986f459aa66cf72bc8a3: chore: standardize formatting and update dependencies in workflows (@appleboy)\n### Build process updates\n* 1c1ad10f6da46db2f81a68133f45b6a29317b741: ci(action): remove script stop functionality from project (#350) (@appleboy)\n* e13c387332e012cca188219684f51e6ac401aa32: ci(action): display an environment variable with special characters (#351) (@appleboy)\n* 66aa4d343bf909ac4fa0ac52f4e62a9adc354c95: ci: add SSH testing job to GitHub Actions workflow (#355) (@appleboy)\n* 86aa40ddb7d085faad449ea3e1726b81949ef86b: ci: add SSH server testing to GitHub Actions workflow (@appleboy)\n### Documentation updates\n* a8952ebe2a1428de1644645b937cea45ed655b67: docs(readme): update documentation for GitHub Actions and Docker support (@appleboy)\n* cec69ef2315fa7868468f4283007628aa37a6b7e: docs(readme): standardize terminology and capitalization across project (@appleboy)\n* a9e2fdf08d46817c815611f3989f7757048795bd: docs(readme): improve README structure and add new input variables (@appleboy)\n* 6137f733fb6aad9941aaf990e4df5af3aef72d1c: docs: improve project documentation and organization (@appleboy)\n* b76e6173e8c2787083cd8d94b715e6a01844d137: docs(readme): standardize and format README files across languages (@appleboy)\n* 48531853a70097fbb21625def44933e73f9b3ec1: docs(readme): refactor README files to improve language link structure (@appleboy)\n* 49751ff51697f88206b6c7a0f60f83d1a880b26d: docs: standardize `script_file` naming to `script_path` in documentation (#360) (@appleboy)\n\n",
+      "docsUrl": "https://github.com/appleboy/ssh-action"
     },
     {
       "repo": "slackapi/slack-github-action",
       "latest": "v2.0.0",
       "major": "2",
-      "description": "Send data into Slack using this GitHub Action!"
+      "description": "Send data into Slack using this GitHub Action!",
+      "status": "active",
+      "releaseDate": "2024-11-14T21:30:00Z",
+      "changelog": "**YAML! And more API methods! With improved erroring! And more!**\r\n\r\nSending data to Slack can now be done with the YAML format, and that data can be sent to [a Slack API method][methods] or [technique of choice](https://github.com/slackapi/slack-github-action/tree/main#sending-techniques) with the provided payload. And additional configurations can improve error handling or customize values between steps.\r\n\r\nBreaking changes happen with this update and recommended migration strategies are detailed below. Adding this step to new workflows might prefer to follow the [`README`](https://github.com/slackapi/slack-github-action/tree/main#slack-send-github-action) instead :books:\r\n\r\n## What's changed\r\n\r\nBoth inputs of payload variables, techniques for sending the payload, additional configurations, and expected outputs were changed:\r\n\r\n- **Sending variables**\r\n  - Breaking changes\r\n    - [Only one payload input can be provided](#only-one-payload-input-can-be-provided)\r\n    - [Only one technique to send can be provided](#only-one-technique-to-send-can-be-provided)\r\n    - [Variable replacements no longer happen by default](#variable-replacements-no-longer-happen-by-default)\r\n    - [Payload file path parsed option was removed](#payload-file-path-parsed-option-was-removed)\r\n  - Enhancements\r\n    - [Payloads can now be written in YAML](#payloads-can-now-be-written-in-yaml)\r\n    - [Payload can now be written in unwrapped JSON](#payload-can-now-be-written-in-unwrapped-json)\r\n- **Sending techniques**\r\n  - Technique 1: Slack Workflow Builder\r\n    - Breaking changes\r\n      - [The webhook type must be specified in webhook inputs](#the-webhook-type-must-be-specified-in-webhook-inputs)\r\n      - [Payload flattening no longer happens by default](#payload-flattening-no-longer-happens-by-default)\r\n    - Enhancements\r\n      - [The webhook URL can be specified in webhook inputs](#the-webhook-url-can-be-specified-in-webhook-inputs)\r\n  - Technique 2: Slack API method\r\n    - Breaking changes\r\n      - [The Slack API method now must be specified in inputs](#the-slack-api-method-now-must-be-specified-in-inputs)\r\n      - [A token must be provided with other inputs](#a-token-must-be-provided-with-other-inputs)\r\n      - [Inputs to the Slack API method must be provided in payloads](#inputs-to-the-slack-api-method-must-be-provided-in-payloads)\r\n      - [Messages cannot be sent to multiple channels in one step](#messages-cannot-be-sent-to-multiple-channels-in-one-step)\r\n  - Technique 3: Slack incoming webhook\r\n    - Breaking changes\r\n      - [The webhook type must be specified for incoming webhooks](#the-webhook-type-must-be-specified-for-incoming-webhooks)\r\n    - Enhancements\r\n      - [The webhook URL can be specified for incoming webhook](#the-webhook-url-can-be-specified-for-incoming-webhooks)\r\n- **Additional configurations**\r\n  - Enhancements\r\n    - [Steps can exit with an error after a failed Slack API call](#steps-can-exit-with-an-error-after-a-failed-slack-api-call)\r\n    - [Failed requests can be retried various amounts of times](#failed-requests-can-be-retried-various-amounts-of-times)\r\n    - [Provided payloads can be flattened with a delimiter](#provided-payloads-can-be-flattened-with-a-delimiter)\r\n    - [Provided payloads can have templated variables replaced](#provided-payloads-can-have-templated-variables-replaced)\r\n    - [Proxying HTTPS requests can be done within inputs](#proxying-https-requests-can-be-done-within-inputs)\r\n- **Expected outputs**\r\n  - Breaking changes\r\n    - [The time value is now returned as the Unix epoch time](#the-time-value-is-now-returned-as-the-unix-epoch-time)\r\n  - Enhancements\r\n    - [An ok value is added to represent response success](#an-ok-value-is-added-to-represent-response-success)\r\n    - [A response value is added with the response data](#a-response-value-is-added-with-the-response-data)\r\n\r\nThe following sections detail these changes with recommended changes for existing GitHub workflows using this step and certain features.\r\n\r\nIf something seems off after making these changes, please feel free to [open an issue][issues] for discussion! 👾\r\n\r\n## Sending variables\r\n\r\nThe source of variables remains the same, using one of the following inputs:\r\n\r\n- `payload`: Inputs written inline in your GitHub workflow file.\r\n- `payload-file-path`: Inputs gathered from a file.\r\n- **No input**: Uses the default event [context][event-context] with a [payload][event-payload] matching the GitHub event.\r\n\r\n### :warning: Breaking changes\r\n\r\n<div id=\"only-one-payload-input-can-be-provided\"></div>\r\n\r\n#### Only one payload input can be provided\r\n\r\nThis Action now exits with an error if both `payload` and `payload-file-path` are provided.\r\n\r\n**Prior to updating**: Both options could be provided with `payload` being preferred.\r\n\r\n**Recommended change**: Use either `payload`, `payload-file-path`, or neither, when providing inputs. But don't include both.\r\n\r\n<div id=\"only-one-technique-to-send-can-be-provided\"></div>\r\n\r\n#### Only one technique to send can be provided\r\n\r\nThis Action now exits with an error if both `method` and `webhook` techniques are provided.\r\n\r\n**Prior to updating**: Both techniques could be used to send the same payload.\r\n\r\n**Recommended change**: Use either `method` or `webhook` to send data, but not both.\r\n\r\n<div id=\"variable-replacements-no-longer-happen-by-default\"></div>\r\n\r\n#### Variable replacements no longer happen by default\r\n\r\nThis Action now sends payload provided in a `payload-file-path` file exactly as is.\r\n\r\n**Prior to updating**: Templatized variables in input files were replaced with the matching `github` or `env` variable:\r\n\r\n```json\r\n{\r\n  \"channel\": \"${{ env.SLACK_CHANNEL_ID }}\",\r\n  \"text\": \"A commit was made: ${{ github.sha }}\"\r\n}\r\n```\r\n\r\nChanging the above file into something like this before being sent:\r\n\r\n```json\r\n{\r\n  \"channel\": \"C0123456789\",\r\n  \"text\": \"A commit was made: 3982e204d2ae590e908dd1e279e63933da566c8c\"\r\n}\r\n```\r\n\r\n**Recommended change**: To continue replacing templated variables provided from the step `env` or default GitHub event [context][event-context] and [payload][event-payload], set the `payload-templated` variable to `true`.\r\n\r\n<div id=\"payload-file-path-parsed-option-was-removed\"></div>\r\n\r\n#### Payload file path parsed option was removed\r\n\r\nThis Action removed the `payload-file-path-parsed` input option.\r\n\r\n**Prior to updating**: This option, which defaulted to `true`, could be set to `false` to avoid replacing templatized variables in a provided `payload-file-path` file.\r\n\r\n**Recommended change**: Remove this option if it's set to `false` or set the new `payload-templated` option to `true` to continue parsing the provided payload.\r\n\r\n### 🎁 Enhancements\r\n\r\n<div id=\"payloads-can-now-be-written-in-yaml\"></div>\r\n\r\n#### Payloads can now be written in YAML\r\n\r\nThis Action now supports writing `payload` or `payload-file-path` values with YAML!\r\n\r\n**Prior to updating**: Values provided as payloads had to be JSON.\r\n\r\n**Recommended change**: Optional. Format the input `payload` value as YAML to match the surrounding steps:\r\n\r\n```yaml\r\n- name: Post to a Slack channel\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    method: chat.postMessage\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      channel: ${{ secrets.SLACK_CHANNEL_ID }}\r\n      text: \"Greetings <@channel>!\"\r\n```\r\n\r\n<div id=\"payload-can-now-be-written-in-unwrapped-json\"></div>\r\n\r\n#### Payload can now be written in unwrapped JSON\r\n\r\nThis Action now supports writing `payload` with unwrapped JSON, where surrounding braces are removed.\r\n\r\n**Prior to updating**: Values provided as payloads had to be JSON.\r\n\r\n**Recommended change**: Optional. Remove the surrounding braces from an existing `payload` value:\r\n\r\n```yaml\r\n- name: Post to a Slack channel\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    method: chat.postMessage\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      \"channel\": \"${{ secrets.SLACK_CHANNEL_ID }}\",\r\n      \"text\": \"Greetings <@channel>!\",\r\n```\r\n\r\n## Sending techniques\r\n\r\nThe techniques for sending variables remains the same, using one of the following:\r\n\r\n- **Technique 1**: [Slack Workflow Builder][wfb]\r\n- **Technique 2**: [Slack API method][methods]\r\n- **Technique 3**: [Slack incoming webhook][incoming-webhook]\r\n\r\nChanges for different technique might be different and are included in each of the following sections.\r\n\r\n### Technique 1: Slack Workflow Builder\r\n\r\n#### ⚠️ Breaking changes\r\n\r\n<div id=\"the-webhook-type-must-be-specified-in-webhook-inputs\"></div>\r\n\r\n##### The webhook type must be specified in webhook inputs\r\n\r\nThis Action now requires setting the `webhook-type` as a step input value.\r\n\r\n**Prior to updating**: The webhook type could be omitted to send to Workflow Builder.\r\n\r\n**Recommended change**: Set the `webhook-type` value to `webhook-trigger`, as shown in the example below.\r\n\r\n<div id=\"payload-flattening-no-longer-happens-by-default\"></div>\r\n\r\n##### Payload flattening no longer happens by default\r\n\r\nThis Action no longer flattens or stringifies payloads being sent to Workflow Builder by default.\r\n\r\n**Prior to updating**: Payloads sent using a webhook trigger were flattened with a `.` delimiter and have values stringified before being sent.\r\n\r\n**Recommended change**: If payload flattening is needed, use the `payload-delimiter` option. Inputs of Slack workflows should use an underscore `_` as a delimiter to match expected inputs of Workflow Builder:\r\n\r\n```yaml\r\n- name: Send GitHub Action data to a Slack workflow\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    payload-delimiter: \"_\"\r\n    webhook: ${{ secrets.SLACK_WEBHOOK_URL }}\r\n    webhook-type: webhook-trigger\r\n```\r\n\r\n#### 🎁 Enhancements\r\n\r\n<div id=\"the-webhook-url-can-be-specified-in-webhook-inputs\"></div>\r\n\r\n##### The webhook URL can be specified in webhook inputs\r\n\r\nThis Action can now set the `webhook` URL as a step input.\r\n\r\n**Prior to updating**: The `SLACK_WEBHOOK_URL` environment variable set this value.\r\n\r\n**Recommended change**: Optional. Use the `webhook` input value, as shown above, to set the webhook URL.\r\n\r\n### Technique 2: Slack API methods\r\n\r\nThis technique can now send to [the Slack API methods][methods] and supports all [token][tokens] types!\r\n\r\n#### ⚠️ Breaking changes\r\n\r\n<div id=\"the-slack-api-method-now-must-be-specified-in-inputs\"></div>\r\n\r\n##### The Slack API method now must be specified in inputs\r\n\r\nThis Action now requires that [the Slack API method][methods] is specified in inputs.\r\n\r\n**Prior to updating**: Messages would be posted using `chat.postMessage` or `chat.update` behind the scenes.\r\n\r\n**Recommend change**: Use the `method` that matches the message being posted, or use a different method:\r\n\r\n```yaml\r\n- name: Post to a Slack channel\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    method: chat.postMessage\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      channel: ${{ secrets.SLACK_CHANNEL_ID }}\r\n      text: \"Greetings <@channel>!\"\r\n```\r\n\r\nNote: Steps with `update-ts` should use `chat.update` as the `method`.\r\n\r\n<div id=\"a-token-must-be-provided-with-other-inputs\"></div>\r\n\r\n##### A token must be provided with other inputs\r\n\r\nThis Action expects a [`token`][tokens] as a step input value.\r\n\r\n**Prior to updating**: Bot tokens were provided with the `SLACK_BOT_TOKEN` environment variable.\r\n\r\n**Recommended change**: Provide the `token` scoped for the method as a step input, as shown above. The `SLACK_TOKEN` environment variable can also be used.\r\n\r\n<div id=\"inputs-to-the-slack-api-method-must-be-provided-in-payloads\"></div>\r\n\r\n##### Inputs to the Slack API method must be provided in payloads\r\n\r\nThis Action now passes all provided values for payloads to the Slack API method.\r\n\r\n**Prior to updating**: The `channel-id` and `slack-message` values were used.\r\n\r\n**Recommended change**: Include the values sent to the Slack API method in the provided payload, as shown above.\r\n\r\n<div id=\"messages-cannot-be-sent-to-multiple-channels-in-one-step\"></div>\r\n\r\n##### Messages cannot be sent to multiple channels in one step\r\n\r\nThis Action can no longer send messages to multiple channels.\r\n\r\n**Prior to updating**: Multiple channels could be provided to `channel-id`.\r\n\r\n**Recommended change**: Update your GitHub workflow to repeat the same `chat.postMessage` step multiple times with different channel IDs.\r\n\r\n### Technique 3: Slack incoming webhook\r\n\r\n#### ⚠️ Breaking changes\r\n\r\n<div id=\"the-webhook-type-must-be-specified-for-incoming-webhooks\"></div>\r\n\r\n##### The webhook type must be specified for incoming webhooks\r\n\r\nThis Action now requires setting the `webhook-type` as a step input value.\r\n\r\n**Prior to updating**: The webhook type could be omitted to send to Workflow Builder.\r\n\r\n**Recommended change**: Set the `webhook-type` value to `incoming-webhook`, as shown in the example below:\r\n\r\n```yaml\r\n- name: Post a message in a channel\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    webhook: ${{ secrets.SLACK_WEBHOOK_URL }}\r\n    webhook-type: incoming-webhook\r\n    payload: |\r\n      text: \"Greetings from this step!\"\r\n```\r\n\r\n#### 🎁 Enhancements\r\n\r\n<div id=\"the-webhook-url-can-be-specified-for-incoming-webhooks\"></div>\r\n\r\n##### The webhook URL must be specified for incoming webhooks\r\n\r\nThis Action can now set the `webhook` URL as a step input.\r\n\r\n**Prior to updating**: The `SLACK_WEBHOOK_URL` environment variable set this value.\r\n\r\n**Recommended change**: Optional. Use the `webhook` input value, as shown above, to set the webhook URL.\r\n\r\n## Additional configurations\r\n\r\n### 🎁 Enhancements\r\n\r\n<div id=\"steps-can-exit-with-an-error-after-a-failed-slack-api-call\"></div>\r\n\r\n#### Steps can exit with an error after a failed Slack API call\r\n\r\nThis Action can now exit if the Slack API returns an erroring response.\r\n\r\n**Prior to updating**: Errors due to invalid payloads were ignored.\r\n\r\n**Recommended change**: If a failing response from the Slack API should cause a step to fail, the `errors` value should be set to `true` since it defaults to `false`:\r\n\r\n```yaml\r\n- name: Attempt to inverse a message\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    errors: true\r\n    method: chat.reverse\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      \"message\": \"palindrome\"\r\n```\r\n\r\n<div id=\"failed-requests-can-be-retried-various-amounts-of-times\"></div>\r\n\r\n#### Failed requests can be retried various amounts of times\r\n\r\nThis Action can now retry requests that failed due to [rate limits][rate-limits].\r\n\r\n**Prior to updating**: Rate limited requests were retried a fixed amount of times.\r\n\r\n**Recommended change**: Set the `retries` option to [a setting of choice](https://github.com/slackapi/slack-github-action/tree/main#retrying-failed-requests):\r\n\r\n```yaml\r\n- name: Attempt to inverse a message\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    method: chat.postMessage\r\n    retries: rapid\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      \"message\": \"Good luck!\"\r\n```\r\n\r\n<div id=\"provided-payloads-can-be-flattened-with-a-delimiter\"></div>\r\n\r\n#### Provided payloads can be flattened with a delimiter\r\n\r\nThis Action can now flatten and stringify payloads from any source.\r\n\r\n**Prior to updating**: Payloads from the `payload-file-path` source were flattened with a period `.` delimiter by default.\r\n\r\n**Recommended change**: Set the `payload-delimiter` option to an underscore `_` to flatten and stringify nested payloads:\r\n\r\n```yaml\r\n- name: Send GitHub Action data to a Slack workflow\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    payload-delimiter: \"_\"\r\n    webhook: ${{ secrets.SLACK_WEBHOOK_URL }}\r\n    webhook-type: webhook-trigger\r\n```\r\n\r\nIn the example above, data from the default GitHub event [context][event-context] and event [payload][event-payload] are flattened before being sent with a webhook to Workflow Builder, matching the expected input shape of Workflow Builder.\r\n\r\n<div id=\"provided-payloads-can-have-templated-variables-replaced\"></div>\r\n\r\n#### Provided payloads can have templated variables replaced\r\n\r\nThis Action can now replace templated variables from any source.\r\n\r\n**Prior to updating**: Templated variables were replaced by default in payloads from the `payload-file-path` source.\r\n\r\n**Recommended change**: Set the `payload-templated` option to `true` to replace templated variables in provided payloads:\r\n\r\n```yaml\r\n- name: Send custom JSON data to Slack workflow\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    payload-file-path: \"./payload-slack-content.json\"\r\n    payload-templated: true\r\n    webhook: ${{ secrets.SLACK_WEBHOOK_URL }}\r\n    webhook-type: webhook-trigger\r\n```\r\n\r\n<div id=\"proxying-https-requests-can-be-done-within-inputs\"></div>\r\n\r\n#### Proxying HTTPS requests can be done within inputs\r\n\r\nThis Action can now set HTTPS proxies within the step inputs.\r\n\r\n**Prior to updating**: The `HTTPS_PROXY` environment variable was recommended.\r\n\r\n**Recommended change**: Set the `proxy` step input:\r\n\r\n```yaml\r\n- name: Post to a Slack channel via a proxy\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    method: chat.postMessage\r\n    proxy: \"http://proxy.example.org:8080\" # Change this to a custom value\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      channel: ${{ secrets.SLACK_CHANNEL_ID }}\r\n      text: \"This message was sent through a proxy\"\r\n```\r\n\r\n## Expected outputs\r\n\r\nThe outputs from steps continues to return the following values, with changes noted below:\r\n\r\n- `time`: `number` The Unix [epoch time][epoch] that the step completed.\r\n- `channel_id`: `string`. The [channel ID][conversation] included in the response of some Slack API methods.\r\n- `ts`: `string`. The [timestamp][messaging-timestamp] of the Slack event or message.\r\n- `thread_ts`: `string`. The [timestamp][messaging-timestamp] of a parent Slack message with [threaded replies][messaging-parents].\r\n\r\n### ⚠️ Breaking changes\r\n\r\n<div id=\"the-time-value-is-now-returned-as-the-unix-epoch-time\"></div>\r\n\r\n#### The time value is now returned as the Unix epoch time\r\n\r\nThis Action now returns the Unix [epoch time][epoch] of when the step completed.\r\n\r\n**Prior to updating**: The returned `time` value was formatted as a JavaScript date.\r\n\r\n**Recommenced change**: Configure following steps to use `time` as an epoch offset.\r\n\r\n### 🎁 Enhancements\r\n\r\n<div id=\"an-ok-value-is-added-to-represent-response-success\"></div>\r\n\r\n#### An ok value is added to represent response success\r\n\r\nThis Action now returns `ok` to represent a successful send.\r\n\r\n**Prior to updating**: Checking the `time` value or other outputs could be used to determine the status of some steps.\r\n\r\n**Recommended change**: Configure steps that require certain successful responses of prior steps to check `ok`:\r\n\r\n```yaml\r\n- name: Send a message into channel\r\n  id: message\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    method: chat.postMessage\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      channel: ${{ secrets.SLACK_CHANNEL_ID }}\r\n      text: \"Something is happening and is in action\"\r\n- name: Reply to that message with outputs\r\n  if: ${{ steps.message.outputs.ok }}\r\n  uses: slackapi/slack-github-action@v2.0.0\r\n  with:\r\n    method: chat.postMessage\r\n    token: ${{ secrets.SLACK_BOT_TOKEN }}\r\n    payload: |\r\n      channel: ${{ secrets.SLACK_CHANNEL_ID }}\r\n      text: \"The previous step completed <!date^${{ steps.message.outputs.time }}^{date_num} at {time_secs}|just now>.\"\r\n      thread_ts: \"${{ steps.message.outputs.ts }}\"\r\n```\r\n\r\n<div id=\"a-response-value-is-added-with-the-response-data\"></div>\r\n\r\n#### A response value is added with the response data\r\n\r\nThis Action now returns the JSON `response` value from Slack API requests.\r\n\r\n**Prior to change**: Some response values were returned for conversation APIs.\r\n\r\n**Recommended change**: Use the output `response` of one step as input to another for more complex workflows.\r\n\r\n---\r\n\r\nWe're hoping the update goes well, but please do [let us know][issues] if something seems off! 💌\r\n\r\n[conversation]: https://api.slack.com/types/conversation\r\n[epoch]: https://en.wikipedia.org/wiki/Unix_time\r\n[event-context]: https://github.com/actions/toolkit/blob/main/packages/github/src/context.ts#L6\r\n[event-payload]: https://docs.github.com/en/webhooks/webhook-events-and-payloads\r\n[incoming-webhook]: https://api.slack.com/messaging/webhooks\r\n[issues]: https://github.com/slackapi/slack-github-action/issues\r\n[messaging-parents]: https://api.slack.com/messaging/retrieving#finding_threads\r\n[messaging-threads]: https://api.slack.com/messaging/sending#threading\r\n[messaging-timestamp]: https://api.slack.com/messaging/retrieving#individual_messages\r\n[methods]: https://api.slack.com/methods\r\n[rate-limits]: https://api.slack.com/apis/rate-limits\r\n[tokens]: https://api.slack.com/concepts/token-types\r\n[wfb]: https://slack.com/features/workflow-automation",
+      "docsUrl": "https://github.com/slackapi/slack-github-action"
     },
     {
       "repo": "actions/github-script",
       "latest": "v7.0.1",
       "major": "7",
-      "description": "Write workflows scripting the GitHub API in JavaScript"
+      "description": "Write workflows scripting the GitHub API in JavaScript",
+      "status": "active",
+      "releaseDate": "2023-11-17T22:21:53Z",
+      "changelog": "## What's Changed\r\n* Avoid setting `baseUrl` to undefined when input is not provided by @joshmgross in https://github.com/actions/github-script/pull/439\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/github-script/compare/v7.0.0...v7.0.1",
+      "docsUrl": "https://github.com/actions/github-script"
     },
     {
       "repo": "actions/labeler",
       "latest": "v5.0.0",
       "major": "5",
-      "description": "An action for automatically labelling pull requests"
+      "description": "An action for automatically labelling pull requests",
+      "status": "active",
+      "releaseDate": "2023-12-04T14:14:37Z",
+      "changelog": "## What's Changed\r\nThis release contains the following breaking changes:\r\n1) The ability to apply labels based on the names of base and/or head branches was added ([#186](https://github.com/actions/labeler/issues/186) and [#54](https://github.com/actions/labeler/issues/54)). The match object for changed files was expanded with new combinations in order to make it more intuitive and flexible ([#423](https://github.com/actions/labeler/issues/423) and [#101](https://github.com/actions/labeler/issues/101)). As a result, the configuration file structure was significantly redesigned and is not compatible with the structure of the previous version. Please read the [action documentation](https://github.com/actions/labeler/tree/main#pull-request-labeler) to find out how to adapt your configuration files for use with the new action version.\r\n\r\n2) The bug related to the `sync-labels` input was fixed ([#112](https://github.com/actions/labeler/issues/112)). Now the input value is read correctly.\r\n\r\n3) By default, `dot` input is set to `true`. Now, paths starting with a dot (e.g. `.github`) are matched by default.\r\n\r\n4) Version 5 of this action updated the [runtime to Node.js 20](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#runs-for-javascript-actions). All scripts are now run with Node.js 20 instead of Node.js 16 and are affected by any breaking changes between Node.js 16 and 20.\r\n\r\nFor more information, please read the [action documentation](https://github.com/actions/labeler/tree/main#pull-request-labeler).\r\n## New Contributors\r\n* @joshdales made their first contribution in https://github.com/actions/labeler/pull/203\r\n* @dusan-trickovic made their first contribution in https://github.com/actions/labeler/pull/626\r\n* @sungh0lim made their first contribution in https://github.com/actions/labeler/pull/630\r\n* @TrianguloY made their first contribution in https://github.com/actions/labeler/pull/629\r\n\r\n**Full Changelog**: https://github.com/actions/labeler/compare/v4...v5.0.0",
+      "docsUrl": "https://github.com/actions/labeler"
     },
     {
       "repo": "actions/stale",
       "latest": "v9.1.0",
       "major": "9",
-      "description": "Marks issues and pull requests that have not had recent interaction"
+      "description": "Marks issues and pull requests that have not had recent interaction",
+      "status": "active",
+      "releaseDate": "2025-01-21T03:34:36Z",
+      "changelog": "## What's Changed\r\n* Documentation update by @Marukome0743 in https://github.com/actions/stale/pull/1116\r\n* Add workflow file for publishing releases to immutable action package by @Jcambass in https://github.com/actions/stale/pull/1179\r\n* Update undici from 5.28.2 to 5.28.4 by @dependabot in https://github.com/actions/stale/pull/1150\r\n* Update actions/checkout from 3 to 4 by @dependabot in https://github.com/actions/stale/pull/1091\r\n* Update actions/publish-action from 0.2.2 to 0.3.0 by @dependabot in https://github.com/actions/stale/pull/1147\r\n* Update ts-jest from 29.1.1 to 29.2.5 by @dependabot in https://github.com/actions/stale/pull/1175\r\n* Update @actions/core from 1.10.1 to 1.11.1 by @dependabot in https://github.com/actions/stale/pull/1191\r\n* Update @types/jest from 29.5.11 to 29.5.14 by @dependabot in https://github.com/actions/stale/pull/1193\r\n* Update @actions/cache from 3.2.2 to 4.0.0 by @dependabot in https://github.com/actions/stale/pull/1194\r\n\r\n## New Contributors\r\n* @Marukome0743 made their first contribution in https://github.com/actions/stale/pull/1116\r\n* @Jcambass made their first contribution in https://github.com/actions/stale/pull/1179\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v9...v9.1.0",
+      "docsUrl": "https://github.com/actions/stale"
     }
   ],
-  "updated": "2025-02-23T03:57:49.357Z"
+  "updated": "2025-02-23T07:11:33.125Z"
 }

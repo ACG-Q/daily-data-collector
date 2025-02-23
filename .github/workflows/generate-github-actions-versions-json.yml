@@ -122,7 +122,7 @@ jobs:
                 }
 
                 // 将数据写入 JSON 文件
-                fs.writeFileSync(process.env.JSON_FILE_PATH.stringify(data, null, 2));
+                fs.writeFileSync(process.env.JSON_FILE_PATH, JSON.stringify(data, null, 2));
                 console.log(`JSON 文件已生成：${process.env.JSON_FILE_PATH}`);
               } catch (error) {
                 console.error("Error:", error.message);

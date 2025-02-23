@@ -1,4 +1,27 @@
 {
+  "sources": "actions/runner-images",
+  "labels": [
+    "macos-13",
+    "macos-13-large",
+    "macos-13-xlarge",
+    "macos-14",
+    "macos-14-large",
+    "macos-14-xlarge",
+    "macos-15",
+    "macos-15-large",
+    "macos-15-xlarge",
+    "macos-latest",
+    "macos-latest-large",
+    "macos-latest-xlarge",
+    "ubuntu-20.04",
+    "ubuntu-22.04",
+    "ubuntu-24.04",
+    "ubuntu-latest",
+    "windows-2019",
+    "windows-2022",
+    "windows-2025",
+    "windows-latest"
+  ],
   "categories": {
     "ubuntu": [
       {
@@ -88,5 +111,5 @@
     ],
     "other": []
   },
-  "updated": "2025-02-23T01:22:37.129Z"
+  "updated": "2025-02-23T03:34:31.625Z"
 }

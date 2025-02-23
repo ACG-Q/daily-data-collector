@@ -45,12 +45,10 @@ jobs:
 
             const GITHUB_REPOS = JSON.parse(process.env.GITHUB_REPOS);
 
-            // 请求头
             const headers = {
               Accept: "application/vnd.github.v3+json",
             };
 
-            // 获取仓库最新的信息
             async function fetchLatestTag(git_repo) {
               try {
                 const url = `https://api.github.com/repos/${git_repo}`;
@@ -60,48 +58,63 @@ jobs:
                   throw new Error(`Failed to fetch data: ${response.status}`);
                 }
 
-                // 记录 description
                 const description = response.data.description;
+                const archived = response.data.archived;
+                const docsUrl = response.data.html_url;
 
-                // 请求 tags
-                const tagsUrl = response.data.tags_url;
-                const tagsResponse = await axios.get(tagsUrl, { headers });
-                if (tagsResponse.status !== 200) {
-                  throw new Error(`Failed to fetch tags: ${tagsResponse.status}`);
+                // 请求releases
+                const releasesUrl = response.data.releases_url.replace('{/id}', '');
+                const releasesResponse = await axios.get(releasesUrl, { headers });
+                if (releasesResponse.status !== 200) {
+                  throw new Error(`Failed to fetch releases: ${releasesResponse.status}`);
                 }
 
-                // 检查是否有标签
-                if (tagsResponse.data.length === 0) {
+                // 检查是否有releases
+                if (releasesResponse.data.length === 0) {
                   return {
                     latest: "N/A",
                     major: "N/A",
+                    status: archived ? "deprecated" : "active",
                     description: description,
+                    releaseDate: "N/A",
+                    changelog: "N/A",
+                    docsUrl: docsUrl
                   };
                 }
 
-                // 获取最新的 tag
-                const latestTag = tagsResponse.data[0].name;
+                // 获取最新的release信息
+                const latestRelease = releasesResponse.data[0];
+                const latestTag = latestRelease.tag_name;
+                const releaseDate = latestRelease.published_at;
+                const changelog = latestRelease.body || "No changelog provided";
+
                 return {
                   latest: latestTag,
                   major: parseTag(latestTag),
+                  status: archived ? "deprecated" : "active",
                   description: description,
+                  releaseDate: releaseDate,
+                  changelog: changelog,
+                  docsUrl: docsUrl
                 };
               } catch (error) {
                 console.error(`Error fetching ${git_repo}:`, error.message);
                 return {
                   latest: "Error",
                   major: "Error",
+                  status: "Error",
                   description: "Error",
+                  releaseDate: "Error",
+                  changelog: "Error",
+                  docsUrl: "Error"
                 };
               }
             }
 
-            // 处理 tag // v1.2.3 => 1.2.3 => 1
             function parseTag(tag) {
-              return tag.replace(/^v/, "").split(".").slice(0, 1).join(".");
+              return tag.replace(/^v/, "").split(".")[0];
             }
 
-            // 获取所有仓库的最新 tag
             (async () => {
               try {
                 const repos = GITHUB_REPOS;
@@ -110,7 +123,6 @@ jobs:
                   updated: new Date().toISOString(),
                 };
 
-                // 遍历仓库
                 for (const repo of repos) {
                   const result = await fetchLatestTag(repo);
                   data.actions.push({
@@ -118,12 +130,15 @@ jobs:
                     latest: result.latest,
                     major: result.major,
                     description: result.description,
+                    status: result.status,
+                    releaseDate: result.releaseDate,
+                    changelog: result.changelog,
+                    docsUrl: result.docsUrl
                   });
                 }
 
-                // 将数据写入 JSON 文件
                 fs.writeFileSync(process.env.JSON_FILE_PATH, JSON.stringify(data, null, 2));
-                console.log(`JSON 文件已生成：${process.env.JSON_FILE_PATH}`);
+                console.log(`JSON file generated: ${process.env.JSON_FILE_PATH}`);
               } catch (error) {
                 console.error("Error:", error.message);
                 process.exit(1);

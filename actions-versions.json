@@ -1,0 +1,167 @@
+{
+  "actions": [
+    {
+      "repo": "actions/checkout",
+      "latest": "v4.2.2",
+      "major": "4",
+      "description": "Action for checking out a repo"
+    },
+    {
+      "repo": "actions/setup-node",
+      "latest": "v4.2.0",
+      "major": "4",
+      "description": "Set up your GitHub Actions workflow with a specific version of node.js"
+    },
+    {
+      "repo": "actions/setup-python",
+      "latest": "v5.4.0",
+      "major": "5",
+      "description": "Set up your GitHub Actions workflow with a specific version of Python"
+    },
+    {
+      "repo": "actions/setup-dotnet",
+      "latest": "v4.3.0",
+      "major": "4",
+      "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk"
+    },
+    {
+      "repo": "actions/setup-java",
+      "latest": "v4.7.0",
+      "major": "4",
+      "description": "Set up your GitHub Actions workflow with a specific version of Java"
+    },
+    {
+      "repo": "actions/cache",
+      "latest": "v4.2.1",
+      "major": "4",
+      "description": "Cache dependencies and build outputs in GitHub Actions"
+    },
+    {
+      "repo": "actions/upload-artifact",
+      "latest": "v4.6.1",
+      "major": "4",
+      "description": null
+    },
+    {
+      "repo": "actions/download-artifact",
+      "latest": "v4.1.8",
+      "major": "4",
+      "description": null
+    },
+    {
+      "repo": "codecov/codecov-action",
+      "latest": "v5.3.1",
+      "major": "5",
+      "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: "
+    },
+    {
+      "repo": "dorny/test-reporter",
+      "latest": "v1.9.1",
+      "major": "1",
+      "description": "Displays test results from popular testing frameworks directly in GitHub"
+    },
+    {
+      "repo": "super-linter/super-linter",
+      "latest": "v7.2.1",
+      "major": "7",
+      "description": "Combination of multiple linters to run as a GitHub Action or standalone"
+    },
+    {
+      "repo": "sonarsource/sonarqube-scan-action",
+      "latest": "v5.0.0",
+      "major": "5",
+      "description": null
+    },
+    {
+      "repo": "aquasecurity/trivy-action",
+      "latest": "v0.0.10",
+      "major": "0",
+      "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities"
+    },
+    {
+      "repo": "actions/deploy-pages",
+      "latest": "v4.0.5",
+      "major": "4",
+      "description": "GitHub Action to publish artifacts to GitHub Pages for deployments"
+    },
+    {
+      "repo": "JamesIves/github-pages-deploy-action",
+      "latest": "v4.7.3",
+      "major": "4",
+      "description": "🚀 Automatically deploy your project to GitHub Pages using GitHub Actions. This action can be configured to push your production-ready code into any branch you'd like."
+    },
+    {
+      "repo": "docker/login-action",
+      "latest": "v3.3.0",
+      "major": "3",
+      "description": "GitHub Action to login against a Docker registry"
+    },
+    {
+      "repo": "docker/setup-buildx-action",
+      "latest": "v3.9.0",
+      "major": "3",
+      "description": "GitHub Action to set up Docker Buildx"
+    },
+    {
+      "repo": "docker/build-push-action",
+      "latest": "v6.14.0",
+      "major": "6",
+      "description": "GitHub Action to build and push Docker images with Buildx"
+    },
+    {
+      "repo": "google-github-actions/deploy-appengine",
+      "latest": "v2.1.5",
+      "major": "2",
+      "description": "A GitHub Action that deploys source code to Google App Engine."
+    },
+    {
+      "repo": "azure/webapps-deploy",
+      "latest": "v3.0.2",
+      "major": "3",
+      "description": "Enable GitHub developers to deploy to Azure WebApps using GitHub Actions"
+    },
+    {
+      "repo": "aws-actions/configure-aws-credentials",
+      "latest": "v4.1.0",
+      "major": "4",
+      "description": "Configure AWS credential environment variables for use in other GitHub Actions."
+    },
+    {
+      "repo": "aws-actions/aws-cloudformation-github-deploy",
+      "latest": "v1.3.0",
+      "major": "1",
+      "description": "Deploys AWS CloudFormation Stacks"
+    },
+    {
+      "repo": "appleboy/ssh-action",
+      "latest": "v1.2.1",
+      "major": "1",
+      "description": "GitHub Actions for executing remote ssh commands."
+    },
+    {
+      "repo": "slackapi/slack-github-action",
+      "latest": "v2.0.0",
+      "major": "2",
+      "description": "Send data into Slack using this GitHub Action!"
+    },
+    {
+      "repo": "actions/github-script",
+      "latest": "v7.0.1",
+      "major": "7",
+      "description": "Write workflows scripting the GitHub API in JavaScript"
+    },
+    {
+      "repo": "actions/labeler",
+      "latest": "v5.0.0",
+      "major": "5",
+      "description": "An action for automatically labelling pull requests"
+    },
+    {
+      "repo": "actions/stale",
+      "latest": "v9.1.0",
+      "major": "9",
+      "description": "Marks issues and pull requests that have not had recent interaction"
+    }
+  ],
+  "updated": "2025-02-23T03:57:49.357Z"
+}

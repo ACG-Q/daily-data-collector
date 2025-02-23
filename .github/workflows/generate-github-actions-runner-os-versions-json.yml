@@ -6,7 +6,18 @@ on:
   workflow_dispatch: # 允许手动触发
 
 env:
+  # 保存地址
   JSON_FILE_PATH: ${{ github.workspace }}/runner-images.json
+
+  # 数据来源
+  GITHUB_REPO: actions/runner-images
+
+  # 数据中心文件
+  DATA_CENTER_FILE: ${{ github.workspace }}/data.json
+
+  # 在数据中心的标识
+  DATA_CENTER_NAME: runner-images
+
 
 jobs:
   generate:
@@ -31,21 +42,23 @@ jobs:
             const fs = require('fs');
             const axios = require('axios');
   
-            const GITHUB_REPO = 'actions/runner-images';
-  
+            // 获取 README.md 内容
             async function fetchReadme() {
-                const url = `https://api.github.com/repos/${GITHUB_REPO}/contents/README.md`;
+                const url = `https://api.github.com/repos/${process.env.GITHUB_REPO}/contents/README.md`;
                 const response = await axios.get(url, {
                     headers: { 'Accept': 'application/vnd.github.v3.raw' }
                 });
                 return response.data;
             }
   
+            // 解析 OS 版本
             function parseOSVersions(content) {
+                // 找到table的开始和结束位置
                 const tableStart = content.indexOf('| Image | YAML Label |');
                 const tableEnd = content.indexOf('\n\n', tableStart);
                 const tableContent = content.slice(tableStart, tableEnd);
   
+                // 解析 table 内容
                 const lines = tableContent.split('\n').filter(line => line.trim().startsWith('|'));
   
                 const headers = lines[0]
@@ -53,6 +66,12 @@ jobs:
                     .slice(1, -1)
                     .map(header => header.trim());
   
+                // 解析每一行
+                // 从第三行开始解析
+                // 每一行的数据是以 | 分隔的
+                // 每一行的数据是以 | 开头和结尾的，所以需要去掉第一个和最后一个
+                // 每一行的数据是以 | 分隔的，所以需要用 split('|') 分割
+                // 将每一行的数据转换为对象
                 const data = lines.slice(2).map(line => {
                     const cells = line
                         .split('|')
@@ -65,18 +84,24 @@ jobs:
                     }, {});
                 });
   
+                // 分类
                 const categories = {
                     ubuntu: [],
                     windows: [],
                     macos: [],
                     other: []
                 };
+
+                // 标签
+                const labels = [];
   
                 data.forEach(item => {
                     const image = item.Image.replace(/<sup>.*?<\/sup>/g, '').trim();
                     const yamlLabel = item['YAML Label'].replace(/`/g, '').trim();
+                    const yamlLabels = parseYamlLabel(yamlLabel);
   
-                    const entry = { image, yamlLabels: parseYamlLabel(yamlLabel) };
+                    const entry = { image, yamlLabels };
+                    labels.push(...yamlLabels);
   
                     if (image.includes('Ubuntu')) {
                         categories.ubuntu.push(entry);
@@ -90,11 +115,14 @@ jobs:
                 });
   
                 return {
+                    sources: process.env.GITHUB_REPO,
+                    labels: [...new Set(labels)].sort(),
                     categories,
                     updated: new Date().toISOString()
                 };
             }
   
+            // 解析 YAML 标签
             function parseYamlLabel(yamlLabel) {
                 return yamlLabel
                     .split(' or ')
@@ -118,11 +146,56 @@ jobs:
                     process.exit(1);
                 }
             })();
+      
+      - name: Update JSON file
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const data = fs.readFileSync(process.env.DATA_CENTER_FILE, 'utf8');
+            const json = JSON.parse(data);
+
+            // {
+            //   "data": [
+            //     {
+            //       "name": "runner-images",
+            //       "description": "GitHub Actions Runner OS Versions",
+            //       "description.zh": "GitHub Actions Runner 操作系统版本",
+            //       "path": "runner-images.json",
+            //       "updated": "2021-10-01T00:00:00.000Z"
+            //     }
+            //   ]
+            // }
+
+            const index = json.data.findIndex(item => item.name === process.env.DATA_CENTER_NAME);
+            // 处理路径文件, 改成相对路径
+            const json_path = process.env.JSON_FILE_PATH.replace(`${process.env.GITHUB_WORKSPACE}/`, '');
+            // 处理更新时间
+            const updated = new Date().toISOString();
+
+
+            if (index !== -1) {
+                json.data[index].path = json_path;
+                json.data[index].updated = updated;
+            } else {
+                json.data.push({
+                    name: process.env.DATA_CENTER_NAME,
+                    description: 'GitHub Actions Runner OS Versions',
+                    description.zh: 'GitHub Actions Runner 操作系统版本',
+                    path: json_path,
+                    updated: updated
+                });
+            }
+
+            fs.writeFileSync(process.env.DATA_CENTER_FILE, JSON.stringify(json, null, 2));
+            console.log(`JSON 文件已更新：${process.env.DATA_CENTER_FILE}`);
 
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add runner-images.json
+          git add ${{ env.JSON_FILE_PATH }}
           git commit -m "Auto-generated JSON file [skip ci]"
+          git add ${{ env.DATA_CENTER_FILE }}
+          git commit -m "Update data center file [skip ci]"
           git push

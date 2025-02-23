@@ -1,0 +1,215 @@
+name: Generate GitHub Actions Versions JSON
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天 UTC 时间 00:00 运行
+  workflow_dispatch: # 允许手动触发
+
+env:
+  # 保存地址
+  JSON_FILE_PATH: ${{ github.workspace }}/actions-versions.json
+
+  # 数据中心文件
+  DATA_CENTER_FILE: ${{ github.workspace }}/data.json
+
+  # 在数据中心的标识
+  DATA_CENTER_NAME: actions-versions
+
+  # 捕获
+  GITHUB_REPOS: [
+      # 代码检出
+      "actions/checkout", # 用于从仓库中检出代码
+
+      # 环境设置
+      "actions/setup-node", # 设置 Node.js 环境
+      "actions/setup-python", # 设置 Python 环境
+      "actions/setup-dotnet", # 设置 .NET 环境
+      "actions/setup-java", # 设置 Java 环境
+
+      # 依赖管理
+      "actions/cache", # 缓存依赖项以加速构建
+
+      # 构建与测试
+      "actions/upload-artifact", # 上传构建产物
+      "actions/download-artifact", # 下载构建产物
+      "codecov/codecov-action", # 上传代码覆盖率报告
+      "dorny/test-reporter", # 测试报告生成
+      "super-linter/super-linter", # 运行多种代码检查工具
+
+      # 安全与合规
+      "sonarsource/sonarqube-scan-action", # 使用 SonarQube 进行代码质量分析
+      "aquasecurity/trivy-action", # 使用 Trivy 进行容器镜像漏洞扫描
+
+      # 部署
+      "actions/deploy-pages", # 部署到 GitHub Pages
+      "JamesIves/github-pages-deploy-action", # 部署到 GitHub Pages（替代方案）
+      "docker/login-action", # 登录 Docker 仓库
+      "docker/setup-buildx-action", # 设置 Docker Buildx
+      "docker/build-push-action", # 构建并推送 Docker 镜像
+      "google-github-actions/deploy-appengine", # 部署到 Google App Engine
+      "azure/webapps-deploy", # 部署到 Azure Web Apps
+      "aws-actions/configure-aws-credentials", # 配置 AWS 凭证
+      "aws-actions/aws-cloudformation-github-deploy", # 使用 AWS CloudFormation 部署
+
+      # 远程操作
+      "appleboy/ssh-action", # 通过 SSH 连接到远程服务器执行命令
+
+      # 通知与集成
+      "slackapi/slack-github-action", # 发送通知到 Slack（替代方案）
+
+      # 自动化与工作流管理
+      "actions/github-script", # 在 GitHub Actions 中执行 JavaScript 脚本
+      "actions/labeler", # 自动为 Pull Request 添加标签
+      "actions/stale", # 自动标记和陈旧 Issue/PR
+    ]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install axios
+
+      # 获取 GITHUB_OWNER 有哪些仓库以及最新的信息
+      - name: Run script to generate JSON
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require("fs");
+            const axios = require("axios");
+
+            const GITHUB_REPOS = process.env.GITHUB_REPOS;
+
+            // 请求头
+            const headers = {
+              Accept: "application/vnd.github.v3+json",
+            };
+
+            // 获取仓库最新的信息
+            async function fetchLatestTag(git_repo) {
+              try {
+                const url = `https://api.github.com/repos/${git_repo}`;
+                console.log(`Fetching data from ${url}...`);
+                const response = await axios.get(url, { headers });
+                if (response.status !== 200) {
+                  throw new Error(`Failed to fetch data: ${response.status}`);
+                }
+
+                // 记录 description
+                const description = response.data.description;
+
+                // 请求 tags
+                const tagsUrl = response.data.tags_url;
+                const tagsResponse = await axios.get(tagsUrl, { headers });
+                if (tagsResponse.status !== 200) {
+                  throw new Error(`Failed to fetch tags: ${tagsResponse.status}`);
+                }
+
+                // 检查是否有标签
+                if (tagsResponse.data.length === 0) {
+                  return {
+                    latest: "N/A",
+                    major: "N/A",
+                    description: description,
+                  };
+                }
+
+                // 获取最新的 tag
+                const latestTag = tagsResponse.data[0].name;
+                return {
+                  latest: latestTag,
+                  major: parseTag(latestTag),
+                  description: description,
+                };
+              } catch (error) {
+                console.error(`Error fetching ${git_repo}:`, error.message);
+                return {
+                  latest: "Error",
+                  major: "Error",
+                  description: "Error",
+                };
+              }
+            }
+
+            // 处理 tag // v1.2.3 => 1.2.3 => 1
+            function parseTag(tag) {
+              return tag.replace(/^v/, "").split(".").slice(0, 1).join(".");
+            }
+
+            // 获取所有仓库的最新 tag
+            (async () => {
+              try {
+                const repos = GITHUB_REPOS;
+                const data = {
+                  actions: [],
+                  updated: new Date().toISOString(),
+                };
+
+                // 遍历仓库
+                for (const repo of repos) {
+                  const result = await fetchLatestTag(repo);
+                  data.actions.push({
+                    repo,
+                    latest: result.latest,
+                    major: result.major,
+                    description: result.description,
+                  });
+                }
+
+                // 将数据写入 JSON 文件
+                fs.writeFileSync(process.env.JSON_FILE_PATH.stringify(data, null, 2));
+                console.log(`JSON 文件已生成：${process.env.JSON_FILE_PATH}`);
+              } catch (error) {
+                console.error("Error:", error.message);
+                process.exit(1);
+              }
+            })();
+      
+      - name: Update JSON file
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const data = fs.readFileSync(process.env.DATA_CENTER_FILE, 'utf8');
+            const json = JSON.parse(data);
+
+            const index = json.data.findIndex(item => item.name === process.env.DATA_CENTER_NAME);
+            // 处理路径文件, 改成相对路径
+            const json_path = process.env.JSON_FILE_PATH.replace(`${process.env.GITHUB_WORKSPACE}/`, '');
+            // 处理更新时间
+            const updated = new Date().toISOString();
+
+            if (index !== -1) {
+                json.data[index].path = json_path;
+                json.data[index].updated = updated;
+            } else {
+                json.data.push({
+                    name: process.env.DATA_CENTER_NAME,
+                    description: 'Github Actions Versions',
+                    description.zh: 'Github Actions 中 action 版本',
+                    path: json_path,
+                    updated: updated
+                });
+            }
+
+            fs.writeFileSync(process.env.DATA_CENTER_FILE, JSON.stringify(json, null, 2));
+            console.log(`JSON 文件已更新：${process.env.DATA_CENTER_FILE}`);
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add ${{ env.JSON_FILE_PATH }}
+          git commit -m "Auto-generated JSON file [skip ci]"
+          git add ${{ env.DATA_CENTER_FILE }}
+          git commit -m "Update data center file [skip ci]"
+          git push

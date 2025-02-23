@@ -16,51 +16,8 @@ env:
   DATA_CENTER_NAME: actions-versions
 
   # 捕获
-  GITHUB_REPOS: |
-      # 代码检出
-    - "actions/checkout", # 用于从仓库中检出代码
+  GITHUB_REPOS: '["actions/checkout", "actions/setup-node", "actions/setup-python", "actions/setup-dotnet", "actions/setup-java", "actions/cache", "actions/upload-artifact", "actions/download-artifact", "codecov/codecov-action", "dorny/test-reporter", "super-linter/super-linter", "sonarsource/sonarqube-scan-action", "aquasecurity/trivy-action", "actions/deploy-pages", "JamesIves/github-pages-deploy-action", "docker/login-action", "docker/setup-buildx-action", "docker/build-push-action", "google-github-actions/deploy-appengine", "azure/webapps-deploy", "aws-actions/configure-aws-credentials", "aws-actions/aws-cloudformation-github-deploy", "appleboy/ssh-action", "slackapi/slack-github-action", "actions/github-script", "actions/labeler", "actions/stale"]'
 
-      # 环境设置
-    - "actions/setup-node", # 设置 Node.js 环境
-    - "actions/setup-python", # 设置 Python 环境
-    - "actions/setup-dotnet", # 设置 .NET 环境
-    - "actions/setup-java", # 设置 Java 环境
-
-      # 依赖管理
-    - "actions/cache", # 缓存依赖项以加速构建
-
-      # 构建与测试
-    - "actions/upload-artifact", # 上传构建产物
-    - "actions/download-artifact", # 下载构建产物
-    - "codecov/codecov-action", # 上传代码覆盖率报告
-    - "dorny/test-reporter", # 测试报告生成
-    - "super-linter/super-linter", # 运行多种代码检查工具
-
-      # 安全与合规
-    - "sonarsource/sonarqube-scan-action", # 使用 SonarQube 进行代码质量分析
-    - "aquasecurity/trivy-action", # 使用 Trivy 进行容器镜像漏洞扫描
-
-      # 部署
-    - "actions/deploy-pages", # 部署到 GitHub Pages
-    - "JamesIves/github-pages-deploy-action", # 部署到 GitHub Pages（替代方案）
-    - "docker/login-action", # 登录 Docker 仓库
-    - "docker/setup-buildx-action", # 设置 Docker Buildx
-    - "docker/build-push-action", # 构建并推送 Docker 镜像
-    - "google-github-actions/deploy-appengine", # 部署到 Google App Engine
-    - "azure/webapps-deploy", # 部署到 Azure Web Apps
-    - "aws-actions/configure-aws-credentials", # 配置 AWS 凭证
-    - "aws-actions/aws-cloudformation-github-deploy", # 使用 AWS CloudFormation 部署
-
-      # 远程操作
-    - "appleboy/ssh-action", # 通过 SSH 连接到远程服务器执行命令
-
-      # 通知与集成
-    - "slackapi/slack-github-action", # 发送通知到 Slack（替代方案）
-
-      # 自动化与工作流管理
-    - "actions/github-script", # 在 GitHub Actions 中执行 JavaScript 脚本
-    - "actions/labeler", # 自动为 Pull Request 添加标签
-    - "actions/stale", # 自动标记和陈旧 Issue/PR
 
 jobs:
   generate:
@@ -86,7 +43,7 @@ jobs:
             const fs = require("fs");
             const axios = require("axios");
 
-            const GITHUB_REPOS = process.env.GITHUB_REPOS;
+            const GITHUB_REPOS = JSON.parse(process.env.GITHUB_REPOS);
 
             // 请求头
             const headers = {

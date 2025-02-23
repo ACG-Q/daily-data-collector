@@ -181,7 +181,7 @@ jobs:
                 json.data.push({
                     name: process.env.DATA_CENTER_NAME,
                     description: 'GitHub Actions Runner OS Versions',
-                    description.zh: 'GitHub Actions Runner 操作系统版本',
+                    ["description.zh"]: 'GitHub Actions Runner 操作系统版本',
                     path: json_path,
                     updated: updated
                 });

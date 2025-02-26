@@ -72,12 +72,12 @@
     },
     {
       "repo": "actions/download-artifact",
-      "latest": "v4.1.8",
+      "latest": "v4.1.9",
       "major": "4",
       "description": null,
       "status": "active",
-      "releaseDate": "2024-07-05T15:12:41Z",
-      "changelog": "## What's Changed\r\n* Update @actions/artifact version, bump dependencies by @robherley in https://github.com/actions/download-artifact/pull/341\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v4...v4.1.8",
+      "releaseDate": "2025-02-25T21:26:04Z",
+      "changelog": "## What's Changed\r\n* Add workflow file for publishing releases to immutable action package by @Jcambass in https://github.com/actions/download-artifact/pull/354\r\n* docs: small migration fix by @froblesmartin in https://github.com/actions/download-artifact/pull/370\r\n* Update MIGRATION.md by @andyfeller in https://github.com/actions/download-artifact/pull/372\r\n* Update artifact package to 2.2.2 by @yacaovsnc in https://github.com/actions/download-artifact/pull/380\r\n\r\n## New Contributors\r\n* @Jcambass made their first contribution in https://github.com/actions/download-artifact/pull/354\r\n* @froblesmartin made their first contribution in https://github.com/actions/download-artifact/pull/370\r\n* @andyfeller made their first contribution in https://github.com/actions/download-artifact/pull/372\r\n* @yacaovsnc made their first contribution in https://github.com/actions/download-artifact/pull/380\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v4...v4.1.9",
       "docsUrl": "https://github.com/actions/download-artifact"
     },
     {
@@ -262,14 +262,14 @@
     },
     {
       "repo": "actions/stale",
-      "latest": "v9.1.0",
-      "major": "9",
-      "description": "Marks issues and pull requests that have not had recent interaction",
-      "status": "active",
-      "releaseDate": "2025-01-21T03:34:36Z",
-      "changelog": "## What's Changed\r\n* Documentation update by @Marukome0743 in https://github.com/actions/stale/pull/1116\r\n* Add workflow file for publishing releases to immutable action package by @Jcambass in https://github.com/actions/stale/pull/1179\r\n* Update undici from 5.28.2 to 5.28.4 by @dependabot in https://github.com/actions/stale/pull/1150\r\n* Update actions/checkout from 3 to 4 by @dependabot in https://github.com/actions/stale/pull/1091\r\n* Update actions/publish-action from 0.2.2 to 0.3.0 by @dependabot in https://github.com/actions/stale/pull/1147\r\n* Update ts-jest from 29.1.1 to 29.2.5 by @dependabot in https://github.com/actions/stale/pull/1175\r\n* Update @actions/core from 1.10.1 to 1.11.1 by @dependabot in https://github.com/actions/stale/pull/1191\r\n* Update @types/jest from 29.5.11 to 29.5.14 by @dependabot in https://github.com/actions/stale/pull/1193\r\n* Update @actions/cache from 3.2.2 to 4.0.0 by @dependabot in https://github.com/actions/stale/pull/1194\r\n\r\n## New Contributors\r\n* @Marukome0743 made their first contribution in https://github.com/actions/stale/pull/1116\r\n* @Jcambass made their first contribution in https://github.com/actions/stale/pull/1179\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v9...v9.1.0",
-      "docsUrl": "https://github.com/actions/stale"
+      "latest": "Error",
+      "major": "Error",
+      "description": "Error",
+      "status": "Error",
+      "releaseDate": "Error",
+      "changelog": "Error",
+      "docsUrl": "Error"
     }
   ],
-  "updated": "2025-02-25T00:42:55.467Z"
+  "updated": "2025-02-26T00:42:40.491Z"
 }

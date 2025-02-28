@@ -19,8 +19,8 @@ class GovSpiderConfig:
         "searchWord": "国务院办公厅关于{}年部分节假日安排的通知"
     }
     SELECTORS = {
-        "result_container": ".basic_result_content",
-        "result_item": ".item",
+        "result_container": ".basic_result_content>.item",
+        "result_item": ".basic_result_content>.item.is-news",
         "title_link": "a.title",
         "content_container": ".pages_content"
     }
@@ -42,7 +42,7 @@ class GovHolidaySpider:
         self.crawler = HolidayCrawler(debug)
 
     async def _log(self, message: str, icon: str = "🔍"):
-        """记录日志（美化版）"""
+        """记录日志"""
         if self.debug:
             timestamp = datetime.now().strftime("%H:%M:%S")
             print(f"{icon} [{timestamp}] {message}")
@@ -192,11 +192,11 @@ class HolidayCrawler:
             print(f"{icon} [{timestamp}] {message}")
 
     def parse(self, text: str, year: int) -> dict:
-        """解析年度通知核心内容(优化版)"""
+        """解析年度通知核心内容"""
         self._log(f"开始解析 {year}年节假日通知", "🔍")
         result = {}
 
-        # 优化后的正则表达式
+        # 假日正则表达式
         holiday_pattern = re.compile(
             r'([一二三四五六七八九十]+)、\s*'       # 匹配序号
             r'([^：:\n]+?)\s*'                     # 匹配节日名称部分
@@ -205,19 +205,13 @@ class HolidayCrawler:
             re.DOTALL
         )
 
-        # 日期范围匹配优化
-        # date_range_pattern = re.compile(
-        #     r'(\d{1,2}月\d{1,2}日)\D*至\D*'        # 匹配开始日期
-        #     r'(?:(\d{1,2}月)?(\d{1,2}日))'         # 匹配结束日期(月份可选)
-        # )
-
         # 日期范围正则，支持年份和简写格式
         date_range_pattern = re.compile(
             r'((?:\d{4}年)?\d{1,2}月\d{1,2}日)\D*至\D*'  # 开始日期
             r'((?:\d{4}年)?(?:\d{1,2}月\d{1,2}日|\d{1,2}日))'  # 结束日期
         )
 
-        # 修改后的补班日期匹配模式（支持多个日期分隔）
+        # 补班日期匹配模式（支持多个日期分隔）
         workday_pattern = re.compile(
             r'((?:\d{1,2}月\d{1,2}日\s*(?:（[^）]*）)?\s*[,、]?\s*)+)上班'  # 匹配连续日期
         )
@@ -246,16 +240,6 @@ class HolidayCrawler:
 
                 end_date = self._parse_end_date(end_str, start_date, year)
                 self._log(f"解析结束日期: {end_str} → {end_date}", "⏱️" if end_date else "⚠️")
-
-                # 处理省略月份的情况(如"至8日")
-                # if end_month:
-                #     end_date = self._parse_date(f"{end_month}{end_day}", year)
-                # else:
-                #     try:
-                #         end_date = start_date.replace(day=int(end_day.strip('日')))
-                #     except ValueError:
-                #         self._log(f"无效的月末日期: {end_day}")
-                #         end_date = None
 
                 if start_date and end_date:
                     # 处理跨年逻辑
@@ -307,7 +291,7 @@ class HolidayCrawler:
                 self._log(f"过滤后有效补班日期: {len(valid_work_days)}个", "🛡️")
                 holiday_data['work_days'] = valid_work_days
 
-            # 合并结果（增加节日名称校验）
+            # 合并结果
             for name in names:
                 name = name.strip()
                 if not name:
@@ -328,7 +312,7 @@ class HolidayCrawler:
         self._log("开始合并相同日期的节日", "🔄")
         date_to_names = {}  # 用于存储日期范围对应的节日名称
         for name, info in result.items():
-            dates = tuple(info.get('dates', []))  # 将日期列表转换为元组（可哈希）
+            dates = tuple(info.get('dates', []))  # 将日期列表转换为元组
             if dates not in date_to_names:
                 date_to_names[dates] = []
             date_to_names[dates].append(name)
@@ -348,7 +332,7 @@ class HolidayCrawler:
                 # 否则直接添加到最终结果
                 final_result['holidays'][names[0]] = result[names[0]]
 
-        # 新增元数据解析
+        # 元数据解析
         publish_date = self._parse_publish_date(text)
         if publish_date:
             final_result['metadata']['publish_date'] = publish_date
@@ -401,7 +385,7 @@ class HolidayCrawler:
         """生成连续日期序列"""
         return [start + timedelta(days=x) for x in range((end - start).days + 1)]
 
-    # 在 HolidayCrawler 类中新增解析方法
+    # 发文日期解析方法
     def _parse_publish_date(self, text: str) -> datetime:
         """解析发文日期"""
         publish_date_pattern = re.compile(
@@ -416,7 +400,7 @@ class HolidayCrawler:
 
 
 async def main(args):
-    """主运行函数（兼容交互式环境）"""
+    """主运行函数"""
     spider = GovHolidaySpider(debug=not args.quiet)
 
     # 显示启动横幅
@@ -439,10 +423,10 @@ async def main(args):
         with open(save_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2, default=str)
 
-    return results  # 返回结果供交互式环境使用
+    return results
 
 def parse_args():
-    """解析命令行参数（兼容交互式环境）"""
+    """解析命令行参数"""
 
     parser = argparse.ArgumentParser(
         description="国务院节假日安排抓取工具",

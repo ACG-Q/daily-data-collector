@@ -13,6 +13,13 @@
       "description.zh": "GitHub Actions Runner 操作系统版本",
       "path": "actions-versions.json",
       "updated": "2025-02-28T00:42:58.330Z"
+    },
+    {
+      "name": "holidays",
+      "description": "Chinese Holiday Information",
+      "description.zh": "中国节假日信息",
+      "path": "holidays/",
+      "updated": "2025-02-28T01:12:40.128Z"
     }
   ]
 }

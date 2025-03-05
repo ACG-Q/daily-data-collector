@@ -51,9 +51,7 @@ jobs:
                       _years.push(i);
                   }
                   
-                  return {
-                    year: _years.join(" ")
-                  };
+                  core.setOutput('year', _years.join(' '));
 
 
             # 获取当前年份的节假日数据

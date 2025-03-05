@@ -19,13 +19,6 @@
       "description": "Chinese Holiday Information",
       "description_zh": "中国节假日信息",
       "path": [
-        "holidays/holidays_2000.json",
-        "holidays/holidays_2001.json",
-        "holidays/holidays_2002.json",
-        "holidays/holidays_2003.json",
-        "holidays/holidays_2004.json",
-        "holidays/holidays_2005.json",
-        "holidays/holidays_2006.json",
         "holidays/holidays_2007.json",
         "holidays/holidays_2008.json",
         "holidays/holidays_2009.json",

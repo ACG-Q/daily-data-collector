@@ -3,14 +3,14 @@
     {
       "name": "runner-images",
       "description": "GitHub Actions Runner OS Versions",
-      "description.zh": "GitHub Actions Runner 操作系统版本",
+      "description_zh": "GitHub Actions Runner 操作系统版本信息",
       "path": "runner-images.json",
       "updated": "2025-03-05T01:20:06.737Z"
     },
     {
       "name": "actions-versions",
       "description": "Github Actions Versions",
-      "description.zh": "GitHub Actions Runner 操作系统版本",
+      "description_zh": "GitHub Actions 版本信息",
       "path": "actions-versions.json",
       "updated": "2025-03-05T00:43:45.594Z"
     },

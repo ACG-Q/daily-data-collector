@@ -1,0 +1,147 @@
+name: Split BlackIP TXT to TXT
+
+on:
+    schedule:
+      - cron: "0 0 * * *" # 每天 UTC 时间 00:00 运行
+    workflow_dispatch: # 允许手动触发
+  
+
+env:
+    # 雷池WAF社区版限制1000条
+    # 每个txt限制为1000条
+    LINE_LIMIT: 1000
+
+    # 黑名单IPs 来源
+    SOURCES: '["https://blackip.ustc.edu.cn/list.php?txt"]'
+
+    # 输出文件夹
+    OUTPUT_PATH: ${{ github.workspace }}/blackip
+
+    # 数据中心文件
+    DATA_CENTER_FILE: ${{ github.workspace }}/data.json
+
+    # 在数据中心的标识
+    DATA_CENTER_NAME: blackIPs
+
+jobs:
+    generate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            
+            - name: Set up Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: "22"
+            
+            - name: Install dependencies
+              run: npm install axios
+        
+            - name: Run script to generate JSON
+              uses: actions/github-script@v6
+              with:
+                script: |
+                    const fs = require("fs");
+                    const axios = require("axios");
+                    const path = require("path");
+
+                    const SOURCES = JSON.parse(process.env.SOURCES); // 获取黑名单IPs 来源
+                    const LINE_LIMIT = process.env.LINE_LIMIT; // 每个文件的最大行数
+                    const OUTPUT_PATH = process.env.OUTPUT_PATH; // 输出文件夹路径
+
+                    /**
+                    * 请求获取黑名单IPs
+                    * @param {string} source - 数据来源URL
+                    * @returns {Promise<string>} - 黑名单IPs数据
+                    */
+                    async function fetchBlackIPs(source) {
+                        try {
+                            const response = await axios.get(source);
+                            if (response.status !== 200) {
+                                throw new Error(`请求失败，状态码：${response.status}`);
+                            }
+                            return response.data;
+                        } catch (error) {
+                            console.error(`获取数据失败（${source}）：`, error.message);
+                            return null; // 返回 null 以便上层处理
+                        }
+                    }
+
+                    /**
+                    * 将黑名单IPs按行分割并保存到文件中
+                    * @param {string} blackIPs - 黑名单IPs数据
+                    * @param {string} outputPath - 输出文件夹路径
+                    * @param {number} sourceIndex - 数据源的索引（用于生成唯一文件名）
+                    */
+                    function splitAndSaveBlackIPs(blackIPs, outputPath, sourceIndex) {
+                        if (!blackIPs) {
+                            console.warn("黑名单IPs数据为空，跳过保存");
+                            return;
+                        }
+
+                        const lines = blackIPs.split("\n").filter(line => line.trim()); // 过滤空行
+                        if (lines.length === 0) {
+                            console.warn("黑名单IPs数据为空，跳过保存");
+                            return;
+                        }
+
+                        // 创建输出文件夹
+                        if (!fs.existsSync(outputPath)) {
+                            fs.mkdirSync(outputPath, { recursive: true }); // 递归创建文件夹
+                        }
+
+                        // 按行数分割并保存文件
+                        for (let i = 0; i < lines.length; i += LINE_LIMIT) {
+                            const chunk = lines.slice(i, i + LINE_LIMIT).join("\n");
+                            const fileName = `blackip_${sourceIndex}_${Math.floor(i / LINE_LIMIT) + 1}.txt`;
+                            const filePath = path.join(outputPath, fileName);
+                            fs.writeFileSync(filePath, chunk, "utf8");
+                            console.log(`文件已创建：${filePath}`);
+                        }
+
+                        console.log(`所有文件已保存到：${outputPath}`);
+                    }
+
+                    (async () => {
+                        try {
+                            for (let i = 0; i < SOURCES.length; i++) {
+                                const source = SOURCES[i];
+                                console.log(`正在从 ${source} 获取数据...`);
+                                const blackIPs = await fetchBlackIPs(source);
+                                splitAndSaveBlackIPs(blackIPs, OUTPUT_PATH, i + 1);
+                            }
+                        } catch (error) {
+                            console.error("程序运行出错：", error.message);
+                            process.exit(1);
+                        }
+                    })();
+            - name: Update JSON file
+              uses: actions/github-script@v6
+              with:
+                script: |
+                    const { buildData, processDataUpdate } = require('.github/utils/json.js');
+                    const { listFiles } = require('.github/utils/utils.js');
+
+                    const output_path_rel = process.env.OUTPUT_PATH.replace(`${process.env.GITHUB_WORKSPACE}/`, '');
+                    const path = listFiles(output_path_rel);
+
+                    const data = buildData({
+                        name: process.env.DATA_CENTER_NAME,
+                        description: 'Automatically subscribe to blacklisted IP addresses and split them into multiple files (1000 entries per file) for easy management and usage.',
+                        description_zh: '自动订阅黑名单IP地址，并按每1000条分割为多个文件，便于管理和使用。',
+                        path
+                    });
+
+                    processDataUpdate(process.env.DATA_CENTER_FILE, data)
+                    console.log(`JSON 文件已更新：${process.env.DATA_CENTER_FILE}`);
+            
+            - name: Commit and push changes
+              run: |
+                git config --global user.name "GitHub Actions"
+                git config --global user.email "actions@github.com"
+                git add ${{ env.OUTPUT_PATH }}
+                git commit -m "Auto-generated JSON file [skip ci]"
+                git add ${{ env.DATA_CENTER_FILE }}
+                git commit -m "Update data center file [skip ci]"
+                git push

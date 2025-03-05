@@ -1,8 +1,6 @@
-name: Generate Holidays JSON
+name: Generate Holidays JSON Temp
 
 on:
-    schedule:
-        - cron: '0 20 15 * *' # 12点自动执行(UTC+8)
     workflow_dispatch: # 允许手动触发
 
 env:
@@ -11,6 +9,9 @@ env:
     
     # 数据来源
     SOURCE: https://www.gov.cn/
+
+    # 指定年份
+    YEARS: '[2000, 2024]'
 
     # 数据中心文件
     DATA_CENTER_FILE: ${{ github.workspace }}/data.json
@@ -35,22 +36,32 @@ jobs:
               run: |
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
-
-            # 获取当前年份和下一年份
-            - name: Get current and next year
+            
+            - name: Get years
               id: years
-              run: |
-                  current_year=$(date +%Y)
-                  next_year=$((current_year + 1))
-                  echo "current_year=$current_year" >> $GITHUB_OUTPUT
-                  echo "next_year=$next_year" >> $GITHUB_OUTPUT
+              uses: actions/github-script@v6
+              with:
+                script: |
+                  const years = JSON.parse(process.env.YEARS);
+                  const current_year = years[0];
+                  const next_year = years[1];
+                  // 生成年份列表 current_year-next_year
+                  let _years = [];
+                  for (let i = current_year; i <= next_year; i++) {
+                      _years.push(i);
+                  }
+                  
+                  return {
+                    year: _years.join(" ")
+                  };
+
 
             # 获取当前年份的节假日数据
             - name: Get holidays data
               id: get_holidays
               working-directory: .github/holidays
               run: |
-                  python holidays.py -y ${{ steps.years.outputs.current_year }} ${{ steps.years.outputs.next_year}} -o ${{ env.OUTPUT_PATH }}
+                  python holidays.py -y ${{ steps.years.outputs.year }} -o ${{ env.OUTPUT_PATH }}
 
             - name: Update JSON file
               uses: actions/github-script@v6
@@ -59,7 +70,6 @@ jobs:
                     const { buildData, processDataUpdate } = require('.github/utils/json.js');
                     const { listFiles } = require('.github/utils/utils.js');
 
-                    // 相对文件夹路径
                     const output_path_rel = process.env.OUTPUT_PATH.replace(`${process.env.GITHUB_WORKSPACE}/`, '');
                     const path = listFiles(output_path_rel);
 

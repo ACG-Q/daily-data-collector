@@ -149,39 +149,18 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const fs = require('fs');
-            let json = {}; // 默认值为空对象
+            const {buildData, processDataUpdate} = require('.github/utils/json.js');
 
-            try {
-                // 尝试读取文件
-                const data = fs.readFileSync(process.env.DATA_CENTER_FILE, 'utf8');
-                json = JSON.parse(data); // 如果文件存在且内容合法，解析为 JSON 对象
-            } catch (error) {
-                // 如果文件不存在或读取失败，捕获错误并返回空对象
-                console.warn(`文件 ${process.env.DATA_CENTER_FILE} 不存在或读取失败，返回空对象。`);
-                json = { data: [] }; // 初始化一个空的数据结构
-            }
-
-            const index = json.data.findIndex(item => item.name === process.env.DATA_CENTER_NAME);
-            // 处理路径文件, 改成相对路径
             const json_path = process.env.JSON_FILE_PATH.replace(`${process.env.GITHUB_WORKSPACE}/`, '');
-            // 处理更新时间
-            const updated = new Date().toISOString();
 
-            if (index !== -1) {
-                json.data[index].path = json_path;
-                json.data[index].updated = updated;
-            } else {
-                json.data.push({
-                    name: process.env.DATA_CENTER_NAME,
-                    description: 'Github Actions Versions',
-                    ["description.zh"]: 'GitHub Actions Runner 操作系统版本',
-                    path: json_path,
-                    updated: updated
-                });
-            }
+            const data = buildData({
+              name: process.env.DATA_CENTER_NAME,
+              description: 'Github Actions Versions',
+              description_zh: 'GitHub Actions Runner 操作系统版本',
+              path: [json_path]
+            });
 
-            fs.writeFileSync(process.env.DATA_CENTER_FILE, JSON.stringify(json, null, 2));
+            processDataUpdate(process.env.DATA_CENTER_FILE, data)
             console.log(`JSON 文件已更新：${process.env.DATA_CENTER_FILE}`);
 
       - name: Commit and push changes

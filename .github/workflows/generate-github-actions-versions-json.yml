@@ -16,7 +16,7 @@ env:
   DATA_CENTER_NAME: actions-versions
 
   # 捕获
-  GITHUB_REPOS: '["actions/checkout", "actions/setup-node", "actions/setup-python", "actions/setup-dotnet", "actions/setup-java", "actions/cache", "actions/upload-artifact", "actions/download-artifact", "codecov/codecov-action", "dorny/test-reporter", "super-linter/super-linter", "sonarsource/sonarqube-scan-action", "aquasecurity/trivy-action", "actions/deploy-pages", "JamesIves/github-pages-deploy-action", "docker/login-action", "docker/setup-buildx-action", "docker/build-push-action", "google-github-actions/deploy-appengine", "azure/webapps-deploy", "aws-actions/configure-aws-credentials", "aws-actions/aws-cloudformation-github-deploy", "appleboy/ssh-action", "slackapi/slack-github-action", "actions/github-script", "actions/labeler", "actions/stale"]'
+  GITHUB_REPOS: '["actions/checkout", "actions/setup-node", "actions/setup-python", "actions/setup-dotnet", "actions/setup-java", "actions/cache", "actions/upload-artifact", "actions/download-artifact", "codecov/codecov-action", "dorny/test-reporter", "super-linter/super-linter", "sonarsource/sonarqube-scan-action", "aquasecurity/trivy-action", "actions/deploy-pages", "JamesIves/github-pages-deploy-action", "docker/login-action", "docker/setup-buildx-action", "docker/build-push-action", "google-github-actions/deploy-appengine", "azure/webapps-deploy", "aws-actions/configure-aws-credentials", "aws-actions/aws-cloudformation-github-deploy", "appleboy/ssh-action", "slackapi/slack-github-action", "actions/github-script", "actions/labeler", "actions/stale", "actions/create-release", "softprops/action-gh-release"]'
 
 
 jobs:

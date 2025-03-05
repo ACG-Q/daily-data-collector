@@ -1,5 +1,6 @@
 # daily-data-collector
 
+访问 [数据展示页面](https://acg-q.github.io/daily-data-collector/) 可实时查看以下数据
 
 ## 数据展示
 

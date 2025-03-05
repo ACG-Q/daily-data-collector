@@ -48,9 +48,15 @@
       "description_zh": "自动订阅黑名单IP地址，并按每1000条分割为多个文件，便于管理和使用。",
       "path": [
         "blackip/blackip_1_1.txt",
-        "blackip/blackip_1_2.txt"
+        "blackip/blackip_1_2.txt",
+        "blackip/blackip_1_3.txt",
+        "blackip/blackip_1_4.txt",
+        "blackip/blackip_1_5.txt",
+        "blackip/blackip_1_6.txt",
+        "blackip/blackip_1_7.txt",
+        "blackip/blackip_1_8.txt"
       ],
-      "updated": "2025-03-05T08:13:53.613Z"
+      "updated": "2025-03-05T08:15:29.593Z"
     }
   ]
 }

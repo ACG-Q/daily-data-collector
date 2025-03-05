@@ -32,12 +32,12 @@
     },
     {
       "repo": "actions/setup-dotnet",
-      "latest": "v4.3.0",
-      "major": "4",
+      "latest": "v3.3.1",
+      "major": "3",
       "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk",
       "status": "active",
-      "releaseDate": "2025-01-30T03:20:58Z",
-      "changelog": "## What's Changed\r\n* README update - add permissions section by @benwells in https://github.com/actions/setup-dotnet/pull/587\r\n* Configure Dependabot settings by @HarithaVattikuti in https://github.com/actions/setup-dotnet/pull/585\r\n* Upgrade **cache** from 3.2.4 to 4.0.0 by @aparnajyothi-y in https://github.com/actions/setup-dotnet/pull/586\r\n* Upgrade **actions/publish-immutable-action** from 0.0.3 to 0.0.4 by @dependabot in https://github.com/actions/setup-dotnet/pull/590\r\n* Upgrade **@actions/http-client** from 2.2.1 to 2.2.3 by @dependabot in https://github.com/actions/setup-dotnet/pull/592\r\n* Upgrade **undici** from 5.28.4 to 5.28.5 by @dependabot in https://github.com/actions/setup-dotnet/pull/596\r\n\r\n## New Contributors\r\n* @benwells made their first contribution in https://github.com/actions/setup-dotnet/pull/587\r\n* @aparnajyothi-y made their first contribution in https://github.com/actions/setup-dotnet/pull/586\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v4...v4.3.0",
+      "releaseDate": "2025-03-04T03:46:07Z",
+      "changelog": "## What's Changed\r\n* `v3` - Remove `azureedge.net` fallback logic and update install scripts by @zaataylor in https://github.com/actions/setup-dotnet/pull/573\r\nAs outlined in[ Critical .NET Install Links Are Changing](https://devblogs.microsoft.com/dotnet/critical-dotnet-install-links-are-changing/#call-to-action), remove the storage account fallback logic added for v3 in [#567](https://github.com/actions/setup-dotnet/pull/567) and update the install scripts accordingly.\r\n    **Related issue:** https://github.com/dotnet/install-scripts/issues/559\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v3...v3.3.1",
       "docsUrl": "https://github.com/actions/setup-dotnet"
     },
     {
@@ -271,5 +271,5 @@
       "docsUrl": "https://github.com/actions/stale"
     }
   ],
-  "updated": "2025-03-04T00:43:51.648Z"
+  "updated": "2025-03-05T00:43:38.478Z"
 }

@@ -36,7 +36,10 @@ jobs:
               run: npm install
 
             - name: Build
-              run: npm run build
+              run: |
+                repo_name=$(echo ${{ github.repository }} | cut -d '/' -f 2)
+                export BASE_PATH=$repo_name  
+                npm run build
 
             - name: Setup Pages
               uses: actions/configure-pages@v5

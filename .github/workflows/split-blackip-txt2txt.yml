@@ -47,7 +47,7 @@ jobs:
                     const path = require("path");
 
                     const SOURCES = JSON.parse(process.env.SOURCES); // 获取黑名单IPs 来源
-                    const LINE_LIMIT = process.env.LINE_LIMIT; // 每个文件的最大行数
+                    const LINE_LIMIT = parseInt(process.env.LINE_LIMIT); // 每个文件的最大行数
                     const OUTPUT_PATH = process.env.OUTPUT_PATH; // 输出文件夹路径
 
                     /**
@@ -93,7 +93,7 @@ jobs:
 
                         // 按行数分割并保存文件
                         for (let i = 0; i < lines.length; i += LINE_LIMIT) {
-                            console.log(`正在处理第 ${i + 1} 到 ${i + LINE_LIMIT} 条数据...`);
+                            // console.log(`正在处理第 ${i + 1} 到 ${i + LINE_LIMIT} 条数据...`);
                             const chunk = lines.slice(i, i + LINE_LIMIT).join("\n");
                             const fileName = `blackip_${sourceIndex}_${Math.floor(i / LINE_LIMIT) + 1}.txt`;
                             const filePath = path.join(outputPath, fileName);

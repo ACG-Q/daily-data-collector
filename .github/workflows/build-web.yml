@@ -3,9 +3,24 @@ name: Build Web
 on:
     workflow_dispatch:
 
+# 设置 GitHub Pages 部署权限
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+  
+# 允许仅保留最新一次部署，防止并发冲突
+concurrency:
+    group: "pages"
+    cancel-in-progress: false
+
 jobs:
     build:
         runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4

@@ -93,6 +93,7 @@ jobs:
 
                         // 按行数分割并保存文件
                         for (let i = 0; i < lines.length; i += LINE_LIMIT) {
+                            console.log(`正在处理第 ${i + 1} 到 ${i + LINE_LIMIT} 条数据...`);
                             const chunk = lines.slice(i, i + LINE_LIMIT).join("\n");
                             const fileName = `blackip_${sourceIndex}_${Math.floor(i / LINE_LIMIT) + 1}.txt`;
                             const filePath = path.join(outputPath, fileName);

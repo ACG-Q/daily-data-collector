@@ -10,9 +10,11 @@
     {
       "name": "actions-versions",
       "description": "Github Actions Versions",
-      "description_zh": "GitHub Actions 版本信息",
-      "path": "actions-versions.json",
-      "updated": "2025-03-05T00:43:45.594Z"
+      "description_zh": "GitHub Actions Runner 操作系统版本",
+      "path": [
+        "actions-versions.json"
+      ],
+      "updated": "2025-03-06T00:43:40.129Z"
     },
     {
       "name": "holidays",

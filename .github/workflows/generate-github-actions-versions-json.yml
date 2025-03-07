@@ -46,103 +46,125 @@ jobs:
             const GITHUB_REPOS = JSON.parse(process.env.GITHUB_REPOS);
 
             const headers = {
-              Accept: "application/vnd.github.v3+json",
+                Accept: "application/vnd.github.v3+json",
+            };
+
+            const fetchApi = async (url) => {
+              const response = await axios.get(url, { headers });
+              const rateLimit = response.headers["x-ratelimit-limit"];
+              const rateLimitRemaining = response.headers["x-ratelimit-remaining"];
+              const rateLimitReset = response.headers["x-ratelimit-reset"];
+
+              console.log(`🔄 Rate limit remaining: ${rateLimitRemaining}/${rateLimit}`);
+
+              if (response.status === 403 || response.status === 429) {
+                  const resetTime = new Date(rateLimitReset * 1000).toLocaleTimeString();
+                  console.log(`⏳ Rate limit exceeded, waiting until ${resetTime}...`);
+                  await new Promise((resolve) =>
+                      setTimeout(resolve, rateLimitReset * 1000 - Date.now())
+                  );
+                  return await fetchApi(url);
+              }
+
+              if (response.status !== 200) {
+                  throw new Error(`❌ Failed to fetch data: ${response.status}`);
+              }
+
+              return response.data;
             };
 
             async function fetchLatestTag(git_repo) {
-              try {
-                const url = `https://api.github.com/repos/${git_repo}`;
-                console.log(`Fetching data from ${url}...`);
-                const response = await axios.get(url, { headers });
-                if (response.status !== 200) {
-                  throw new Error(`Failed to fetch data: ${response.status}`);
+                try {
+                    const url = `https://api.github.com/repos/${git_repo}`;
+                    console.log(`📡 Fetching data from ${url}...`);
+                    const repoData = await fetchApi(url);
+
+                    const description = repoData.description;
+                    const archived = repoData.archived;
+                    const docsUrl = repoData.html_url;
+
+                    // 请求releases
+                    const releasesUrl = repoData.releases_url.replace("{/id}", "");
+                    const releasesResponse = await fetchApi(releasesUrl);
+
+                    // 检查是否有releases
+                    if (releasesResponse.length === 0) {
+                        console.log(`⚠️ No releases found for ${git_repo}`);
+                        return {
+                            latest: "N/A",
+                            major: "N/A",
+                            status: archived ? "deprecated" : "active",
+                            description: description,
+                            releaseDate: "N/A",
+                            changelog: "N/A",
+                            docsUrl: docsUrl,
+                        };
+                    }
+
+                    // 获取最新的release信息
+                    const latestRelease = releasesResponse[0];
+                    const latestTag = latestRelease.tag_name;
+                    const releaseDate = latestRelease.published_at;
+                    const changelog = latestRelease.body || "No changelog provided";
+
+                    console.log(`✅ Latest tag for ${git_repo}: ${latestTag}`);
+
+                    return {
+                        latest: latestTag,
+                        major: parseTag(latestTag),
+                        status: archived ? "deprecated" : "active",
+                        description: description,
+                        releaseDate: releaseDate,
+                        changelog: changelog,
+                        docsUrl: docsUrl,
+                    };
+                } catch (error) {
+                    console.error(`❌ Error fetching ${git_repo}:`, error.message);
+                    return {
+                        latest: "Error",
+                        major: "Error",
+                        status: "Error",
+                        description: "Error",
+                        releaseDate: "Error",
+                        changelog: "Error",
+                        docsUrl: "Error",
+                    };
                 }
-
-                const description = response.data.description;
-                const archived = response.data.archived;
-                const docsUrl = response.data.html_url;
-
-                // 请求releases
-                const releasesUrl = response.data.releases_url.replace('{/id}', '');
-                const releasesResponse = await axios.get(releasesUrl, { headers });
-                if (releasesResponse.status !== 200) {
-                  throw new Error(`Failed to fetch releases: ${releasesResponse.status}`);
-                }
-
-                // 检查是否有releases
-                if (releasesResponse.data.length === 0) {
-                  return {
-                    latest: "N/A",
-                    major: "N/A",
-                    status: archived ? "deprecated" : "active",
-                    description: description,
-                    releaseDate: "N/A",
-                    changelog: "N/A",
-                    docsUrl: docsUrl
-                  };
-                }
-
-                // 获取最新的release信息
-                const latestRelease = releasesResponse.data[0];
-                const latestTag = latestRelease.tag_name;
-                const releaseDate = latestRelease.published_at;
-                const changelog = latestRelease.body || "No changelog provided";
-
-                return {
-                  latest: latestTag,
-                  major: parseTag(latestTag),
-                  status: archived ? "deprecated" : "active",
-                  description: description,
-                  releaseDate: releaseDate,
-                  changelog: changelog,
-                  docsUrl: docsUrl
-                };
-              } catch (error) {
-                console.error(`Error fetching ${git_repo}:`, error.message);
-                return {
-                  latest: "Error",
-                  major: "Error",
-                  status: "Error",
-                  description: "Error",
-                  releaseDate: "Error",
-                  changelog: "Error",
-                  docsUrl: "Error"
-                };
-              }
             }
 
             function parseTag(tag) {
-              return tag.replace(/^v/, "").split(".")[0];
+                return tag.replace(/^v/, "").split(".")[0];
             }
 
             (async () => {
-              try {
-                const repos = GITHUB_REPOS;
-                const data = {
-                  actions: [],
-                  updated: new Date().toISOString(),
-                };
+                try {
+                    const repos = GITHUB_REPOS;
+                    const data = {
+                        actions: [],
+                        updated: new Date().toISOString(),
+                    };
 
-                for (const repo of repos) {
-                  const result = await fetchLatestTag(repo);
-                  data.actions.push({
-                    repo,
-                    latest: result.latest,
-                    major: result.major,
-                    description: result.description,
-                    status: result.status,
-                    releaseDate: result.releaseDate,
-                    changelog: result.changelog,
-                    docsUrl: result.docsUrl
-                  });
+                    for (const repo of repos) {
+                        console.log(`🔍 Processing repository: ${repo}`);
+                        const result = await fetchLatestTag(repo);
+                        data.actions.push({
+                            repo,
+                            latest: result.latest,
+                            major: result.major,
+                            description: result.description,
+                            status: result.status,
+                            releaseDate: result.releaseDate,
+                            changelog: result.changelog,
+                            docsUrl: result.docsUrl,
+                        });
+                    }
+
+                    fs.writeFileSync(process.env.JSON_FILE_PATH, JSON.stringify(data, null, 2));
+                    console.log(`📄 JSON file generated: ${process.env.JSON_FILE_PATH}`);
+                } catch (error) {
+                    console.error("❌ Error:", error.message);
+                    process.exit(1);
                 }
-
-                fs.writeFileSync(process.env.JSON_FILE_PATH, JSON.stringify(data, null, 2));
-                console.log(`JSON file generated: ${process.env.JSON_FILE_PATH}`);
-              } catch (error) {
-                console.error("Error:", error.message);
-                process.exit(1);
-              }
             })();
       
       - name: Update JSON file

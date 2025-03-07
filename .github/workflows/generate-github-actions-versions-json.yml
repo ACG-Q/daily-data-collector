@@ -50,27 +50,39 @@ jobs:
             };
 
             const fetchApi = async (url) => {
-              const response = await axios.get(url, { headers });
-              const rateLimit = response.headers["x-ratelimit-limit"];
-              const rateLimitRemaining = response.headers["x-ratelimit-remaining"];
-              const rateLimitReset = response.headers["x-ratelimit-reset"];
+              try {
+                  const response = await axios.get(url, { headers });
+                  const rateLimit = response.headers["x-ratelimit-limit"];
+                  const rateLimitRemaining = response.headers["x-ratelimit-remaining"];
+                  const rateLimitReset = response.headers["x-ratelimit-reset"];
 
-              console.log(`🔄 Rate limit remaining: ${rateLimitRemaining}/${rateLimit}`);
+                  console.log(`🔄 Rate limit remaining: ${rateLimitRemaining}/${rateLimit}`);
 
-              if (response.status === 403 || response.status === 429) {
-                  const resetTime = new Date(rateLimitReset * 1000).toLocaleTimeString();
-                  console.log(`⏳ Rate limit exceeded, waiting until ${resetTime}...`);
-                  await new Promise((resolve) =>
-                      setTimeout(resolve, rateLimitReset * 1000 - Date.now())
-                  );
-                  return await fetchApi(url);
+                  if(rateLimitRemaining === "0") {
+                    const resetTime = new Date(rateLimitReset * 1000).toLocaleTimeString();
+                    const waitTime = rateLimitReset * 1000 - Date.now();
+                    console.log(`⏳ Rate limit exceeded, waiting until ${resetTime}...`);
+                    await new Promise((resolve) => setTimeout(resolve, waitTime));
+
+                    return await fetchApi(url);
+                  }
+
+                  return response.data;
+              } catch (error) {
+                  if (error.response && error.response.status === 403) {
+                      const rateLimitReset = error.response.headers["x-ratelimit-reset"];
+                      const resetTime = new Date(rateLimitReset * 1000).toLocaleTimeString();
+                      const waitTime = rateLimitReset * 1000 - Date.now();
+
+                      console.log(`⏳ Rate limit exceeded, waiting until ${resetTime}...`);
+                      await new Promise((resolve) => setTimeout(resolve, waitTime));
+
+                      return await fetchApi(url);
+                  }
+
+                  console.error(`❌ Error fetching ${url}:`, error.message);
+                  throw error;
               }
-
-              if (response.status !== 200) {
-                  throw new Error(`❌ Failed to fetch data: ${response.status}`);
-              }
-
-              return response.data;
             };
 
             async function fetchLatestTag(git_repo) {

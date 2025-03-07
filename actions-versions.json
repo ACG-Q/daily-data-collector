@@ -262,34 +262,34 @@
     },
     {
       "repo": "actions/stale",
-      "latest": "v9.1.0",
-      "major": "9",
-      "description": "Marks issues and pull requests that have not had recent interaction",
-      "status": "active",
-      "releaseDate": "2025-01-21T03:34:36Z",
-      "changelog": "## What's Changed\r\n* Documentation update by @Marukome0743 in https://github.com/actions/stale/pull/1116\r\n* Add workflow file for publishing releases to immutable action package by @Jcambass in https://github.com/actions/stale/pull/1179\r\n* Update undici from 5.28.2 to 5.28.4 by @dependabot in https://github.com/actions/stale/pull/1150\r\n* Update actions/checkout from 3 to 4 by @dependabot in https://github.com/actions/stale/pull/1091\r\n* Update actions/publish-action from 0.2.2 to 0.3.0 by @dependabot in https://github.com/actions/stale/pull/1147\r\n* Update ts-jest from 29.1.1 to 29.2.5 by @dependabot in https://github.com/actions/stale/pull/1175\r\n* Update @actions/core from 1.10.1 to 1.11.1 by @dependabot in https://github.com/actions/stale/pull/1191\r\n* Update @types/jest from 29.5.11 to 29.5.14 by @dependabot in https://github.com/actions/stale/pull/1193\r\n* Update @actions/cache from 3.2.2 to 4.0.0 by @dependabot in https://github.com/actions/stale/pull/1194\r\n\r\n## New Contributors\r\n* @Marukome0743 made their first contribution in https://github.com/actions/stale/pull/1116\r\n* @Jcambass made their first contribution in https://github.com/actions/stale/pull/1179\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v9...v9.1.0",
-      "docsUrl": "https://github.com/actions/stale"
+      "latest": "Error",
+      "major": "Error",
+      "description": "Error",
+      "status": "Error",
+      "releaseDate": "Error",
+      "changelog": "Error",
+      "docsUrl": "Error"
     },
     {
       "repo": "actions/create-release",
-      "latest": "v1.1.4",
-      "major": "1",
-      "description": "An Action to create releases via the GitHub Release API",
-      "status": "deprecated",
-      "releaseDate": "2020-09-14T13:55:07Z",
-      "changelog": "This release adds the ability to specify an owner/repo in your inputs to have an action run create releases on a different repository.",
-      "docsUrl": "https://github.com/actions/create-release"
+      "latest": "Error",
+      "major": "Error",
+      "description": "Error",
+      "status": "Error",
+      "releaseDate": "Error",
+      "changelog": "Error",
+      "docsUrl": "Error"
     },
     {
       "repo": "softprops/action-gh-release",
-      "latest": "v2.2.1",
-      "major": "2",
-      "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
-      "status": "active",
-      "releaseDate": "2025-01-07T18:45:50Z",
-      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n\r\n### Bug fixes 🐛\r\n\r\n* fix: big file uploads by @xen0n in https://github.com/softprops/action-gh-release/pull/562\r\n\r\n### Other Changes 🔄\r\n\r\n* chore(deps): bump @types/node from 22.10.1 to 22.10.2 by @dependabot in https://github.com/softprops/action-gh-release/pull/559\r\n* chore(deps): bump @types/node from 22.10.2 to 22.10.5 by @dependabot in https://github.com/softprops/action-gh-release/pull/569\r\n* chore: update error and warning messages for not matching files in files field by @ytimocin in https://github.com/softprops/action-gh-release/pull/568\r\n\r\n\r\n## New Contributors\r\n* @ytimocin made their first contribution in https://github.com/softprops/action-gh-release/pull/568\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2.2.0...v2.2.1",
-      "docsUrl": "https://github.com/softprops/action-gh-release"
+      "latest": "Error",
+      "major": "Error",
+      "description": "Error",
+      "status": "Error",
+      "releaseDate": "Error",
+      "changelog": "Error",
+      "docsUrl": "Error"
     }
   ],
-  "updated": "2025-03-06T00:43:32.789Z"
+  "updated": "2025-03-07T00:43:52.142Z"
 }

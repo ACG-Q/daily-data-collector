@@ -121,8 +121,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      
+      # 保证当前仓库代码为最新
+      - name: Checkout repository
+        run: |
+          git pull --rebase
+
 
       - name: Set up Node.js
         uses: actions/setup-node@v4

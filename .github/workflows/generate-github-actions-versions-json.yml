@@ -80,7 +80,7 @@ jobs:
             const JOB_MAX_GITHUB_REPOS = Math.floor(UNAUTHENTICATED_REQUESTS_MAX / REQUESTS_PER_REPO);
 
             // 获取需要的多少个JOB
-            const NEED_JOBS = Math.ceil(GITHUB_REPOS.length / JOB_MAX_GITHUB_REPOS);
+            const NEED_JOBS = Math.ceil(GITHUB_REPOS.length / JOB_MAX_GITHUB_REPOS) - 1;
 
             if(NEED_JOBS > MAX_JOBS){
               await github.rest.issues.createComment({
@@ -104,8 +104,6 @@ jobs:
                 repos: GITHUB_REPOS.slice(i * JOB_MAX_GITHUB_REPOS, (i + 1) * JOB_MAX_GITHUB_REPOS)
               })
             }
-
-            console.log(GITHUB_REPOS_LIST)
             core.setOutput('GITHUB_REPOS_LIST', JSON.stringify(GITHUB_REPOS_LIST))
 
 

@@ -99,7 +99,10 @@ jobs:
             const GITHUB_REPOS_LIST = []
             for(let i = 0; i < NEED_JOBS; i++){
               // 获取每个JOB的GITHUB_REPOS
-              GITHUB_REPOS_LIST.push(GITHUB_REPOS.slice(i * JOB_MAX_GITHUB_REPOS, (i + 1) * JOB_MAX_GITHUB_REPOS))
+              GITHUB_REPOS_LIST.push({
+                index: i,
+                repos: GITHUB_REPOS.slice(i * JOB_MAX_GITHUB_REPOS, (i + 1) * JOB_MAX_GITHUB_REPOS)
+              })
             }
 
             core.setOutput('GITHUB_REPOS_LIST', JSON.stringify(GITHUB_REPOS_LIST))
@@ -109,10 +112,10 @@ jobs:
     needs: [split]
     strategy:
       matrix:
-        jobs: ${{ fromJSON(needs.split.outputs.GITHUB_REPOS_LIST) }}
+        job_config: ${{ fromJSON(needs.split.outputs.GITHUB_REPOS_LIST) }}
     runs-on: ubuntu-latest
     env:
-      GITHUB_REPOS: ${{ matrix.jobs }}
+      GITHUB_REPOS: ${{ toJson(matrix.job_config.repos) }}
 
     steps:
       - name: Checkout repository

@@ -45,11 +45,14 @@ jobs:
       - name: Check if the number of repositories exceeds the maximum
         uses: actions/github-script@v6
         id: split
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.repository }}
         with:
           script: |
             // 所有者
-            const OWNER = github.repository_owner;
-            const REPO = github.repository.replace(`${OWNER}/`, "");
+            const OWNER = process.env.OWNER;
+            const REPO = process.env.REPO.replace(`${OWNER}/`, "");
             const MAX_API_REQUESTS = parseInt(process.env.MAX_API_REQUESTS);
             const REQUESTS_PER_REPO = parseInt(process.env.REQUESTS_PER_REPO);
             // 计算最大仓库数量[向下取整]

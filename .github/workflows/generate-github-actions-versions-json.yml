@@ -105,6 +105,7 @@ jobs:
               })
             }
 
+            console.log(GITHUB_REPOS_LIST)
             core.setOutput('GITHUB_REPOS_LIST', JSON.stringify(GITHUB_REPOS_LIST))
 
 

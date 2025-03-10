@@ -105,14 +105,13 @@ jobs:
               })
             }
 
-            console.log(`GITHUB_REPOS_LIST: ${JSON.stringify(GITHUB_REPOS_LIST)}`)
-
             core.setOutput('GITHUB_REPOS_LIST', JSON.stringify(GITHUB_REPOS_LIST))
 
 
   generate:
     needs: [split]
     strategy:
+      max-parallel: 1
       matrix:
         job_config: ${{ fromJSON(needs.split.outputs.GITHUB_REPOS_LIST) }}
     runs-on: ubuntu-latest

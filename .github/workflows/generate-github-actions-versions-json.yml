@@ -87,7 +87,8 @@ jobs:
                 body: `
                   ### ⚠️ Warning: Too many jobs (${GITHUB_REPOS.length} > (${NEED_JOBS} > ${MAX_JOBS}).
                 `,
-              }
+              })
+
               throw new Error(`Too many jobs (${GITHUB_REPOS.length} > (${NEED_JOBS} > ${MAX_JOBS}).`);
             }
 

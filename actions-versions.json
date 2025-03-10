@@ -292,14 +292,14 @@
     },
     {
       "repo": "dephraiim/translate-readme",
-      "latest": "Error",
-      "major": "Error",
-      "description": "Error",
-      "status": "Error",
-      "releaseDate": "Error",
-      "changelog": "Error",
-      "docsUrl": "Error"
+      "latest": "v1",
+      "major": "1",
+      "description": "Translate Github Readme to any other Language",
+      "status": "active",
+      "releaseDate": "2020-08-22T20:36:37Z",
+      "changelog": "No changelog provided",
+      "docsUrl": "https://github.com/ephraimduncan/translate-readme"
     }
   ],
-  "updated": "2025-03-07T02:36:31.556Z"
+  "updated": "2025-03-10T06:56:00.131Z"
 }

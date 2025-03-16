@@ -92,12 +92,12 @@
     },
     {
       "repo": "dorny/test-reporter",
-      "latest": "v1.9.1",
-      "major": "1",
+      "latest": "v2.0.0",
+      "major": "2",
       "description": "Displays test results from popular testing frameworks directly in GitHub",
       "status": "active",
-      "releaseDate": "2024-05-08T11:29:56Z",
-      "changelog": "## What's Changed\r\n* fix: reporting wrong number of tests in Dart by @dominicmh in https://github.com/dorny/test-reporter/pull/426\r\n* Fix problematic retransmission of authentication token (alternative solution) by @JojOatXGME in https://github.com/dorny/test-reporter/pull/438\r\n* Update development dependencies by @jozefizso in https://github.com/dorny/test-reporter/pull/442\r\n\r\n## New Contributors\r\n* @dominicmh made their first contribution in https://github.com/dorny/test-reporter/pull/426\r\n* @JojOatXGME made their first contribution in https://github.com/dorny/test-reporter/pull/438\r\n\r\n**Full Changelog**: https://github.com/dorny/test-reporter/compare/v1.9.0...v1.9.1",
+      "releaseDate": "2025-03-12T13:10:33Z",
+      "changelog": "## What's Changed\r\n* Merge v1.7.0 to v1 branche by @j-catania in https://github.com/dorny/test-reporter/pull/298\r\n* Bump development to `v2.0.0-preview` by @jozefizso in https://github.com/dorny/test-reporter/pull/449\r\n* Update checkout and upload-artifact actions versions by @Akaame in https://github.com/dorny/test-reporter/pull/419\r\n* README.md: Update GitHub Actions by @cclauss in https://github.com/dorny/test-reporter/pull/404\r\n* Update project to Node 20 runtime by @jozefizso in https://github.com/dorny/test-reporter/pull/450\r\n* Add support for NUnit v3 XML results files by @kring in https://github.com/dorny/test-reporter/pull/225\r\n* Fix JUnit message / type fields. by @AnthonyBarbier in https://github.com/dorny/test-reporter/pull/399\r\n* Update mocha-json usage instructions by @MonkeyDo in https://github.com/dorny/test-reporter/pull/145\r\n* Clarify .NET support is dotnet test command support by @anatawa12 in https://github.com/dorny/test-reporter/pull/232\r\n* Target node20 by @jozefizso in https://github.com/dorny/test-reporter/pull/489\r\n* Support displaying test results in markdown using GitHub Actions Job Summaries by @ritchxu in https://github.com/dorny/test-reporter/pull/463\r\n* Support displaying test results in markdown using GitHub Actions Job Summaries by @ritchxu in https://github.com/dorny/test-reporter/pull/383\r\n* Fix parsing of ESLint reports in jest-junit format by @phjardas in https://github.com/dorny/test-reporter/pull/134\r\n* Change docs for mocha-json by @chdanielmueller in https://github.com/dorny/test-reporter/pull/517\r\n* Remove unused development dependency `@types/github-slugger` by @jozefizso in https://github.com/dorny/test-reporter/pull/524\r\n* Merge `v1` branch to `main` by @jozefizso in https://github.com/dorny/test-reporter/pull/525\r\n* Update bug_report.md by @j-catania in https://github.com/dorny/test-reporter/pull/553\r\n* Update feature.md by @j-catania in https://github.com/dorny/test-reporter/pull/554\r\n* feat: parse junit report with message by @cmonaghan1 in https://github.com/dorny/test-reporter/pull/559\r\n* Update dependencies by @jozefizso in https://github.com/dorny/test-reporter/pull/560\r\n* test-reporter release v2.0.0 by @jozefizso in https://github.com/dorny/test-reporter/pull/561\r\n\r\n## New Contributors\r\n* @Akaame made their first contribution in https://github.com/dorny/test-reporter/pull/419\r\n* @cclauss made their first contribution in https://github.com/dorny/test-reporter/pull/404\r\n* @kring made their first contribution in https://github.com/dorny/test-reporter/pull/225\r\n* @AnthonyBarbier made their first contribution in https://github.com/dorny/test-reporter/pull/399\r\n* @MonkeyDo made their first contribution in https://github.com/dorny/test-reporter/pull/145\r\n* @anatawa12 made their first contribution in https://github.com/dorny/test-reporter/pull/232\r\n* @ritchxu made their first contribution in https://github.com/dorny/test-reporter/pull/463\r\n* @phjardas made their first contribution in https://github.com/dorny/test-reporter/pull/134\r\n* @chdanielmueller made their first contribution in https://github.com/dorny/test-reporter/pull/517\r\n* @cmonaghan1 made their first contribution in https://github.com/dorny/test-reporter/pull/559\r\n\r\n**Full Changelog**: https://github.com/dorny/test-reporter/compare/v1.9.1...v2.0.0",
       "docsUrl": "https://github.com/dorny/test-reporter"
     },
     {
@@ -122,12 +122,12 @@
     },
     {
       "repo": "aquasecurity/trivy-action",
-      "latest": "0.29.0",
+      "latest": "0.30.0",
       "major": "0",
       "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities",
       "status": "active",
-      "releaseDate": "2024-11-20T00:12:52Z",
-      "changelog": "## What's Changed\r\n* feat: Allow skipping setup by @rvesse in https://github.com/aquasecurity/trivy-action/pull/414\r\n* Fix oras command not found in \"Update Trivy Cache\" action by @Tiryoh in https://github.com/aquasecurity/trivy-action/pull/413\r\n* Update README.md by @simar7 in https://github.com/aquasecurity/trivy-action/pull/420\r\n* feat: add token for `setup-trivy` by @DmitriyLewen in https://github.com/aquasecurity/trivy-action/pull/421\r\n* fix: bump `setup-trivy` and add new `contrib` directory path info by @DmitriyLewen in https://github.com/aquasecurity/trivy-action/pull/424\r\n* docs: remove ignore-unfixed from IaC scan example by @nikpivkin in https://github.com/aquasecurity/trivy-action/pull/429\r\n* chore(deps): Bump trivy to v0.57.1 by @simar7 in https://github.com/aquasecurity/trivy-action/pull/434\r\n\r\n## New Contributors\r\n* @rvesse made their first contribution in https://github.com/aquasecurity/trivy-action/pull/414\r\n* @Tiryoh made their first contribution in https://github.com/aquasecurity/trivy-action/pull/413\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.28.0...0.29.0",
+      "releaseDate": "2025-03-14T02:58:41Z",
+      "changelog": "## What's Changed\r\n* fix: Update default trivy version in README by @derrix060 in https://github.com/aquasecurity/trivy-action/pull/444\r\n* fix: typo in description of an input for action.yaml by @yutatokoi in https://github.com/aquasecurity/trivy-action/pull/452\r\n* Improve README/SBOM by @AB-xdev in https://github.com/aquasecurity/trivy-action/pull/439\r\n* chore: bump trivy to v0.60.0 by @nikpivkin in https://github.com/aquasecurity/trivy-action/pull/453\r\n\r\n## New Contributors\r\n* @derrix060 made their first contribution in https://github.com/aquasecurity/trivy-action/pull/444\r\n* @yutatokoi made their first contribution in https://github.com/aquasecurity/trivy-action/pull/452\r\n* @AB-xdev made their first contribution in https://github.com/aquasecurity/trivy-action/pull/439\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.29.0...0.30.0",
       "docsUrl": "https://github.com/aquasecurity/trivy-action"
     },
     {
@@ -152,12 +152,12 @@
     },
     {
       "repo": "docker/login-action",
-      "latest": "v3.3.0",
+      "latest": "v3.4.0",
       "major": "3",
       "description": "GitHub Action to login against a Docker registry",
       "status": "active",
-      "releaseDate": "2024-07-22T09:07:15Z",
-      "changelog": "* Bump @docker/actions-toolkit from 0.24.0 to 0.35.0 in https://github.com/docker/login-action/pull/754\r\n* Bump https-proxy-agent from 7.0.4 to 7.0.5 in https://github.com/docker/login-action/pull/741\r\n* Bump braces from 3.0.2 to 3.0.3 in https://github.com/docker/login-action/pull/730\r\n\r\n**Full Changelog**: https://github.com/docker/login-action/compare/v3.2.0...v3.3.0",
+      "releaseDate": "2025-03-14T09:53:25Z",
+      "changelog": "* Bump @actions/core from 1.10.1 to 1.11.1 in https://github.com/docker/login-action/pull/791\r\n* Bump @aws-sdk/client-ecr to 3.766.0 in https://github.com/docker/login-action/pull/789 https://github.com/docker/login-action/pull/856\r\n* Bump @aws-sdk/client-ecr-public to 3.758.0 in https://github.com/docker/login-action/pull/789 https://github.com/docker/login-action/pull/856\r\n* Bump @docker/actions-toolkit from 0.35.0 to 0.57.0 in https://github.com/docker/login-action/pull/801 https://github.com/docker/login-action/pull/806 https://github.com/docker/login-action/pull/858\r\n* Bump cross-spawn from 7.0.3 to 7.0.6 in https://github.com/docker/login-action/pull/814\r\n* Bump https-proxy-agent from 7.0.5 to 7.0.6 in https://github.com/docker/login-action/pull/823\r\n* Bump path-to-regexp from 6.2.2 to 6.3.0 in https://github.com/docker/login-action/pull/777\r\n\r\n**Full Changelog**: https://github.com/docker/login-action/compare/v3.3.0...v3.4.0",
       "docsUrl": "https://github.com/docker/login-action"
     },
     {
@@ -301,5 +301,5 @@
       "docsUrl": "https://github.com/ephraimduncan/translate-readme"
     }
   ],
-  "updated": "2025-03-11T01:36:26.685Z"
+  "updated": "2025-03-16T01:41:27.672Z"
 }

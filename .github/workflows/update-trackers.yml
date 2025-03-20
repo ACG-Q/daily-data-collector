@@ -72,8 +72,70 @@ jobs:
 
         # 清理临时文件
         rm -rf tmp_trackers
-      
+
+    - name: Validate trackers
+      run: |
+        # 安装依赖工具
+        sudo apt-get update && sudo apt-get install -y netcat-openbsd
+
+        # 创建检测脚本
+        echo '#!/bin/bash
+        tracker="$1"
+        protocol="${tracker%%://*}"
+        address="${tracker#*://}"
+        host_port="${address%%/*}"
+        
+        # 提取主机和端口
+        if [[ "$host_port" == *":"* ]]; then
+          host="${host_port%:*}"
+          port="${host_port##*:}"
+        else
+          host="$host_port"
+          port=""
+        fi
+
+        # 根据协议检测连通性
+        case "$protocol" in
+          udp)
+            timeout 10 nc -zu $host ${port:-80} >/dev/null 2>&1
+            ;;
+          tcp)
+            timeout 10 nc -zv $host ${port:-80} >/dev/null 2>&1
+            ;;
+          http*|ws*)
+            timeout 15 curl -sSI $tracker >/dev/null
+            ;;
+          *)
+            echo "invalid_protocol"
+            exit 1
+            ;;
+        esac
+
+        if [ $? -eq 0 ]; then
+          echo "valid"
+          echo "$tracker"
+        else
+          echo "invalid"
+        fi' > check_tracker.sh
+        chmod +x check_tracker.sh
+
+        # 并行检测追踪器（同时检测10个）
+        grep -E '^(udp|tcp|http|ws)://' ${{ env.FILE_PATH }} | \
+        xargs -P 10 -I{} bash -c 'result=$(./check_tracker.sh "{}"); \
+          if [[ "$result" == valid* ]]; then \
+            echo "$result" | tail -n1 >> ${{ env.FILE_PATH }}.valid; \
+          else \
+            echo "Invalid tracker removed: {}"; \
+          fi'
+
+        # 替换原始文件并添加统计信息
+        mv ${{ env.FILE_PATH }}.valid ${{ env.FILE_PATH }}
+        echo -e "\n# Validation Report" >> ${{ env.FILE_PATH }}
+        echo "# Validation time: ${{ steps.timekeeper.outputs.NOW }}" >> ${{ env.FILE_PATH }}
+        echo "# Total valid trackers: $(wc -l < ${{ env.FILE_PATH }} | awk \"{print \$1}\")" >> ${{ env.FILE_PATH }}
     - name: Update JSON file
+      env:
+        VALID_TRACKERS: $(wc -l < ${{ env.FILE_PATH }} | awk '{print $1}')
       uses: actions/github-script@v6
       with:
         script: |

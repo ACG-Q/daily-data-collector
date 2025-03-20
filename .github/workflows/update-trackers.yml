@@ -94,8 +94,8 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add trackers.txt
+        git add ${{ env.FILE_PATH }}
         git commit -m "Auto-update trackers list (${{ steps.timekeeper.outputs.NOW }})" || echo "No changes to commit"
-        # 配置推送URL使用认证信息
-        git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-        git push origin HEAD:main  # 明确指定分支
+        git add ${{ env.DATA_CENTER_FILE }}
+        git commit -m "Update data center file [skip ci]"
+        git push

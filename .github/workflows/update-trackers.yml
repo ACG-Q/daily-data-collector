@@ -132,7 +132,7 @@ jobs:
         mv ${{ env.FILE_PATH }}.valid ${{ env.FILE_PATH }}
         echo -e "\n# Validation Report" >> ${{ env.FILE_PATH }}
         echo "# Validation time: ${{ steps.timekeeper.outputs.NOW }}" >> ${{ env.FILE_PATH }}
-        echo "# Total valid trackers: $(wc -l < ${{ env.FILE_PATH }} | awk \"{print \$1}\")" >> ${{ env.FILE_PATH }}
+        echo "# Total valid trackers: $(wc -l < ${{ env.FILE_PATH }} | awk '{print $1}')" >> ${{ env.FILE_PATH }}
     - name: Update JSON file
       env:
         VALID_TRACKERS: $(wc -l < ${{ env.FILE_PATH }} | awk '{print $1}')

@@ -1,0 +1,101 @@
+name: Update Trackers List
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天 UTC 时间 00:00 运行
+  workflow_dispatch: # 允许手动触发
+
+env:
+  # 保存地址
+  FILE_PATH: ${{ github.workspace }}/trackers.txt
+
+  # 数据中心文件
+  DATA_CENTER_FILE: ${{ github.workspace }}/data.json
+
+  # 在数据中心的标识
+  DATA_CENTER_NAME: runner-images
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10  # 设置超时防止卡死
+    permissions:
+      contents: write  # 明确写入权限
+
+    steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'  # 确保bash环境一致性
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 获取完整提交历史
+        token: ${{ secrets.GITHUB_TOKEN }}  # 使用有写入权限的token
+
+    - name: Get execution time
+      id: timekeeper
+      run: echo "NOW=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
+
+    - name: Fetch trackers list
+      run: |
+        # 定义tracker源列表
+        SOURCES=(
+          "https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt"
+          "https://cdn.jsdelivr.net/gh/XIU2/TrackersListCollection@master/all.txt"
+          "https://newtrackon.com/api/all"
+        )
+
+        # 创建临时目录
+        mkdir -p tmp_trackers
+
+        # 并行下载所有tracker源
+        for url in "${SOURCES[@]}"; do
+          filename=$(echo $url | md5sum | cut -d' ' -f1).txt
+          (curl -sSfL --retry 3 --connect-timeout 30 $url -o "tmp_trackers/$filename" || echo "Failed to download $url") &
+        done
+        wait
+
+        # 合并并去重
+        find tmp_trackers -type f -name '*.txt' -exec cat {} \+ | 
+          grep -Eo '^(udp|tcp|http|ws)://[^/]+' |  # 提取规范格式
+          sed '/^#/d;/^$/d' |  # 删除注释和空行
+          sort -u > ${{ env.FILE_PATH  }}  # 排序去重
+
+        # 添加元数据
+        echo -e "\n# Sources:" >> ${{ env.FILE_PATH  }}
+        printf "# - %s\n" "${SOURCES[@]}" >> ${{ env.FILE_PATH  }}
+        echo -e "\n# Last updated: ${{ steps.timekeeper.outputs.NOW }}" >> ${{ env.FILE_PATH  }}
+
+        # 清理临时文件
+        rm -rf tmp_trackers
+      
+    - name: Update JSON file
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const {buildData, processDataUpdate} = require('.github/utils/json.js');
+
+          const json_path = process.env.FILE_PATH.replace(`${process.env.GITHUB_WORKSPACE}/`, '');
+
+          const data = buildData({
+            name: process.env.DATA_CENTER_NAME,
+            description: "BitTorrent Trackers List",
+            description_zh: "BitTorrent 追踪器列表",
+            path: [json_path]
+          });
+
+          processDataUpdate(process.env.DATA_CENTER_FILE, data)
+          console.log(`JSON 文件已更新：${process.env.DATA_CENTER_FILE}`);
+
+    - name: Commit and push
+      continue-on-error: true
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add trackers.txt
+        git commit -m "Auto-update trackers list (${{ steps.timekeeper.outputs.NOW }})" || echo "No changes to commit"
+        # 配置推送URL使用认证信息
+        git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        git push origin HEAD:main  # 明确指定分支

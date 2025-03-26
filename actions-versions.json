@@ -22,12 +22,12 @@
     },
     {
       "repo": "actions/setup-python",
-      "latest": "v5.4.0",
+      "latest": "v5.5.0",
       "major": "5",
       "description": "Set up your GitHub Actions workflow with a specific version of Python",
       "status": "active",
-      "releaseDate": "2025-01-28T03:28:18Z",
-      "changelog": "## What's Changed\r\n### Enhancements:\r\n* Update cache error message by @aparnajyothi-y in https://github.com/actions/setup-python/pull/968\r\n* Enhance Workflows: Add Ubuntu-24, Remove Python 3.8  by @priya-kinthali in https://github.com/actions/setup-python/pull/985\r\n* Configure Dependabot settings by @HarithaVattikuti in https://github.com/actions/setup-python/pull/1008\r\n### Documentation changes:\r\n* Readme update - recommended permissions by @benwells in https://github.com/actions/setup-python/pull/1009\r\n* Improve Advanced Usage examples by @lrq3000 in https://github.com/actions/setup-python/pull/645\r\n### Dependency updates:\r\n* Upgrade `undici` from 5.28.4 to 5.28.5 by @dependabot in https://github.com/actions/setup-python/pull/1012\r\n* Upgrade `urllib3` from 1.25.9 to 1.26.19 in /__tests__/data by @dependabot in https://github.com/actions/setup-python/pull/895\r\n* Upgrade `actions/publish-immutable-action` from 0.0.3 to 0.0.4 by @dependabot in https://github.com/actions/setup-python/pull/1014\r\n* Upgrade `@actions/http-client` from 2.2.1 to 2.2.3 by @dependabot in https://github.com/actions/setup-python/pull/1020\r\n* Upgrade `requests` from 2.24.0 to 2.32.2 in /__tests__/data by @dependabot in https://github.com/actions/setup-python/pull/1019\r\n* Upgrade `@actions/cache` to `^4.0.0` by @priyagupta108 in https://github.com/actions/setup-python/pull/1007\r\n\r\n## New Contributors\r\n* @benwells made their first contribution in https://github.com/actions/setup-python/pull/1009\r\n* @HarithaVattikuti made their first contribution in https://github.com/actions/setup-python/pull/1008\r\n* @lrq3000 made their first contribution in https://github.com/actions/setup-python/pull/645\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v5...v5.4.0",
+      "releaseDate": "2025-03-25T02:43:21Z",
+      "changelog": "## What's Changed\r\n### Enhancements:\r\n* Support free threaded Python versions like '3.13t' by @colesbury in https://github.com/actions/setup-python/pull/973\r\n* Enhance Workflows: Include ubuntu-arm runners, Add e2e Testing for free threaded and Upgrade @action/cache from 4.0.0 to 4.0.3 by @priya-kinthali in https://github.com/actions/setup-python/pull/1056\r\n* Add support for .tool-versions file in setup-python by @mahabaleshwars in https://github.com/actions/setup-python/pull/1043\r\n### Bug fixes:\r\n* Fix architecture for pypy on Linux ARM64 by @mayeut in https://github.com/actions/setup-python/pull/1011\r\n  This update maps arm64 to aarch64 for Linux ARM64 PyPy installations.\r\n### Dependency updates:\r\n* Upgrade @vercel/ncc from 0.38.1 to 0.38.3 by @dependabot in https://github.com/actions/setup-python/pull/1016\r\n* Upgrade @actions/glob from 0.4.0 to 0.5.0 by @dependabot in https://github.com/actions/setup-python/pull/1015\r\n\r\n## New Contributors\r\n* @colesbury made their first contribution in https://github.com/actions/setup-python/pull/973\r\n* @mahabaleshwars made their first contribution in https://github.com/actions/setup-python/pull/1043\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v5...v5.5.0",
       "docsUrl": "https://github.com/actions/setup-python"
     },
     {
@@ -112,12 +112,12 @@
     },
     {
       "repo": "sonarsource/sonarqube-scan-action",
-      "latest": "v5.0.0",
+      "latest": "v5.1.0",
       "major": "5",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-02-17T10:13:40Z",
-      "changelog": "## What's Changed\r\n* SQSCANGHA-81 Update SonarScanner CLI to 7.0.2.4839 by @github-actions in https://github.com/SonarSource/sonarqube-scan-action/pull/175\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v4...v5.0.0",
+      "releaseDate": "2025-03-24T14:23:58Z",
+      "changelog": "## What's Changed\r\n* Update SonarScanner CLI to 7.1.0.4889 to support sonar.region=us by @github-actions in https://github.com/SonarSource/sonarqube-scan-action/pull/183\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5.0.0...v5.1.0",
       "docsUrl": "https://github.com/SonarSource/sonarqube-scan-action"
     },
     {
@@ -301,5 +301,5 @@
       "docsUrl": "https://github.com/ephraimduncan/translate-readme"
     }
   ],
-  "updated": "2025-03-21T01:38:11.266Z"
+  "updated": "2025-03-26T01:37:48.778Z"
 }

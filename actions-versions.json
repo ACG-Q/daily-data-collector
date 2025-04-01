@@ -299,7 +299,17 @@
       "releaseDate": "2020-08-22T20:36:37Z",
       "changelog": "No changelog provided",
       "docsUrl": "https://github.com/ephraimduncan/translate-readme"
+    },
+    {
+      "repo": "subosito/flutter-action",
+      "latest": "v2.19.0",
+      "major": "2",
+      "description": "Flutter environment for use in GitHub Actions. It works on Linux, Windows, and macOS.",
+      "status": "active",
+      "releaseDate": "2025-03-24T20:59:47Z",
+      "changelog": "## What's Changed\r\n\r\n* Split test cases by architecture by @koji-1009 in https://github.com/subosito/flutter-action/pull/305\r\n* Remove restore-keys from caching by @lbonsey1 in https://github.com/subosito/flutter-action/pull/349\r\n* Fix `PUB-CACHE-PATH` output different from `PUB_CACHE` env variable by @kuhnroyal in https://github.com/subosito/flutter-action/pull/348\r\n* Update Flock's git URL in README by @victoreronmosele in https://github.com/subosito/flutter-action/pull/347\r\n\r\n## New Contributors\r\n\r\n* @lbonsey1 made their first contribution in https://github.com/subosito/flutter-action/pull/349\r\n* @victoreronmosele made their first contribution in https://github.com/subosito/flutter-action/pull/347\r\n\r\n**Full Changelog**: https://github.com/subosito/flutter-action/compare/v2.18.0...v2.19.0",
+      "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-04-01T01:49:01.163Z"
+  "updated": "2025-04-01T02:23:49.804Z"
 }

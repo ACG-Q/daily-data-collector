@@ -42,12 +42,12 @@
     },
     {
       "repo": "actions/setup-java",
-      "latest": "v4.7.0",
+      "latest": "v4.7.1",
       "major": "4",
       "description": "Set up your GitHub Actions workflow with a specific version of Java",
       "status": "active",
-      "releaseDate": "2025-01-29T03:24:46Z",
-      "changelog": "## What's Changed\r\n\r\n* Configure Dependabot settings by @HarithaVattikuti in https://github.com/actions/setup-java/pull/722\r\n* README Update: Added a permissions section by @benwells in https://github.com/actions/setup-java/pull/723\r\n* Upgrade `cache` from version 3.2.4 to 4.0.0 by @aparnajyothi-y in https://github.com/actions/setup-java/pull/724\r\n* Upgrade `@actions/http-client` from 2.2.1 to 2.2.3 by @dependabot in https://github.com/actions/setup-java/pull/728\r\n* Upgrade `actions/publish-immutable-action` from 0.0.3 to 0.0.4 by @dependabot in https://github.com/actions/setup-java/pull/727\r\n* Upgrade `@types/jest` from 29.5.12 to 29.5.14 by @dependabot in https://github.com/actions/setup-java/pull/729\r\n\r\n## New Contributors\r\n* @benwells made their first contribution in https://github.com/actions/setup-java/pull/723\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v4...v4.7.0",
+      "releaseDate": "2025-04-09T02:58:20Z",
+      "changelog": "## What's Changed\r\n\r\n### Documentation changes\r\n* Add Documentation to Recommend Using GraalVM JDK 17 Version to 17.0.12 to Align with GFTC License Terms by @aparnajyothi-y in https://github.com/actions/setup-java/pull/704\r\n* Remove duplicated GraalVM section in documentation by @Marcono1234 in https://github.com/actions/setup-java/pull/716\r\n\r\n### Dependency updates:\r\n* Upgrade @action/cache from 4.0.0 to 4.0.2 by @aparnajyothi-y in https://github.com/actions/setup-java/pull/766\r\n* Upgrade @actions/glob from 0.4.0 to 0.5.0 by @dependabot in https://github.com/actions/setup-java/pull/744\r\n* Upgrade ts-jest from 29.1.2 to 29.2.5 by @dependabot in https://github.com/actions/setup-java/pull/743\r\n* Upgrade @action/cache to 4.0.3 by @aparnajyothi-y in https://github.com/actions/setup-java/pull/773\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v4...v4.7.1",
       "docsUrl": "https://github.com/actions/setup-java"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-04-06T01:59:17.727Z"
+  "updated": "2025-04-11T01:39:48.818Z"
 }

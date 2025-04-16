@@ -12,42 +12,42 @@
     },
     {
       "repo": "actions/setup-node",
-      "latest": "v4.3.0",
-      "major": "4",
+      "latest": "v3.9.0",
+      "major": "3",
       "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "status": "active",
-      "releaseDate": "2025-03-17T02:44:28Z",
-      "changelog": "## What's Changed\r\n### Dependency updates\r\n* Upgrade @actions/glob from 0.4.0 to 0.5.0 by @dependabot in https://github.com/actions/setup-node/pull/1200\r\n* Upgrade @action/cache from 4.0.0 to 4.0.2 by @gowridurgad in https://github.com/actions/setup-node/pull/1251\r\n* Upgrade @vercel/ncc from 0.38.1 to 0.38.3 by @dependabot in https://github.com/actions/setup-node/pull/1203\r\n* Upgrade @actions/tool-cache from 2.0.1 to 2.0.2 by @dependabot in https://github.com/actions/setup-node/pull/1220\r\n\r\n## New Contributors\r\n* @gowridurgad made their first contribution in https://github.com/actions/setup-node/pull/1251\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v4...v4.3.0",
+      "releaseDate": "2025-04-14T02:47:31Z",
+      "changelog": "## What's Changed\r\n* Upgrade @actions/cache to 4.0.3 by @gowridurgad in https://github.com/actions/setup-node/pull/1270\r\n In scope of this release we updated actions/cache package to ensure continued support and compatibility, as older versions of the package are now deprecated. For more information please refer to the [toolkit/cache](https://github.com/actions/toolkit/discussions/1890).\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v3...v3.9.0",
       "docsUrl": "https://github.com/actions/setup-node"
     },
     {
       "repo": "actions/setup-python",
-      "latest": "v5.5.0",
-      "major": "5",
+      "latest": "v4.9.0",
+      "major": "4",
       "description": "Set up your GitHub Actions workflow with a specific version of Python",
       "status": "active",
-      "releaseDate": "2025-03-25T02:43:21Z",
-      "changelog": "## What's Changed\r\n### Enhancements:\r\n* Support free threaded Python versions like '3.13t' by @colesbury in https://github.com/actions/setup-python/pull/973\r\n* Enhance Workflows: Include ubuntu-arm runners, Add e2e Testing for free threaded and Upgrade @action/cache from 4.0.0 to 4.0.3 by @priya-kinthali in https://github.com/actions/setup-python/pull/1056\r\n* Add support for .tool-versions file in setup-python by @mahabaleshwars in https://github.com/actions/setup-python/pull/1043\r\n### Bug fixes:\r\n* Fix architecture for pypy on Linux ARM64 by @mayeut in https://github.com/actions/setup-python/pull/1011\r\n  This update maps arm64 to aarch64 for Linux ARM64 PyPy installations.\r\n### Dependency updates:\r\n* Upgrade @vercel/ncc from 0.38.1 to 0.38.3 by @dependabot in https://github.com/actions/setup-python/pull/1016\r\n* Upgrade @actions/glob from 0.4.0 to 0.5.0 by @dependabot in https://github.com/actions/setup-python/pull/1015\r\n\r\n## New Contributors\r\n* @colesbury made their first contribution in https://github.com/actions/setup-python/pull/973\r\n* @mahabaleshwars made their first contribution in https://github.com/actions/setup-python/pull/1043\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v5...v5.5.0",
+      "releaseDate": "2025-04-14T03:02:27Z",
+      "changelog": "## What's Changed\r\n* Upgrade `actions/cache` to 4.0.3 by @priya-kinthali in https://github.com/actions/setup-python/pull/1073\r\nIn scope of this release we updated actions/cache package to ensure continued support and compatibility, as older versions of the package are now deprecated. For more information please refer to the [toolkit/cache](https://github.com/actions/toolkit/discussions/1890).\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v4.8.0...v4.9.0",
       "docsUrl": "https://github.com/actions/setup-python"
     },
     {
       "repo": "actions/setup-dotnet",
-      "latest": "v4.3.1",
-      "major": "4",
+      "latest": "v3.4.0",
+      "major": "3",
       "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk",
       "status": "active",
-      "releaseDate": "2025-03-17T02:59:06Z",
-      "changelog": "## What's Changed\r\n* `v4` - Remove `azureedge.net` fallback logic and update install scripts by @zaataylor in https://github.com/actions/setup-dotnet/pull/572\r\nAs outlined in[ Critical .NET Install Links Are Changing](https://devblogs.microsoft.com/dotnet/critical-dotnet-install-links-are-changing/#call-to-action), remove the storage account fallback logic added for v4 in https://github.com/actions/setup-dotnet/pull/566 and update the install scripts accordingly.\r\n**Related issue**: https://github.com/dotnet/install-scripts/issues/559\r\n* upgrade @actions/cache to 4.0.2 by @HarithaVattikuti in https://github.com/actions/setup-dotnet/pull/615\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v4...v4.3.1",
+      "releaseDate": "2025-04-14T03:25:13Z",
+      "changelog": "## What's Changed\r\n* Update actions/cache to 4.0.3 by @mahabaleshwars in https://github.com/actions/setup-dotnet/pull/620\r\n In scope of this release we updated actions/cache package to ensure continuous support and compatibility, as older versions of the package are now deprecated. For more information please refer to the [toolkit/cache](https://github.com/actions/toolkit/discussions/1890).\r\n\r\n## New Contributors\r\n* @mahabaleshwars made their first contribution in https://github.com/actions/setup-dotnet/pull/620\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v3...v3.4.0",
       "docsUrl": "https://github.com/actions/setup-dotnet"
     },
     {
       "repo": "actions/setup-java",
-      "latest": "v4.7.1",
-      "major": "4",
+      "latest": "v3.14.0",
+      "major": "3",
       "description": "Set up your GitHub Actions workflow with a specific version of Java",
       "status": "active",
-      "releaseDate": "2025-04-09T02:58:20Z",
-      "changelog": "## What's Changed\r\n\r\n### Documentation changes\r\n* Add Documentation to Recommend Using GraalVM JDK 17 Version to 17.0.12 to Align with GFTC License Terms by @aparnajyothi-y in https://github.com/actions/setup-java/pull/704\r\n* Remove duplicated GraalVM section in documentation by @Marcono1234 in https://github.com/actions/setup-java/pull/716\r\n\r\n### Dependency updates:\r\n* Upgrade @action/cache from 4.0.0 to 4.0.2 by @aparnajyothi-y in https://github.com/actions/setup-java/pull/766\r\n* Upgrade @actions/glob from 0.4.0 to 0.5.0 by @dependabot in https://github.com/actions/setup-java/pull/744\r\n* Upgrade ts-jest from 29.1.2 to 29.2.5 by @dependabot in https://github.com/actions/setup-java/pull/743\r\n* Upgrade @action/cache to 4.0.3 by @aparnajyothi-y in https://github.com/actions/setup-java/pull/773\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v4...v4.7.1",
+      "releaseDate": "2025-04-15T03:39:05Z",
+      "changelog": "## What's Changed\r\n* Upgrade @action/cache to 4.0.3 by @aparnajyothi-y in https://github.com/actions/setup-java/pull/790.\r\nIn scope of this release we updated actions/cache package to ensure continued support and compatibility, as older versions of the package are now deprecated. For more information please refer to the [toolkit/cache](https://github.com/actions/toolkit/discussions/1890).\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v3...v3.14.0",
       "docsUrl": "https://github.com/actions/setup-java"
     },
     {
@@ -82,12 +82,12 @@
     },
     {
       "repo": "codecov/codecov-action",
-      "latest": "v5.4.0",
+      "latest": "v5.4.2",
       "major": "5",
       "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: ",
       "status": "active",
-      "releaseDate": "2025-02-26T23:41:16Z",
-      "changelog": "## What's Changed\r\n* build(deps): bump github/codeql-action from 3.28.1 to 3.28.5 by @dependabot in https://github.com/codecov/codecov-action/pull/1753\r\n* build(deps): bump github/codeql-action from 3.28.5 to 3.28.8 by @dependabot in https://github.com/codecov/codecov-action/pull/1757\r\n* Fix a typo in the example by @miranska in https://github.com/codecov/codecov-action/pull/1758\r\n* build(deps): bump github/codeql-action from 3.28.8 to 3.28.9 by @dependabot in https://github.com/codecov/codecov-action/pull/1765\r\n* Fix description for report_type input by @craigscott-crascit in https://github.com/codecov/codecov-action/pull/1770\r\n* Fix use of safe.directory inside containers by @Flamefire in https://github.com/codecov/codecov-action/pull/1768\r\n* Clarify in README that `use_pypi` bypasses integrity checks too by @webknjaz in https://github.com/codecov/codecov-action/pull/1773\r\n* build(deps): bump github/codeql-action from 3.28.9 to 3.28.10 by @dependabot in https://github.com/codecov/codecov-action/pull/1777\r\n* build(deps): bump ossf/scorecard-action from 2.4.0 to 2.4.1 by @dependabot in https://github.com/codecov/codecov-action/pull/1776\r\n* build(deps): bump actions/upload-artifact from 4.6.0 to 4.6.1 by @dependabot in https://github.com/codecov/codecov-action/pull/1775\r\n* update wrapper submodule to 0.2.0, add recurse_submodules arg by @matt-codecov in https://github.com/codecov/codecov-action/pull/1780\r\n* chore(release): 5.4.0 by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1781\r\n\r\n## New Contributors\r\n* @miranska made their first contribution in https://github.com/codecov/codecov-action/pull/1758\r\n* @craigscott-crascit made their first contribution in https://github.com/codecov/codecov-action/pull/1770\r\n* @Flamefire made their first contribution in https://github.com/codecov/codecov-action/pull/1768\r\n* @matt-codecov made their first contribution in https://github.com/codecov/codecov-action/pull/1780\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.3.1...v5.4.0",
+      "releaseDate": "2025-04-14T20:02:26Z",
+      "changelog": "## What's Changed\r\n* fix: hotfix oidc by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1813\r\n\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.4.1...v5.4.2",
       "docsUrl": "https://github.com/codecov/codecov-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-04-11T02:12:48.291Z"
+  "updated": "2025-04-16T01:41:47.592Z"
 }

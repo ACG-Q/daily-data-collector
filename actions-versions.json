@@ -22,12 +22,12 @@
     },
     {
       "repo": "actions/setup-python",
-      "latest": "v4.9.1",
-      "major": "4",
+      "latest": "v5.6.0",
+      "major": "5",
       "description": "Set up your GitHub Actions workflow with a specific version of Python",
       "status": "active",
-      "releaseDate": "2025-04-17T14:40:18Z",
-      "changelog": "## What's Changed\r\n* Add workflow file for publishing releases to immutable action package by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1084\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v4...v4.9.1",
+      "releaseDate": "2025-04-24T02:50:16Z",
+      "changelog": "## What's Changed\r\n* Workflow updates related to Ubuntu 20.04 by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1065\r\n* Fix for Candidate Not Iterable Error by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1082\r\n* Upgrade semver and @types/semver by @dependabot in https://github.com/actions/setup-python/pull/1091\r\n* Upgrade prettier from 2.8.8 to 3.5.3 by @dependabot in https://github.com/actions/setup-python/pull/1046\r\n* Upgrade ts-jest from 29.1.2 to 29.3.2 by @dependabot in https://github.com/actions/setup-python/pull/1081\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v5...v5.6.0",
       "docsUrl": "https://github.com/actions/setup-python"
     },
     {
@@ -72,12 +72,12 @@
     },
     {
       "repo": "actions/download-artifact",
-      "latest": "v4.2.1",
+      "latest": "v4.3.0",
       "major": "4",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-03-19T15:54:58Z",
-      "changelog": "## What's Changed\r\n* Add unit tests by @GhadimiR in https://github.com/actions/download-artifact/pull/392\r\n* Fix bug introduced in 4.2.0 by @GhadimiR in https://github.com/actions/download-artifact/pull/391\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v4.2.0...v4.2.1",
+      "releaseDate": "2025-04-24T16:28:16Z",
+      "changelog": "## What's Changed\r\n* feat: implement new `artifact-ids` input by @GrantBirki in https://github.com/actions/download-artifact/pull/401\r\n* Fix workflow example for downloading by artifact ID by @joshmgross in https://github.com/actions/download-artifact/pull/402\r\n* Prep for v4.3.0 release by @robherley in https://github.com/actions/download-artifact/pull/404\r\n\r\n## New Contributors\r\n* @GrantBirki made their first contribution in https://github.com/actions/download-artifact/pull/401\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v4.2.1...v4.3.0",
       "docsUrl": "https://github.com/actions/download-artifact"
     },
     {
@@ -172,12 +172,12 @@
     },
     {
       "repo": "docker/build-push-action",
-      "latest": "v6.15.0",
+      "latest": "v6.16.0",
       "major": "6",
       "description": "GitHub Action to build and push Docker images with Buildx",
       "status": "active",
-      "releaseDate": "2025-02-26T15:28:00Z",
-      "changelog": "* Bump @docker/actions-toolkit from 0.55.0 to 0.56.0 in https://github.com/docker/build-push-action/pull/1330\r\n\r\n**Full Changelog**: https://github.com/docker/build-push-action/compare/v6.14.0...v6.15.0",
+      "releaseDate": "2025-04-24T14:18:49Z",
+      "changelog": "* Handle no default attestations env var by @crazy-max in https://github.com/docker/build-push-action/pull/1343\r\n* Only print secret keys in build summary output by @crazy-max in https://github.com/docker/build-push-action/pull/1353\r\n* Bump @docker/actions-toolkit from 0.56.0 to 0.59.0 in https://github.com/docker/build-push-action/pull/1352\r\n\r\n**Full Changelog**: https://github.com/docker/build-push-action/compare/v6.15.0...v6.16.0",
       "docsUrl": "https://github.com/docker/build-push-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-04-21T01:55:19.432Z"
+  "updated": "2025-04-26T01:38:29.594Z"
 }

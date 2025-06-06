@@ -122,12 +122,12 @@
     },
     {
       "repo": "aquasecurity/trivy-action",
-      "latest": "0.30.0",
+      "latest": "0.31.0",
       "major": "0",
       "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities",
       "status": "active",
-      "releaseDate": "2025-03-14T02:58:41Z",
-      "changelog": "## What's Changed\r\n* fix: Update default trivy version in README by @derrix060 in https://github.com/aquasecurity/trivy-action/pull/444\r\n* fix: typo in description of an input for action.yaml by @yutatokoi in https://github.com/aquasecurity/trivy-action/pull/452\r\n* Improve README/SBOM by @AB-xdev in https://github.com/aquasecurity/trivy-action/pull/439\r\n* chore: bump trivy to v0.60.0 by @nikpivkin in https://github.com/aquasecurity/trivy-action/pull/453\r\n\r\n## New Contributors\r\n* @derrix060 made their first contribution in https://github.com/aquasecurity/trivy-action/pull/444\r\n* @yutatokoi made their first contribution in https://github.com/aquasecurity/trivy-action/pull/452\r\n* @AB-xdev made their first contribution in https://github.com/aquasecurity/trivy-action/pull/439\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.29.0...0.30.0",
+      "releaseDate": "2025-06-03T07:46:51Z",
+      "changelog": "## What's Changed\r\n* docs: add info that `unix:/` prefix is required for `docker-host` input by @DmitriyLewen in https://github.com/aquasecurity/trivy-action/pull/455\r\n* Fix Trivy action inputs leaking between invocations (#422) by @rvesse in https://github.com/aquasecurity/trivy-action/pull/454\r\n* Pin aquasecuriy/setup-trivy to hash instead of tag by @lhotari in https://github.com/aquasecurity/trivy-action/pull/456\r\n* Bump Trivy version to fix GitHub actions by @maximmasiutin in https://github.com/aquasecurity/trivy-action/pull/460\r\n* refactor: use ubuntu 24.04 in example code by @simar7 in https://github.com/aquasecurity/trivy-action/pull/465\r\n* ci: fix workflow to bump Trivy by @nikpivkin in https://github.com/aquasecurity/trivy-action/pull/466\r\n* chore(deps): Update trivy to v0.63.0 by @aqua-bot in https://github.com/aquasecurity/trivy-action/pull/467\r\n\r\n## New Contributors\r\n* @lhotari made their first contribution in https://github.com/aquasecurity/trivy-action/pull/456\r\n* @maximmasiutin made their first contribution in https://github.com/aquasecurity/trivy-action/pull/460\r\n* @aqua-bot made their first contribution in https://github.com/aquasecurity/trivy-action/pull/467\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.30.0...0.31.0",
       "docsUrl": "https://github.com/aquasecurity/trivy-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-06-01T02:03:50.104Z"
+  "updated": "2025-06-06T01:46:12.726Z"
 }

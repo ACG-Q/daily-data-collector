@@ -282,12 +282,12 @@
     },
     {
       "repo": "softprops/action-gh-release",
-      "latest": "v2.2.2",
+      "latest": "v2.3.2",
       "major": "2",
       "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "status": "active",
-      "releaseDate": "2025-04-18T21:34:22Z",
-      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n\r\n### Bug fixes 🐛\r\n\r\n* fix: updating release draft status from true to false by @galargh in https://github.com/softprops/action-gh-release/pull/316\r\n\r\n### Other Changes 🔄\r\n\r\n* chore: simplify ref_type test by @steinybot in https://github.com/softprops/action-gh-release/pull/598\r\n* fix(docs): clarify the default for tag_name by @muzimuzhi in https://github.com/softprops/action-gh-release/pull/599\r\n* test(release): add unit tests when searching for a release by @rwaskiewicz in https://github.com/softprops/action-gh-release/pull/603\r\n* dependency updates\r\n\r\n## New Contributors\r\n* @steinybot made their first contribution in https://github.com/softprops/action-gh-release/pull/598\r\n* @muzimuzhi made their first contribution in https://github.com/softprops/action-gh-release/pull/599\r\n* @galargh made their first contribution in https://github.com/softprops/action-gh-release/pull/316\r\n* @rwaskiewicz made their first contribution in https://github.com/softprops/action-gh-release/pull/603\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2...v2.2.2",
+      "releaseDate": "2025-06-10T22:33:54Z",
+      "changelog": "* fix: revert fs `readableWebStream` change",
       "docsUrl": "https://github.com/softprops/action-gh-release"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-06-06T01:46:31.983Z"
+  "updated": "2025-06-11T01:48:36.928Z"
 }

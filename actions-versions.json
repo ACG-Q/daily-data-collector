@@ -302,14 +302,14 @@
     },
     {
       "repo": "subosito/flutter-action",
-      "latest": "v2.19.0",
+      "latest": "v2.20.0",
       "major": "2",
       "description": "Flutter environment for use in GitHub Actions. It works on Linux, Windows, and macOS.",
       "status": "active",
-      "releaseDate": "2025-03-24T20:59:47Z",
-      "changelog": "## What's Changed\r\n\r\n* Split test cases by architecture by @koji-1009 in https://github.com/subosito/flutter-action/pull/305\r\n* Remove restore-keys from caching by @lbonsey1 in https://github.com/subosito/flutter-action/pull/349\r\n* Fix `PUB-CACHE-PATH` output different from `PUB_CACHE` env variable by @kuhnroyal in https://github.com/subosito/flutter-action/pull/348\r\n* Update Flock's git URL in README by @victoreronmosele in https://github.com/subosito/flutter-action/pull/347\r\n\r\n## New Contributors\r\n\r\n* @lbonsey1 made their first contribution in https://github.com/subosito/flutter-action/pull/349\r\n* @victoreronmosele made their first contribution in https://github.com/subosito/flutter-action/pull/347\r\n\r\n**Full Changelog**: https://github.com/subosito/flutter-action/compare/v2.18.0...v2.19.0",
+      "releaseDate": "2025-06-10T09:08:15Z",
+      "changelog": "## What's Changed\r\n* perf: Only install yq on Windows if used by @christerswahn in https://github.com/subosito/flutter-action/pull/362\r\n* use env if it existed by @atishoo in https://github.com/subosito/flutter-action/pull/360\r\n\r\n## New Contributors\r\n* @christerswahn made their first contribution in https://github.com/subosito/flutter-action/pull/362\r\n* @atishoo made their first contribution in https://github.com/subosito/flutter-action/pull/360\r\n\r\n**Full Changelog**: https://github.com/subosito/flutter-action/compare/v2...v2.20.0",
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-06-11T01:48:36.928Z"
+  "updated": "2025-06-11T01:48:56.149Z"
 }

@@ -162,12 +162,12 @@
     },
     {
       "repo": "docker/setup-buildx-action",
-      "latest": "v3.10.0",
+      "latest": "v3.11.1",
       "major": "3",
       "description": "GitHub Action to set up Docker Buildx",
       "status": "active",
-      "releaseDate": "2025-02-26T15:36:31Z",
-      "changelog": "* Bump @docker/actions-toolkit from 0.54.0 to 0.56.0 in https://github.com/docker/setup-buildx-action/pull/408\r\n\r\n**Full Changelog**: https://github.com/docker/setup-buildx-action/compare/v3.9.0...v3.10.0",
+      "releaseDate": "2025-06-18T08:40:20Z",
+      "changelog": "* Fix `keep-state` not being respected by @crazy-max in https://github.com/docker/setup-buildx-action/pull/429\r\n\r\n**Full Changelog**: https://github.com/docker/setup-buildx-action/compare/v3.11.0...v3.11.1",
       "docsUrl": "https://github.com/docker/setup-buildx-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-06-16T01:52:40.404Z"
+  "updated": "2025-06-21T01:46:09.881Z"
 }

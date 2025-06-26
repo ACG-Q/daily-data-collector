@@ -302,14 +302,14 @@
     },
     {
       "repo": "subosito/flutter-action",
-      "latest": "v2.20.0",
+      "latest": "v2.21.0",
       "major": "2",
       "description": "Flutter environment for use in GitHub Actions. It works on Linux, Windows, and macOS.",
       "status": "active",
-      "releaseDate": "2025-06-10T09:08:15Z",
-      "changelog": "## What's Changed\r\n* perf: Only install yq on Windows if used by @christerswahn in https://github.com/subosito/flutter-action/pull/362\r\n* use env if it existed by @atishoo in https://github.com/subosito/flutter-action/pull/360\r\n\r\n## New Contributors\r\n* @christerswahn made their first contribution in https://github.com/subosito/flutter-action/pull/362\r\n* @atishoo made their first contribution in https://github.com/subosito/flutter-action/pull/360\r\n\r\n**Full Changelog**: https://github.com/subosito/flutter-action/compare/v2...v2.20.0",
+      "releaseDate": "2025-06-24T21:51:43Z",
+      "changelog": "## What's Changed\r\n* Add cache hit outputs by @beninato8 in https://github.com/subosito/flutter-action/pull/364\r\n* fix broken links in README by @bartekpacia in https://github.com/subosito/flutter-action/pull/365\r\n* Support dynamic values for PUB-CACHE-PATH by @beninato8 in https://github.com/subosito/flutter-action/pull/363\r\n\r\n## New Contributors\r\n* @beninato8 made their first contribution in https://github.com/subosito/flutter-action/pull/364\r\n\r\n**Full Changelog**: https://github.com/subosito/flutter-action/compare/v2.20.0...v2.21.0",
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-06-26T01:48:35.963Z"
+  "updated": "2025-06-26T01:48:55.743Z"
 }

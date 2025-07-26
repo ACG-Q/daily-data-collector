@@ -112,12 +112,12 @@
     },
     {
       "repo": "sonarsource/sonarqube-scan-action",
-      "latest": "v5.2.0",
+      "latest": "v5.3.0",
       "major": "5",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-05-06T09:15:59Z",
-      "changelog": "## What's Changed\r\n* SQSCANGHA-90 remove mend dead conf by @pierre-guillot-gh in https://github.com/SonarSource/sonarqube-scan-action/pull/184\r\n* SQSCANGHA-89 Attempt to fix command injection by @henryju in https://github.com/SonarSource/sonarqube-scan-action/pull/186\r\n* SQSCANGHA-93 Fix madhead/semver-utils' version by @csaba-feher-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/187\r\n* SQSCANGHA-94 Update version update logic by @csaba-feher-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/188\r\n* SQSCANGHA-92 Validate scanner version by @csaba-feher-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/189\r\n\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5...v5.2.0",
+      "releaseDate": "2025-07-22T09:05:02Z",
+      "changelog": "## What's Changed\r\n* SQSCANGHA-83 Avoid unbound variable error on parameter expansion by @aleksandra-bozhinoska-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/192\r\n* SQSCANGHA-97 Use /usr/bin/env for shebang by @eliandoran in https://github.com/SonarSource/sonarqube-scan-action/pull/193\r\n* SQSCANGHA-98 Update SonarScanner CLI to 7.2.0.5079 by @github-actions[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/196\r\n\r\n## New Contributors\r\n* @eliandoran made their first contribution in https://github.com/SonarSource/sonarqube-scan-action/pull/193\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5.2.0...v5.3.0",
       "docsUrl": "https://github.com/SonarSource/sonarqube-scan-action"
     },
     {
@@ -182,22 +182,22 @@
     },
     {
       "repo": "google-github-actions/deploy-appengine",
-      "latest": "v2.1.6",
+      "latest": "v2.1.7",
       "major": "2",
       "description": "A GitHub Action that deploys source code to Google App Engine.",
       "status": "active",
-      "releaseDate": "2025-07-18T21:43:33Z",
-      "changelog": "## What's Changed\n* security: bump undici from 5.28.5 to 5.29.0 in the npm_and_yarn group by @dependabot[bot] in https://github.com/google-github-actions/deploy-appengine/pull/382\n* Update linters by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/384\n* Update deps by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/385\n* Release: v2.1.6 by @google-github-actions-bot in https://github.com/google-github-actions/deploy-appengine/pull/386\n\n\n**Full Changelog**: https://github.com/google-github-actions/deploy-appengine/compare/v2.1.5...v2.1.6",
+      "releaseDate": "2025-07-21T14:23:20Z",
+      "changelog": "## What's Changed\n* Make `project_id` an optional input by @DefCon-007 in https://github.com/google-github-actions/deploy-appengine/pull/383\n* Remove optional project_id field by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/387\n* Release: v2.1.7 by @google-github-actions-bot in https://github.com/google-github-actions/deploy-appengine/pull/388\n\n## New Contributors\n* @DefCon-007 made their first contribution in https://github.com/google-github-actions/deploy-appengine/pull/383\n\n**Full Changelog**: https://github.com/google-github-actions/deploy-appengine/compare/v2.1.6...v2.1.7",
       "docsUrl": "https://github.com/google-github-actions/deploy-appengine"
     },
     {
       "repo": "azure/webapps-deploy",
-      "latest": "v3.0.3",
-      "major": "3",
+      "latest": "v2",
+      "major": "2",
       "description": "Enable GitHub developers to deploy to Azure WebApps using GitHub Actions",
       "status": "active",
-      "releaseDate": "2025-07-16T11:37:27Z",
-      "changelog": "Releasing following changes\r\nhttps://github.com/Azure/webapps-deploy/pull/466",
+      "releaseDate": "2020-07-16T04:35:01Z",
+      "changelog": "Automate your GitHub Actions workflow to deploy [Azure Web Apps](https://azure.microsoft.com/services/app-service/web/) and [Azure Web app for Containers](https://azure.microsoft.com/services/app-service/containers/) using [Azure Web App Publish Profile](https://github.com/projectkudu/kudu/wiki/Deployment-credentials#site-credentials-aka-publish-profile-credentials) or using [Azure Login](https://github.com/Azure/login). \r\n\r\nAction supports publish profile for [Azure Web Apps](https://azure.microsoft.com/en-us/services/app-service/web/) (both Windows and Linux) and [Azure Web Apps for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/) (Linux only).\r\n\r\n## Usage\r\n\r\nSample workflow to build and deploy a Web App to Azure using publish profile\r\n\r\n```yaml\r\n\r\n# File: .github/workflows/workflow.yml\r\n\r\non: push\r\n\r\njobs:\r\n  build-and-deploy:\r\n    runs-on: ubuntu-latest\r\n    steps:\r\n    # checkout the repo\r\n    - name: 'Checkout Github Action' \r\n      uses: actions/checkout@master\r\n    \r\n    - name: Setup Node 10.x\r\n      uses: actions/setup-node@v1\r\n      with:\r\n        node-version: '10.x'\r\n    - name: 'npm install, build, and test'\r\n      run: |\r\n        npm install\r\n        npm run build --if-present\r\n        npm run test --if-present\r\n       \r\n    - name: 'Run Azure webapp deploy action using publish profile credentials'\r\n      uses: azure/webapps-deploy@v2\r\n      with: \r\n        app-name: node-rn\r\n        publish-profile: ${{ secrets.azureWebAppPublishProfile }}\r\n        \r\n\r\n```\r\n\r\n## License\r\n\r\nGitHub Action for Azure Web App is licensed under the [MIT License](https://github.com/Azure/webapps-deploy/blob/master/LICENSE).",
       "docsUrl": "https://github.com/Azure/webapps-deploy"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-07-21T02:58:28.614Z"
+  "updated": "2025-07-26T01:52:26.595Z"
 }

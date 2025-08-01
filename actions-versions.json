@@ -192,12 +192,12 @@
     },
     {
       "repo": "azure/webapps-deploy",
-      "latest": "v2",
-      "major": "2",
+      "latest": "v3.0.6",
+      "major": "3",
       "description": "Enable GitHub developers to deploy to Azure WebApps using GitHub Actions",
       "status": "active",
-      "releaseDate": "2020-07-16T04:35:01Z",
-      "changelog": "Automate your GitHub Actions workflow to deploy [Azure Web Apps](https://azure.microsoft.com/services/app-service/web/) and [Azure Web app for Containers](https://azure.microsoft.com/services/app-service/containers/) using [Azure Web App Publish Profile](https://github.com/projectkudu/kudu/wiki/Deployment-credentials#site-credentials-aka-publish-profile-credentials) or using [Azure Login](https://github.com/Azure/login). \r\n\r\nAction supports publish profile for [Azure Web Apps](https://azure.microsoft.com/en-us/services/app-service/web/) (both Windows and Linux) and [Azure Web Apps for Containers](https://azure.microsoft.com/en-us/services/app-service/containers/) (Linux only).\r\n\r\n## Usage\r\n\r\nSample workflow to build and deploy a Web App to Azure using publish profile\r\n\r\n```yaml\r\n\r\n# File: .github/workflows/workflow.yml\r\n\r\non: push\r\n\r\njobs:\r\n  build-and-deploy:\r\n    runs-on: ubuntu-latest\r\n    steps:\r\n    # checkout the repo\r\n    - name: 'Checkout Github Action' \r\n      uses: actions/checkout@master\r\n    \r\n    - name: Setup Node 10.x\r\n      uses: actions/setup-node@v1\r\n      with:\r\n        node-version: '10.x'\r\n    - name: 'npm install, build, and test'\r\n      run: |\r\n        npm install\r\n        npm run build --if-present\r\n        npm run test --if-present\r\n       \r\n    - name: 'Run Azure webapp deploy action using publish profile credentials'\r\n      uses: azure/webapps-deploy@v2\r\n      with: \r\n        app-name: node-rn\r\n        publish-profile: ${{ secrets.azureWebAppPublishProfile }}\r\n        \r\n\r\n```\r\n\r\n## License\r\n\r\nGitHub Action for Azure Web App is licensed under the [MIT License](https://github.com/Azure/webapps-deploy/blob/master/LICENSE).",
+      "releaseDate": "2025-07-31T05:06:28Z",
+      "changelog": "This contains changes related to Sidecar\r\nhttps://github.com/Azure/webapps-deploy/pull/487",
       "docsUrl": "https://github.com/Azure/webapps-deploy"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-07-26T01:52:47.253Z"
+  "updated": "2025-08-01T02:08:39.797Z"
 }

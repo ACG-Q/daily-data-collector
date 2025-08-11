@@ -52,12 +52,12 @@
     },
     {
       "repo": "actions/cache",
-      "latest": "v4.2.3",
+      "latest": "v4.2.4",
       "major": "4",
       "description": "Cache dependencies and build outputs in GitHub Actions",
       "status": "active",
-      "releaseDate": "2025-03-19T18:18:32Z",
-      "changelog": "## What's Changed\r\n* Update to use @actions/cache 4.0.3 package & prepare for new release by @salmanmkc in https://github.com/actions/cache/pull/1577 (SAS tokens for cache entries are now masked in debug logs)\r\n\r\n## New Contributors\r\n* @salmanmkc made their first contribution in https://github.com/actions/cache/pull/1577\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v4.2.2...v4.2.3",
+      "releaseDate": "2025-08-07T12:50:57Z",
+      "changelog": "## What's Changed\r\n\r\n* Update README.md by @nebuk89 in https://github.com/actions/cache/pull/1620\r\n* Upgrade `@actions/cache` to `4.0.5` and move `@protobuf-ts/plugin` to dev depdencies by @Link- in https://github.com/actions/cache/pull/1634\r\n* Prepare release `4.2.4` by @Link- in https://github.com/actions/cache/pull/1636\r\n\r\n## New Contributors\r\n* @nebuk89 made their first contribution in https://github.com/actions/cache/pull/1620\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v4...v4.2.4",
       "docsUrl": "https://github.com/actions/cache"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-08-06T01:59:54.227Z"
+  "updated": "2025-08-11T01:59:46.101Z"
 }

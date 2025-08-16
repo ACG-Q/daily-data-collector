@@ -2,12 +2,12 @@
   "actions": [
     {
       "repo": "actions/checkout",
-      "latest": "v4.2.2",
-      "major": "4",
+      "latest": "v5.0.0",
+      "major": "5",
       "description": "Action for checking out a repo",
       "status": "active",
-      "releaseDate": "2024-10-23T14:46:00Z",
-      "changelog": "## What's Changed\r\n* `url-helper.ts` now leverages well-known environment variables by @jww3 in https://github.com/actions/checkout/pull/1941\r\n* Expand unit test coverage for `isGhes` by @jww3 in https://github.com/actions/checkout/pull/1946\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v4.2.1...v4.2.2",
+      "releaseDate": "2025-08-11T12:39:13Z",
+      "changelog": "## What's Changed\r\n* Update actions checkout to use node 24 by @salmanmkc in https://github.com/actions/checkout/pull/2226\r\n* Prepare v5.0.0 release by @salmanmkc in https://github.com/actions/checkout/pull/2238\r\n\r\n## ⚠️ Minimum Compatible Runner Version\r\n\r\n**v2.327.1**  \r\n[Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\nMake sure your runner is updated to this version or newer to use this release.\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v4...v5.0.0",
       "docsUrl": "https://github.com/actions/checkout"
     },
     {
@@ -207,7 +207,7 @@
       "description": "Configure AWS credential environment variables for use in other GitHub Actions.",
       "status": "active",
       "releaseDate": "2025-08-04T23:23:59Z",
-      "changelog": "## [4.3.1](https://github.com/aws-actions/configure-aws-credentials/compare/v4.3.0...v4.3.1) (2025-08-04)\n\n\n### Bug Fixes\n\n* update readme to 4.3.1 ([#1424](https://github.com/aws-actions/configure-aws-credentials/issues/1424)) ([be2e7ad](https://github.com/aws-actions/configure-aws-credentials/commit/be2e7ad815e27b890489a89ce2717b0f9e26b56e))",
+      "changelog": "## [4.3.1](https://github.com/aws-actions/configure-aws-credentials/compare/v4.3.0...v4.3.1) (2025-08-04)\r\n\r\n\r\n### Bug Fixes\r\n\r\n* update readme to 4.3.1 ([#1424](https://github.com/aws-actions/configure-aws-credentials/issues/1424)) ([be2e7ad](https://github.com/aws-actions/configure-aws-credentials/commit/be2e7ad815e27b890489a89ce2717b0f9e26b56e))",
       "docsUrl": "https://github.com/aws-actions/configure-aws-credentials"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-08-11T02:00:13.202Z"
+  "updated": "2025-08-16T01:45:34.389Z"
 }

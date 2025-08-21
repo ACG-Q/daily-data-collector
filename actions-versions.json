@@ -82,12 +82,12 @@
     },
     {
       "repo": "codecov/codecov-action",
-      "latest": "v5.4.3",
+      "latest": "v5.5.0",
       "major": "5",
       "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: ",
       "status": "active",
-      "releaseDate": "2025-05-15T20:39:19Z",
-      "changelog": "## What's Changed\r\n* fix: OIDC on forks by @joseph-sentry in https://github.com/codecov/codecov-action/pull/1823\r\n* build(deps): bump github/codeql-action from 3.28.13 to 3.28.17 by @dependabot in https://github.com/codecov/codecov-action/pull/1822\r\n* chore(release): 5.4.3 by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1827\r\n\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.4.2...v5.4.3",
+      "releaseDate": "2025-08-20T14:04:55Z",
+      "changelog": "## What's Changed\r\n* build(deps): bump github/codeql-action from 3.28.17 to 3.28.18 by @dependabot[bot] in https://github.com/codecov/codecov-action/pull/1829\r\n* docs: Refine OIDC docs by @spalmurray in https://github.com/codecov/codecov-action/pull/1837\r\n* fix: Typo in README by @spalmurray in https://github.com/codecov/codecov-action/pull/1838\r\n* fix: check reqs exist by @joseph-sentry in https://github.com/codecov/codecov-action/pull/1835\r\n* Pin actions/github-script by Git SHA by @martincostello in https://github.com/codecov/codecov-action/pull/1859\r\n* feat: upgrade wrapper to 0.2.4 by @jviall in https://github.com/codecov/codecov-action/pull/1864\r\n* chore(release): 5.5.0 by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1865\r\n\r\n## New Contributors\r\n* @spalmurray made their first contribution in https://github.com/codecov/codecov-action/pull/1837\r\n* @martincostello made their first contribution in https://github.com/codecov/codecov-action/pull/1859\r\n* @jviall made their first contribution in https://github.com/codecov/codecov-action/pull/1864\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.4.3...v5.5.0",
       "docsUrl": "https://github.com/codecov/codecov-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-08-16T01:49:32.734Z"
+  "updated": "2025-08-21T01:42:17.399Z"
 }

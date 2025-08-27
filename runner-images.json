@@ -52,7 +52,7 @@
         ]
       },
       {
-        "image": "Windows Server 2019",
+        "image": "Windows Server 2019 ![Deprecated](https://img.shields.io/badge/-Deprecated-red)",
         "yamlLabels": [
           "windows-2019"
         ]
@@ -104,5 +104,5 @@
     ],
     "other": []
   },
-  "updated": "2025-08-26T01:27:08.868Z"
+  "updated": "2025-08-27T01:24:36.911Z"
 }

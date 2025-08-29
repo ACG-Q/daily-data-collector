@@ -62,12 +62,14 @@
       {
         "image": "macOS 15",
         "yamlLabels": [
+          "macos-latest-large",
           "macos-15-large"
         ]
       },
       {
         "image": "macOS 15 Arm64",
         "yamlLabels": [
+          "macos-latest",
           "macos-15",
           "macos-15-xlarge"
         ]
@@ -75,14 +77,12 @@
       {
         "image": "macOS 14",
         "yamlLabels": [
-          "macos-latest-large",
           "macos-14-large"
         ]
       },
       {
         "image": "macOS 14 Arm64",
         "yamlLabels": [
-          "macos-latest",
           "macos-14",
           "macos-latest-xlarge",
           "macos-14-xlarge"
@@ -104,5 +104,5 @@
     ],
     "other": []
   },
-  "updated": "2025-08-28T01:23:53.861Z"
+  "updated": "2025-08-29T01:24:13.543Z"
 }

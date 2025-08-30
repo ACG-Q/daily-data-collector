@@ -12,7 +12,6 @@
     "macos-15-xlarge",
     "macos-latest",
     "macos-latest-large",
-    "macos-latest-xlarge",
     "ubuntu-22.04",
     "ubuntu-24.04",
     "ubuntu-latest",
@@ -84,7 +83,6 @@
         "image": "macOS 14 Arm64",
         "yamlLabels": [
           "macos-14",
-          "macos-latest-xlarge",
           "macos-14-xlarge"
         ]
       },
@@ -104,5 +102,5 @@
     ],
     "other": []
   },
-  "updated": "2025-08-29T01:24:13.543Z"
+  "updated": "2025-08-30T01:20:03.658Z"
 }

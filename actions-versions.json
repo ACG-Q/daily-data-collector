@@ -112,22 +112,22 @@
     },
     {
       "repo": "sonarsource/sonarqube-scan-action",
-      "latest": "v5.3.0",
+      "latest": "v5.3.1",
       "major": "5",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-07-22T09:05:02Z",
-      "changelog": "## What's Changed\r\n* SQSCANGHA-83 Avoid unbound variable error on parameter expansion by @aleksandra-bozhinoska-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/192\r\n* SQSCANGHA-97 Use /usr/bin/env for shebang by @eliandoran in https://github.com/SonarSource/sonarqube-scan-action/pull/193\r\n* SQSCANGHA-98 Update SonarScanner CLI to 7.2.0.5079 by @github-actions[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/196\r\n\r\n## New Contributors\r\n* @eliandoran made their first contribution in https://github.com/SonarSource/sonarqube-scan-action/pull/193\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5.2.0...v5.3.0",
+      "releaseDate": "2025-08-29T15:16:51Z",
+      "changelog": "## What's Changed\r\n* Fix the scanner-update script by @henryju in https://github.com/SonarSource/sonarqube-scan-action/pull/194\r\n* SQSCANGHA-100 NO-JIRA Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/197\r\n* SQSCANGHA-101 Add more input injection tests by @aleksandra-bozhinoska-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/200\r\n* pin actions/cache to a full-length commit SHA by @daantimmer in https://github.com/SonarSource/sonarqube-scan-action/pull/199\r\n\r\n## New Contributors\r\n* @daantimmer made their first contribution in https://github.com/SonarSource/sonarqube-scan-action/pull/199\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5...v5.3.1",
       "docsUrl": "https://github.com/SonarSource/sonarqube-scan-action"
     },
     {
       "repo": "aquasecurity/trivy-action",
-      "latest": "0.32.0",
+      "latest": "0.33.0",
       "major": "0",
       "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities",
       "status": "active",
-      "releaseDate": "2025-07-04T06:19:53Z",
-      "changelog": "## What's Changed\r\n* chore(deps): Update trivy to v0.64.1 by @aqua-bot in https://github.com/aquasecurity/trivy-action/pull/474\r\n\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.31.0...0.32.0",
+      "releaseDate": "2025-08-27T22:50:21Z",
+      "changelog": "## What's Changed\r\n* Update dependencies in README by @ibakshay in https://github.com/aquasecurity/trivy-action/pull/378\r\n* doc: correct sbom fs scan by @yxtay in https://github.com/aquasecurity/trivy-action/pull/458\r\n* Pin actions/cache by SHA by @martincostello in https://github.com/aquasecurity/trivy-action/pull/480\r\n* chore(ci): Add oras to correctly setup sync jobs by @simar7 in https://github.com/aquasecurity/trivy-action/pull/482\r\n* chore(deps): Update trivy to v0.65.0 by @aqua-bot in https://github.com/aquasecurity/trivy-action/pull/481\r\n\r\n## New Contributors\r\n* @ibakshay made their first contribution in https://github.com/aquasecurity/trivy-action/pull/378\r\n* @yxtay made their first contribution in https://github.com/aquasecurity/trivy-action/pull/458\r\n* @martincostello made their first contribution in https://github.com/aquasecurity/trivy-action/pull/480\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.32.0...0.33.0",
       "docsUrl": "https://github.com/aquasecurity/trivy-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-08-26T02:14:09.079Z"
+  "updated": "2025-09-01T01:53:53.581Z"
 }

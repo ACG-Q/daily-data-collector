@@ -12,32 +12,32 @@
     },
     {
       "repo": "actions/setup-node",
-      "latest": "v3.9.1",
-      "major": "3",
+      "latest": "v5.0.0",
+      "major": "5",
       "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "status": "active",
-      "releaseDate": "2025-04-17T13:58:17Z",
-      "changelog": "## What's Changed\r\n* Add workflow file for publishing releases to immutable action package by @aparnajyothi-y in https://github.com/actions/setup-node/pull/1281\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v3...v3.9.1",
+      "releaseDate": "2025-09-04T02:52:29Z",
+      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Enhance caching in setup-node with automatic package manager detection by @priya-kinthali in https://github.com/actions/setup-node/pull/1348\r\n\r\nThis update, introduces automatic caching when a valid `packageManager` field is present in your `package.json`. This aims to improve workflow performance and make dependency management more seamless. To disable this automatic caching, \r\nset `package-manager-cache: false`\r\n```yaml\r\nsteps:\r\n- uses: actions/checkout@v5\r\n- uses: actions/setup-node@v5\r\n  with:\r\n    package-manager-cache: false\r\n```\r\n* Upgrade action to use node24 by @salmanmkc in https://github.com/actions/setup-node/pull/1325\r\n\r\nMake sure your runner is on version v2.327.1 or later to ensure compatibility with this release. [See Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n\r\n### Dependency Upgrades\r\n* Upgrade @octokit/request-error and @actions/github by @dependabot[bot] in https://github.com/actions/setup-node/pull/1227\r\n* Upgrade uuid from 9.0.1 to 11.1.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1273\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1295\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/setup-node/pull/1332\r\n* Upgrade actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1345\r\n\r\n## New Contributors\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-node/pull/1348\r\n* @salmanmkc made their first contribution in https://github.com/actions/setup-node/pull/1325\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v4...v5.0.0",
       "docsUrl": "https://github.com/actions/setup-node"
     },
     {
       "repo": "actions/setup-python",
-      "latest": "v5.6.0",
-      "major": "5",
+      "latest": "v6.0.0",
+      "major": "6",
       "description": "Set up your GitHub Actions workflow with a specific version of Python",
       "status": "active",
-      "releaseDate": "2025-04-24T02:50:16Z",
-      "changelog": "## What's Changed\r\n* Workflow updates related to Ubuntu 20.04 by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1065\r\n* Fix for Candidate Not Iterable Error by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1082\r\n* Upgrade semver and @types/semver by @dependabot in https://github.com/actions/setup-python/pull/1091\r\n* Upgrade prettier from 2.8.8 to 3.5.3 by @dependabot in https://github.com/actions/setup-python/pull/1046\r\n* Upgrade ts-jest from 29.1.2 to 29.3.2 by @dependabot in https://github.com/actions/setup-python/pull/1081\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v5...v5.6.0",
+      "releaseDate": "2025-09-04T03:14:37Z",
+      "changelog": "## What's Changed\r\n### Breaking Changes\r\n* Upgrade to node 24 by @salmanmkc in https://github.com/actions/setup-python/pull/1164\r\n\r\nMake sure your runner is on version v2.327.1 or later to ensure compatibility with this release. [See Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n### Enhancements:\r\n* Add support for `pip-version`  by @priyagupta108 in https://github.com/actions/setup-python/pull/1129\r\n* Enhance reading from .python-version by @krystof-k in https://github.com/actions/setup-python/pull/787\r\n* Add version parsing from Pipfile by @aradkdj in https://github.com/actions/setup-python/pull/1067\r\n### Bug fixes:\r\n* Clarify pythonLocation behaviour for PyPy and GraalPy in environment variables by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1183\r\n* Change missing cache directory error to warning  by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1182\r\n* Add Architecture-Specific PATH Management for Python with --user Flag on Windows by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1122\r\n* Include python version in PyPy python-version output by @cdce8p in https://github.com/actions/setup-python/pull/1110\r\n* Update docs: clarification on pip authentication with setup-python by @priya-kinthali in https://github.com/actions/setup-python/pull/1156\r\n### Dependency updates:\r\n* Upgrade idna from 2.9 to 3.7 in /__tests__/data by @dependabot[bot] in https://github.com/actions/setup-python/pull/843\r\n* Upgrade form-data to fix critical vulnerabilities #182 & #183 by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1163\r\n* Upgrade setuptools to 78.1.1 to fix path traversal vulnerability in PackageIndex.download by @aparnajyothi-y in https://github.com/actions/setup-python/pull/1165\r\n* Upgrade actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/setup-python/pull/1181\r\n* Upgrade @actions/tool-cache from 2.0.1 to 2.0.2 by @dependabot[bot] in https://github.com/actions/setup-python/pull/1095\r\n\r\n## New Contributors\r\n* @krystof-k made their first contribution in https://github.com/actions/setup-python/pull/787\r\n* @cdce8p made their first contribution in https://github.com/actions/setup-python/pull/1110\r\n* @aradkdj made their first contribution in https://github.com/actions/setup-python/pull/1067\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v5...v6.0.0",
       "docsUrl": "https://github.com/actions/setup-python"
     },
     {
       "repo": "actions/setup-dotnet",
-      "latest": "v3.4.2",
-      "major": "3",
+      "latest": "v5.0.0",
+      "major": "5",
       "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk",
       "status": "active",
-      "releaseDate": "2025-04-17T18:30:55Z",
-      "changelog": "## What's Changed\r\n* Update the file name publish-immutable-actions to publish-immutable-action by @aparnajyothi-y in https://github.com/actions/setup-dotnet/pull/630\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v3...v3.4.2",
+      "releaseDate": "2025-09-03T03:15:18Z",
+      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Upgrade to Node.js 24 and modernize async usage by @salmanmkc in https://github.com/actions/setup-dotnet/pull/654\r\n\r\nMake sure your runner is updated to this version or newer to use this release. v2.327.1 [Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n### Dependency Updates\r\n* Upgrade @action/cache from 4.0.2 to 4.0.3 by @aparnajyothi-y in https://github.com/actions/setup-dotnet/pull/622\r\n* Upgrade husky from 8.0.3 to 9.1.7 by @dependabot[bot] in https://github.com/actions/setup-dotnet/pull/591\r\n* Upgrade @actions/glob from 0.4.0 to 0.5.0 by @dependabot[bot] in https://github.com/actions/setup-dotnet/pull/594\r\n* Upgrade eslint-config-prettier from 9.1.0 to 10.1.5 by @dependabot[bot] in https://github.com/actions/setup-dotnet/pull/639\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/setup-dotnet/pull/641\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/setup-dotnet/pull/652\r\n* Upgrade actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/setup-dotnet/pull/662\r\n\r\n\r\n### Bug Fixes\r\n* Remove Support for older .NET Versions and Update installers scripts by @gowridurgad in https://github.com/actions/setup-dotnet/pull/647\r\n\r\n## New Contributors\r\n* @gowridurgad made their first contribution in https://github.com/actions/setup-dotnet/pull/647\r\n* @salmanmkc made their first contribution in https://github.com/actions/setup-dotnet/pull/654\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v4...v5.0.0",
       "docsUrl": "https://github.com/actions/setup-dotnet"
     },
     {
@@ -82,12 +82,12 @@
     },
     {
       "repo": "codecov/codecov-action",
-      "latest": "v5.5.0",
+      "latest": "v5.5.1",
       "major": "5",
       "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: ",
       "status": "active",
-      "releaseDate": "2025-08-20T14:04:55Z",
-      "changelog": "## What's Changed\r\n* build(deps): bump github/codeql-action from 3.28.17 to 3.28.18 by @dependabot[bot] in https://github.com/codecov/codecov-action/pull/1829\r\n* docs: Refine OIDC docs by @spalmurray in https://github.com/codecov/codecov-action/pull/1837\r\n* fix: Typo in README by @spalmurray in https://github.com/codecov/codecov-action/pull/1838\r\n* fix: check reqs exist by @joseph-sentry in https://github.com/codecov/codecov-action/pull/1835\r\n* Pin actions/github-script by Git SHA by @martincostello in https://github.com/codecov/codecov-action/pull/1859\r\n* feat: upgrade wrapper to 0.2.4 by @jviall in https://github.com/codecov/codecov-action/pull/1864\r\n* chore(release): 5.5.0 by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1865\r\n\r\n## New Contributors\r\n* @spalmurray made their first contribution in https://github.com/codecov/codecov-action/pull/1837\r\n* @martincostello made their first contribution in https://github.com/codecov/codecov-action/pull/1859\r\n* @jviall made their first contribution in https://github.com/codecov/codecov-action/pull/1864\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.4.3...v5.5.0",
+      "releaseDate": "2025-09-04T14:36:56Z",
+      "changelog": "## What's Changed\r\n* build(deps): bump ossf/scorecard-action from 2.4.1 to 2.4.2 by @dependabot[bot] in https://github.com/codecov/codecov-action/pull/1833\r\n* build(deps): bump github/codeql-action from 3.28.18 to 3.29.9 by @dependabot[bot] in https://github.com/codecov/codecov-action/pull/1861\r\n* Document a `codecov-cli` version reference example by @webknjaz in https://github.com/codecov/codecov-action/pull/1774\r\n* docs: fix typo in README by @datalater in https://github.com/codecov/codecov-action/pull/1866\r\n* fix: update to use local app/ dir by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1872\r\n* build(deps): bump github/codeql-action from 3.29.9 to 3.29.11 by @dependabot[bot] in https://github.com/codecov/codecov-action/pull/1867\r\n* build(deps): bump actions/checkout from 4.2.2 to 5.0.0 by @dependabot[bot] in https://github.com/codecov/codecov-action/pull/1868\r\n* fix: overwrite pr number on fork by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1871\r\n* chore(release): 5.5.1 by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1873\r\n\r\n## New Contributors\r\n* @datalater made their first contribution in https://github.com/codecov/codecov-action/pull/1866\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.5.0...v5.5.1",
       "docsUrl": "https://github.com/codecov/codecov-action"
     },
     {
@@ -122,12 +122,12 @@
     },
     {
       "repo": "aquasecurity/trivy-action",
-      "latest": "0.33.0",
+      "latest": "0.33.1",
       "major": "0",
       "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities",
       "status": "active",
-      "releaseDate": "2025-08-27T22:50:21Z",
-      "changelog": "## What's Changed\r\n* Update dependencies in README by @ibakshay in https://github.com/aquasecurity/trivy-action/pull/378\r\n* doc: correct sbom fs scan by @yxtay in https://github.com/aquasecurity/trivy-action/pull/458\r\n* Pin actions/cache by SHA by @martincostello in https://github.com/aquasecurity/trivy-action/pull/480\r\n* chore(ci): Add oras to correctly setup sync jobs by @simar7 in https://github.com/aquasecurity/trivy-action/pull/482\r\n* chore(deps): Update trivy to v0.65.0 by @aqua-bot in https://github.com/aquasecurity/trivy-action/pull/481\r\n\r\n## New Contributors\r\n* @ibakshay made their first contribution in https://github.com/aquasecurity/trivy-action/pull/378\r\n* @yxtay made their first contribution in https://github.com/aquasecurity/trivy-action/pull/458\r\n* @martincostello made their first contribution in https://github.com/aquasecurity/trivy-action/pull/480\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.32.0...0.33.0",
+      "releaseDate": "2025-09-03T16:07:53Z",
+      "changelog": "## What's Changed\r\n* Update setup-trivy action to version v0.2.4 by @martincostello in https://github.com/aquasecurity/trivy-action/pull/486\r\n\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.33.0...0.33.1",
       "docsUrl": "https://github.com/aquasecurity/trivy-action"
     },
     {
@@ -182,12 +182,12 @@
     },
     {
       "repo": "google-github-actions/deploy-appengine",
-      "latest": "v2.1.7",
-      "major": "2",
+      "latest": "v3.0.1",
+      "major": "3",
       "description": "A GitHub Action that deploys source code to Google App Engine.",
       "status": "active",
-      "releaseDate": "2025-07-21T14:23:20Z",
-      "changelog": "## What's Changed\n* Make `project_id` an optional input by @DefCon-007 in https://github.com/google-github-actions/deploy-appengine/pull/383\n* Remove optional project_id field by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/387\n* Release: v2.1.7 by @google-github-actions-bot in https://github.com/google-github-actions/deploy-appengine/pull/388\n\n## New Contributors\n* @DefCon-007 made their first contribution in https://github.com/google-github-actions/deploy-appengine/pull/383\n\n**Full Changelog**: https://github.com/google-github-actions/deploy-appengine/compare/v2.1.6...v2.1.7",
+      "releaseDate": "2025-09-03T01:08:36Z",
+      "changelog": "## What's Changed\n* Update README to reference newest version by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/393\n* Fix docsgen and remove deprecated field by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/394\n* Release: v3.0.1 by @google-github-actions-bot in https://github.com/google-github-actions/deploy-appengine/pull/395\n\n\n**Full Changelog**: https://github.com/google-github-actions/deploy-appengine/compare/v3...v3.0.1",
       "docsUrl": "https://github.com/google-github-actions/deploy-appengine"
     },
     {
@@ -202,12 +202,12 @@
     },
     {
       "repo": "aws-actions/configure-aws-credentials",
-      "latest": "v4.3.1",
-      "major": "4",
+      "latest": "v5.0.0",
+      "major": "5",
       "description": "Configure AWS credential environment variables for use in other GitHub Actions.",
       "status": "active",
-      "releaseDate": "2025-08-04T23:23:59Z",
-      "changelog": "## [4.3.1](https://github.com/aws-actions/configure-aws-credentials/compare/v4.3.0...v4.3.1) (2025-08-04)\r\n\r\n\r\n### Bug Fixes\r\n\r\n* update readme to 4.3.1 ([#1424](https://github.com/aws-actions/configure-aws-credentials/issues/1424)) ([be2e7ad](https://github.com/aws-actions/configure-aws-credentials/commit/be2e7ad815e27b890489a89ce2717b0f9e26b56e))",
+      "releaseDate": "2025-09-03T19:07:34Z",
+      "changelog": "## [5.0.0](https://github.com/aws-actions/configure-aws-credentials/compare/v4.3.1...v5.0.0) (2025-09-03)\r\n\r\n\r\n### ⚠ BREAKING CHANGES\r\n\r\n* Cleanup input handling. Changes invalid boolean input behavior (see #1445)\r\n\r\n### Features\r\n\r\n* add skip OIDC option ([#1458](https://github.com/aws-actions/configure-aws-credentials/issues/1458)) ([8c45f6b](https://github.com/aws-actions/configure-aws-credentials/commit/8c45f6b08196feb86cfdbe431541d5571d9ab2c2))\r\n* Cleanup input handling. Changes invalid boolean input behavior (see [#1445](https://github.com/aws-actions/configure-aws-credentials/issues/1445)) ([74b3e27](https://github.com/aws-actions/configure-aws-credentials/commit/74b3e27aa80db064b5bb8c04b22fc607e817acf7))\r\n* support account id allowlist ([#1456](https://github.com/aws-actions/configure-aws-credentials/issues/1456)) ([c4be498](https://github.com/aws-actions/configure-aws-credentials/commit/c4be498953fc1da2707a50ce4b761a53af3d02af))",
       "docsUrl": "https://github.com/aws-actions/configure-aws-credentials"
     },
     {
@@ -242,32 +242,32 @@
     },
     {
       "repo": "actions/github-script",
-      "latest": "v7.0.1",
-      "major": "7",
+      "latest": "v8",
+      "major": "8",
       "description": "Write workflows scripting the GitHub API in JavaScript",
       "status": "active",
-      "releaseDate": "2023-11-17T22:21:53Z",
-      "changelog": "## What's Changed\r\n* Avoid setting `baseUrl` to undefined when input is not provided by @joshmgross in https://github.com/actions/github-script/pull/439\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/github-script/compare/v7.0.0...v7.0.1",
+      "releaseDate": "2025-09-04T14:57:03Z",
+      "changelog": "## What's Changed\r\n* Update Node.js version support to 24.x by @salmanmkc in https://github.com/actions/github-script/pull/637\r\n* README for updating actions/github-script from v7 to v8 by @sneha-krip in https://github.com/actions/github-script/pull/653\r\n\r\n## ⚠️ Minimum Compatible Runner Version\r\n\r\n**v2.327.1**  \r\n[Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\nMake sure your runner is updated to this version or newer to use this release.\r\n## New Contributors\r\n* @salmanmkc made their first contribution in https://github.com/actions/github-script/pull/637\r\n* @sneha-krip made their first contribution in https://github.com/actions/github-script/pull/653\r\n\r\n**Full Changelog**: https://github.com/actions/github-script/compare/v7.1.0...v8.0.0",
       "docsUrl": "https://github.com/actions/github-script"
     },
     {
       "repo": "actions/labeler",
-      "latest": "v5.0.0",
-      "major": "5",
+      "latest": "v6.0.1",
+      "major": "6",
       "description": "An action for automatically labelling pull requests",
       "status": "active",
-      "releaseDate": "2023-12-04T14:14:37Z",
-      "changelog": "## What's Changed\r\nThis release contains the following breaking changes:\r\n1) The ability to apply labels based on the names of base and/or head branches was added ([#186](https://github.com/actions/labeler/issues/186) and [#54](https://github.com/actions/labeler/issues/54)). The match object for changed files was expanded with new combinations in order to make it more intuitive and flexible ([#423](https://github.com/actions/labeler/issues/423) and [#101](https://github.com/actions/labeler/issues/101)). As a result, the configuration file structure was significantly redesigned and is not compatible with the structure of the previous version. Please read the [action documentation](https://github.com/actions/labeler/tree/main#pull-request-labeler) to find out how to adapt your configuration files for use with the new action version.\r\n\r\n2) The bug related to the `sync-labels` input was fixed ([#112](https://github.com/actions/labeler/issues/112)). Now the input value is read correctly.\r\n\r\n3) By default, `dot` input is set to `true`. Now, paths starting with a dot (e.g. `.github`) are matched by default.\r\n\r\n4) Version 5 of this action updated the [runtime to Node.js 20](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#runs-for-javascript-actions). All scripts are now run with Node.js 20 instead of Node.js 16 and are affected by any breaking changes between Node.js 16 and 20.\r\n\r\nFor more information, please read the [action documentation](https://github.com/actions/labeler/tree/main#pull-request-labeler).\r\n## New Contributors\r\n* @joshdales made their first contribution in https://github.com/actions/labeler/pull/203\r\n* @dusan-trickovic made their first contribution in https://github.com/actions/labeler/pull/626\r\n* @sungh0lim made their first contribution in https://github.com/actions/labeler/pull/630\r\n* @TrianguloY made their first contribution in https://github.com/actions/labeler/pull/629\r\n\r\n**Full Changelog**: https://github.com/actions/labeler/compare/v4...v5.0.0",
+      "releaseDate": "2025-09-04T17:56:16Z",
+      "changelog": "## What's Changed\r\n* Upgrade publish-action from 0.2.2 to 0.4.0 by @aparnajyothi-y in https://github.com/actions/labeler/pull/901\r\n\r\n## New Contributors\r\n* @aparnajyothi-y made their first contribution in https://github.com/actions/labeler/pull/901\r\n\r\n**Full Changelog**: https://github.com/actions/labeler/compare/v6.0.0...v6.0.1",
       "docsUrl": "https://github.com/actions/labeler"
     },
     {
       "repo": "actions/stale",
-      "latest": "v9.1.0",
-      "major": "9",
+      "latest": "v10.0.0",
+      "major": "10",
       "description": "Marks issues and pull requests that have not had recent interaction",
       "status": "active",
-      "releaseDate": "2025-01-21T03:34:36Z",
-      "changelog": "## What's Changed\r\n* Documentation update by @Marukome0743 in https://github.com/actions/stale/pull/1116\r\n* Add workflow file for publishing releases to immutable action package by @Jcambass in https://github.com/actions/stale/pull/1179\r\n* Update undici from 5.28.2 to 5.28.4 by @dependabot in https://github.com/actions/stale/pull/1150\r\n* Update actions/checkout from 3 to 4 by @dependabot in https://github.com/actions/stale/pull/1091\r\n* Update actions/publish-action from 0.2.2 to 0.3.0 by @dependabot in https://github.com/actions/stale/pull/1147\r\n* Update ts-jest from 29.1.1 to 29.2.5 by @dependabot in https://github.com/actions/stale/pull/1175\r\n* Update @actions/core from 1.10.1 to 1.11.1 by @dependabot in https://github.com/actions/stale/pull/1191\r\n* Update @types/jest from 29.5.11 to 29.5.14 by @dependabot in https://github.com/actions/stale/pull/1193\r\n* Update @actions/cache from 3.2.2 to 4.0.0 by @dependabot in https://github.com/actions/stale/pull/1194\r\n\r\n## New Contributors\r\n* @Marukome0743 made their first contribution in https://github.com/actions/stale/pull/1116\r\n* @Jcambass made their first contribution in https://github.com/actions/stale/pull/1179\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v9...v9.1.0",
+      "releaseDate": "2025-09-04T03:36:14Z",
+      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Upgrade to node 24 by @salmanmkc in https://github.com/actions/stale/pull/1279\r\nMake sure your runner is on version v2.327.1 or later to ensure compatibility with this release. [Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n### Enhancement\r\n- Introducing sort-by option by @suyashgaonkar in https://github.com/actions/stale/pull/1254\r\n\r\n### Dependency Upgrades\r\n* Upgrade actions/publish-immutable-action from 0.0.3 to 0.0.4 by @dependabot[bot] in https://github.com/actions/stale/pull/1186\r\n* Upgrade undici from 5.28.4 to 5.28.5 by @dependabot[bot] in https://github.com/actions/stale/pull/1201\r\n* Upgrade @action/cache from 4.0.0 to 4.0.2 by @aparnajyothi-y in https://github.com/actions/stale/pull/1226\r\n* Upgrade @action/cache from 4.0.2 to 4.0.3 by @suyashgaonkar in https://github.com/actions/stale/pull/1233\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/stale/pull/1251\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/stale/pull/1277\r\n\r\n\r\n### Documentation changes\r\n\r\n- Changelog update for recent releases by @suyashgaonkar in https://github.com/actions/stale/pull/1224\r\n- Permissions update in Readme by @ghadimir in https://github.com/actions/stale/pull/1248\r\n\r\n## New Contributors\r\n* @suyashgaonkar made their first contribution in https://github.com/actions/stale/pull/1224\r\n* @GhadimiR made their first contribution in https://github.com/actions/stale/pull/1248\r\n* @gowridurgad made their first contribution in https://github.com/actions/stale/pull/1277\r\n* @salmanmkc made their first contribution in https://github.com/actions/stale/pull/1279\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v9...v10.0.0",
       "docsUrl": "https://github.com/actions/stale"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-09-01T02:01:33.346Z"
+  "updated": "2025-09-06T01:27:08.798Z"
 }

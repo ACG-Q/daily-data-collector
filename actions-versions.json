@@ -17,7 +17,7 @@
       "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "status": "active",
       "releaseDate": "2025-09-04T02:52:29Z",
-      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Enhance caching in setup-node with automatic package manager detection by @priya-kinthali in https://github.com/actions/setup-node/pull/1348\r\n\r\nThis update, introduces automatic caching when a valid `packageManager` field is present in your `package.json`. This aims to improve workflow performance and make dependency management more seamless. To disable this automatic caching, \r\nset `package-manager-cache: false`\r\n```yaml\r\nsteps:\r\n- uses: actions/checkout@v5\r\n- uses: actions/setup-node@v5\r\n  with:\r\n    package-manager-cache: false\r\n```\r\n* Upgrade action to use node24 by @salmanmkc in https://github.com/actions/setup-node/pull/1325\r\n\r\nMake sure your runner is on version v2.327.1 or later to ensure compatibility with this release. [See Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n\r\n### Dependency Upgrades\r\n* Upgrade @octokit/request-error and @actions/github by @dependabot[bot] in https://github.com/actions/setup-node/pull/1227\r\n* Upgrade uuid from 9.0.1 to 11.1.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1273\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1295\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/setup-node/pull/1332\r\n* Upgrade actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1345\r\n\r\n## New Contributors\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-node/pull/1348\r\n* @salmanmkc made their first contribution in https://github.com/actions/setup-node/pull/1325\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v4...v5.0.0",
+      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Enhance caching in setup-node with automatic package manager detection by @priya-kinthali in https://github.com/actions/setup-node/pull/1348\r\n\r\nThis update, introduces automatic caching when a valid `packageManager` field is present in your `package.json`. This aims to improve workflow performance and make dependency management more seamless. \r\nTo disable this automatic caching, set `package-manager-cache: false`\r\n```yaml\r\nsteps:\r\n- uses: actions/checkout@v5\r\n- uses: actions/setup-node@v5\r\n  with:\r\n    package-manager-cache: false\r\n```\r\n* Upgrade action to use node24 by @salmanmkc in https://github.com/actions/setup-node/pull/1325\r\n\r\nMake sure your runner is on version v2.327.1 or later to ensure compatibility with this release. [See Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n\r\n### Dependency Upgrades\r\n* Upgrade @octokit/request-error and @actions/github by @dependabot[bot] in https://github.com/actions/setup-node/pull/1227\r\n* Upgrade uuid from 9.0.1 to 11.1.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1273\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1295\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/setup-node/pull/1332\r\n* Upgrade actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1345\r\n\r\n## New Contributors\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-node/pull/1348\r\n* @salmanmkc made their first contribution in https://github.com/actions/setup-node/pull/1325\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v4...v5.0.0",
       "docsUrl": "https://github.com/actions/setup-node"
     },
     {
@@ -282,12 +282,12 @@
     },
     {
       "repo": "softprops/action-gh-release",
-      "latest": "v2.3.2",
+      "latest": "v2.3.3",
       "major": "2",
       "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "status": "active",
-      "releaseDate": "2025-06-10T22:33:54Z",
-      "changelog": "* fix: revert fs `readableWebStream` change",
+      "releaseDate": "2025-09-07T04:36:59Z",
+      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Exciting New Features 🎉\r\n\r\n* feat: add input option `overwrite_files` by @asfernandes in https://github.com/softprops/action-gh-release/pull/343\r\n\r\n### Other Changes 🔄\r\n\r\n- dependency updates\r\n\r\n## New Contributors\r\n* @asfernandes made their first contribution in https://github.com/softprops/action-gh-release/pull/343\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2...v2.3.3",
       "docsUrl": "https://github.com/softprops/action-gh-release"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-09-06T02:02:55.677Z"
+  "updated": "2025-09-11T01:38:27.724Z"
 }

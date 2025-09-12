@@ -10,6 +10,8 @@
     "macos-15",
     "macos-15-large",
     "macos-15-xlarge",
+    "macos-26",
+    "macos-26-xlarge",
     "macos-latest",
     "macos-latest-large",
     "ubuntu-22.04",
@@ -59,6 +61,13 @@
     ],
     "macos": [
       {
+        "image": "macOS 26 Arm64 `beta`",
+        "yamlLabels": [
+          "macos-26",
+          "macos-26-xlarge"
+        ]
+      },
+      {
         "image": "macOS 15",
         "yamlLabels": [
           "macos-latest-large",
@@ -102,5 +111,5 @@
     ],
     "other": []
   },
-  "updated": "2025-09-11T01:23:15.034Z"
+  "updated": "2025-09-12T01:19:50.353Z"
 }

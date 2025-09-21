@@ -112,12 +112,12 @@
     },
     {
       "repo": "sonarsource/sonarqube-scan-action",
-      "latest": "v5.3.1",
-      "major": "5",
+      "latest": "v6.0.0",
+      "major": "6",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-08-29T15:16:51Z",
-      "changelog": "## What's Changed\r\n* Fix the scanner-update script by @henryju in https://github.com/SonarSource/sonarqube-scan-action/pull/194\r\n* SQSCANGHA-100 NO-JIRA Bump actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/197\r\n* SQSCANGHA-101 Add more input injection tests by @aleksandra-bozhinoska-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/200\r\n* pin actions/cache to a full-length commit SHA by @daantimmer in https://github.com/SonarSource/sonarqube-scan-action/pull/199\r\n\r\n## New Contributors\r\n* @daantimmer made their first contribution in https://github.com/SonarSource/sonarqube-scan-action/pull/199\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5...v5.3.1",
+      "releaseDate": "2025-09-18T08:56:32Z",
+      "changelog": "## BREAKING CHANGE!\r\n\r\nIn order to prevent command-line injection, the actions has been rewritten from Bash to JS, and the `args` input is now parsed differently. When updating to v6, you might have to update your workflow to change how arguments are quoted.\r\nFor example, if you were previously passing:\r\n```yaml\r\n- uses: SonarSource/sonarqube-scan-action@<action version>\r\n  with:\r\n    args: >\r\n      -Dsonar.projectName=\"My Project\"\r\n```\r\nyou should now pass:\r\n```yaml\r\n- uses: SonarSource/sonarqube-scan-action@<action version>\r\n  with:\r\n    args: >\r\n      \"-Dsonar.projectName=My Project\"\r\n```\r\n\r\nFor more `args` passing examples, please refer to the [README](https://github.com/SonarSource/sonarqube-scan-action/tree/master?tab=readme-ov-file#args) file\r\n\r\n## What's Changed\r\n* SQSCANGHA-106 Migrate from Bash to JS by @jeremy-davis-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/208\r\n\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5.3.1...v6.0.0",
       "docsUrl": "https://github.com/SonarSource/sonarqube-scan-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-09-16T01:28:14.360Z"
+  "updated": "2025-09-21T01:44:54.799Z"
 }

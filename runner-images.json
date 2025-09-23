@@ -96,14 +96,14 @@
         ]
       },
       {
-        "image": "macOS 13",
+        "image": "macOS 13 ![Deprecated](https://img.shields.io/badge/-Deprecated-red)",
         "yamlLabels": [
           "macos-13",
           "macos-13-large"
         ]
       },
       {
-        "image": "macOS 13 Arm64",
+        "image": "macOS 13 Arm64 ![Deprecated](https://img.shields.io/badge/-Deprecated-red)",
         "yamlLabels": [
           "macos-13-xlarge"
         ]
@@ -111,5 +111,5 @@
     ],
     "other": []
   },
-  "updated": "2025-09-22T01:36:56.655Z"
+  "updated": "2025-09-23T01:21:23.927Z"
 }

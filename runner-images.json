@@ -8,6 +8,7 @@
     "macos-14-large",
     "macos-14-xlarge",
     "macos-15",
+    "macos-15-intel",
     "macos-15-large",
     "macos-15-xlarge",
     "macos-26",
@@ -71,7 +72,8 @@
         "image": "macOS 15",
         "yamlLabels": [
           "macos-latest-large",
-          "macos-15-large"
+          "macos-15-large",
+          "macos-15-intel"
         ]
       },
       {
@@ -111,5 +113,5 @@
     ],
     "other": []
   },
-  "updated": "2025-09-23T01:21:23.927Z"
+  "updated": "2025-09-24T01:21:53.781Z"
 }

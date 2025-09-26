@@ -52,12 +52,12 @@
     },
     {
       "repo": "actions/cache",
-      "latest": "v4.2.4",
+      "latest": "v4.3.0",
       "major": "4",
       "description": "Cache dependencies and build outputs in GitHub Actions",
       "status": "active",
-      "releaseDate": "2025-08-07T12:50:57Z",
-      "changelog": "## What's Changed\r\n\r\n* Update README.md by @nebuk89 in https://github.com/actions/cache/pull/1620\r\n* Upgrade `@actions/cache` to `4.0.5` and move `@protobuf-ts/plugin` to dev depdencies by @Link- in https://github.com/actions/cache/pull/1634\r\n* Prepare release `4.2.4` by @Link- in https://github.com/actions/cache/pull/1636\r\n\r\n## New Contributors\r\n* @nebuk89 made their first contribution in https://github.com/actions/cache/pull/1620\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v4...v4.2.4",
+      "releaseDate": "2025-09-24T13:48:50Z",
+      "changelog": "## What's Changed\r\n\r\n* Add note on runner versions by @GhadimiR in https://github.com/actions/cache/pull/1642\r\n* Prepare `v4.3.0` release by @Link- in https://github.com/actions/cache/pull/1655\r\n\r\n## New Contributors\r\n\r\n* @GhadimiR made their first contribution in https://github.com/actions/cache/pull/1642\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v4...v4.3.0",
       "docsUrl": "https://github.com/actions/cache"
     },
     {
@@ -112,12 +112,12 @@
     },
     {
       "repo": "sonarsource/sonarqube-scan-action",
-      "latest": "v6.0.0",
-      "major": "6",
+      "latest": "v4.2.2",
+      "major": "4",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-09-18T08:56:32Z",
-      "changelog": "## BREAKING CHANGE!\r\n\r\nIn order to prevent command-line injection, the actions has been rewritten from Bash to JS, and the `args` input is now parsed differently. When updating to v6, you might have to update your workflow to change how arguments are quoted.\r\nFor example, if you were previously passing:\r\n```yaml\r\n- uses: SonarSource/sonarqube-scan-action@<action version>\r\n  with:\r\n    args: >\r\n      -Dsonar.projectName=\"My Project\"\r\n```\r\nyou should now pass:\r\n```yaml\r\n- uses: SonarSource/sonarqube-scan-action@<action version>\r\n  with:\r\n    args: >\r\n      \"-Dsonar.projectName=My Project\"\r\n```\r\n\r\nFor more `args` passing examples, please refer to the [README](https://github.com/SonarSource/sonarqube-scan-action/tree/master?tab=readme-ov-file#args) file\r\n\r\n## What's Changed\r\n* SQSCANGHA-106 Migrate from Bash to JS by @jeremy-davis-sonarsource in https://github.com/SonarSource/sonarqube-scan-action/pull/208\r\n\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v5.3.1...v6.0.0",
+      "releaseDate": "2025-09-25T13:30:49Z",
+      "changelog": "**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v4.2.1...v4.2.2",
       "docsUrl": "https://github.com/SonarSource/sonarqube-scan-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-09-21T01:45:23.137Z"
+  "updated": "2025-09-26T01:37:39.580Z"
 }

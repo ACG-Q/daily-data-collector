@@ -43,13 +43,13 @@
       {
         "image": "Windows Server 2025",
         "yamlLabels": [
+          "windows-latest",
           "windows-2025"
         ]
       },
       {
         "image": "Windows Server 2022",
         "yamlLabels": [
-          "windows-latest",
           "windows-2022"
         ]
       },
@@ -113,5 +113,5 @@
     ],
     "other": []
   },
-  "updated": "2025-10-01T01:39:23.189Z"
+  "updated": "2025-10-02T01:20:50.484Z"
 }

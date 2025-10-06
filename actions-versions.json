@@ -262,12 +262,12 @@
     },
     {
       "repo": "actions/stale",
-      "latest": "v10.0.0",
+      "latest": "v10.1.0",
       "major": "10",
       "description": "Marks issues and pull requests that have not had recent interaction",
       "status": "active",
-      "releaseDate": "2025-09-04T03:36:14Z",
-      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Upgrade to node 24 by @salmanmkc in https://github.com/actions/stale/pull/1279\r\nMake sure your runner is on version v2.327.1 or later to ensure compatibility with this release. [Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n### Enhancement\r\n- Introducing sort-by option by @suyashgaonkar in https://github.com/actions/stale/pull/1254\r\n\r\n### Dependency Upgrades\r\n* Upgrade actions/publish-immutable-action from 0.0.3 to 0.0.4 by @dependabot[bot] in https://github.com/actions/stale/pull/1186\r\n* Upgrade undici from 5.28.4 to 5.28.5 by @dependabot[bot] in https://github.com/actions/stale/pull/1201\r\n* Upgrade @action/cache from 4.0.0 to 4.0.2 by @aparnajyothi-y in https://github.com/actions/stale/pull/1226\r\n* Upgrade @action/cache from 4.0.2 to 4.0.3 by @suyashgaonkar in https://github.com/actions/stale/pull/1233\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/stale/pull/1251\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/stale/pull/1277\r\n\r\n\r\n### Documentation changes\r\n\r\n- Changelog update for recent releases by @suyashgaonkar in https://github.com/actions/stale/pull/1224\r\n- Permissions update in Readme by @ghadimir in https://github.com/actions/stale/pull/1248\r\n\r\n## New Contributors\r\n* @suyashgaonkar made their first contribution in https://github.com/actions/stale/pull/1224\r\n* @GhadimiR made their first contribution in https://github.com/actions/stale/pull/1248\r\n* @gowridurgad made their first contribution in https://github.com/actions/stale/pull/1277\r\n* @salmanmkc made their first contribution in https://github.com/actions/stale/pull/1279\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v9...v10.0.0",
+      "releaseDate": "2025-10-03T19:45:27Z",
+      "changelog": "## What's Changed\r\n* Add `only-issue-types` option to filter issues by type by @Bibo-Joshi in https://github.com/actions/stale/pull/1255\r\n\r\n## New Contributors\r\n* @Bibo-Joshi made their first contribution in https://github.com/actions/stale/pull/1255\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v10...v10.1.0",
       "docsUrl": "https://github.com/actions/stale"
     },
     {
@@ -282,12 +282,12 @@
     },
     {
       "repo": "softprops/action-gh-release",
-      "latest": "v2.3.3",
+      "latest": "v2.3.4",
       "major": "2",
       "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "status": "active",
-      "releaseDate": "2025-09-07T04:36:59Z",
-      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Exciting New Features 🎉\r\n\r\n* feat: add input option `overwrite_files` by @asfernandes in https://github.com/softprops/action-gh-release/pull/343\r\n\r\n### Other Changes 🔄\r\n\r\n- dependency updates\r\n\r\n## New Contributors\r\n* @asfernandes made their first contribution in https://github.com/softprops/action-gh-release/pull/343\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2...v2.3.3",
+      "releaseDate": "2025-10-03T18:45:51Z",
+      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Bug fixes 🐛\r\n* fix(action): handle 422 already_exists race condition by @stephenway in https://github.com/softprops/action-gh-release/pull/665\r\n### Other Changes 🔄\r\n* chore(deps): bump actions/setup-node from 4.4.0 to 5.0.0 in the github-actions group by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/656\r\n* chore(deps): bump @types/node from 20.19.11 to 20.19.13 in the npm group by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/655\r\n* chore(deps): bump vite from 7.0.0 to 7.1.5 by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/657\r\n* chore(deps): bump the npm group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/662\r\n* chore(deps): bump the npm group with 3 updates by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/666\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2...v2.3.4",
       "docsUrl": "https://github.com/softprops/action-gh-release"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-10-01T02:45:01.570Z"
+  "updated": "2025-10-06T01:38:43.155Z"
 }

@@ -12,12 +12,12 @@
     },
     {
       "repo": "actions/setup-node",
-      "latest": "v5.0.0",
-      "major": "5",
+      "latest": "v6.0.0",
+      "major": "6",
       "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "status": "active",
-      "releaseDate": "2025-09-04T02:52:29Z",
-      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Enhance caching in setup-node with automatic package manager detection by @priya-kinthali in https://github.com/actions/setup-node/pull/1348\r\n\r\nThis update, introduces automatic caching when a valid `packageManager` field is present in your `package.json`. This aims to improve workflow performance and make dependency management more seamless. \r\nTo disable this automatic caching, set `package-manager-cache: false`\r\n```yaml\r\nsteps:\r\n- uses: actions/checkout@v5\r\n- uses: actions/setup-node@v5\r\n  with:\r\n    package-manager-cache: false\r\n```\r\n* Upgrade action to use node24 by @salmanmkc in https://github.com/actions/setup-node/pull/1325\r\n\r\nMake sure your runner is on version v2.327.1 or later to ensure compatibility with this release. [See Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n\r\n### Dependency Upgrades\r\n* Upgrade @octokit/request-error and @actions/github by @dependabot[bot] in https://github.com/actions/setup-node/pull/1227\r\n* Upgrade uuid from 9.0.1 to 11.1.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1273\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1295\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/setup-node/pull/1332\r\n* Upgrade actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1345\r\n\r\n## New Contributors\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-node/pull/1348\r\n* @salmanmkc made their first contribution in https://github.com/actions/setup-node/pull/1325\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v4...v5.0.0",
+      "releaseDate": "2025-10-14T02:55:17Z",
+      "changelog": "## What's Changed\r\n\r\n**Breaking Changes**\r\n\r\n- Limit automatic caching to npm, update workflows and documentation by @priyagupta108 in https://github.com/actions/setup-node/pull/1374\r\n\r\n**Dependency Upgrades**\r\n\r\n- Upgrade ts-jest from 29.1.2 to 29.4.1 and document breaking changes in v5 by @dependabot[bot] in [#1336](https://github.com/actions/setup-node/pull/1336)\r\n- Upgrade prettier from 2.8.8 to 3.6.2 by @dependabot[bot] in [#1334](https://github.com/actions/setup-node/pull/1334)\r\n- Upgrade actions/publish-action from 0.3.0 to 0.4.0 by @dependabot[bot] in [#1362](https://github.com/actions/setup-node/pull/1362)\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v5...v6.0.0",
       "docsUrl": "https://github.com/actions/setup-node"
     },
     {
@@ -282,12 +282,12 @@
     },
     {
       "repo": "softprops/action-gh-release",
-      "latest": "v2.4.0",
+      "latest": "v2.4.1",
       "major": "2",
       "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "status": "active",
-      "releaseDate": "2025-10-07T02:54:10Z",
-      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Exciting New Features 🎉\r\n* feat(action): respect working_directory for files globs by @stephenway in https://github.com/softprops/action-gh-release/pull/667\r\n### Other Changes 🔄\r\n* chore(deps): bump the npm group with 2 updates by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/668\r\n\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2.3.4...v2.4.0",
+      "releaseDate": "2025-10-11T15:41:11Z",
+      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Other Changes 🔄\r\n* fix(util): support brace expansion globs containing commas in parseInputFiles by @Copilot in https://github.com/softprops/action-gh-release/pull/672\r\n* fix: gracefully fallback to body when body_path cannot be read by @Copilot in https://github.com/softprops/action-gh-release/pull/671\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2...v2.4.1",
       "docsUrl": "https://github.com/softprops/action-gh-release"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-10-11T02:07:21.566Z"
+  "updated": "2025-10-16T01:39:59.328Z"
 }

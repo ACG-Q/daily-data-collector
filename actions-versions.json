@@ -62,22 +62,22 @@
     },
     {
       "repo": "actions/upload-artifact",
-      "latest": "v4.6.2",
-      "major": "4",
-      "description": null,
-      "status": "active",
-      "releaseDate": "2025-03-19T17:47:02Z",
-      "changelog": "## What's Changed\r\n* Update to use artifact 2.3.2 package & prepare for new upload-artifact release by @salmanmkc in https://github.com/actions/upload-artifact/pull/685\r\n\r\n## New Contributors\r\n* @salmanmkc made their first contribution in https://github.com/actions/upload-artifact/pull/685\r\n\r\n**Full Changelog**: https://github.com/actions/upload-artifact/compare/v4...v4.6.2",
-      "docsUrl": "https://github.com/actions/upload-artifact"
-    },
-    {
-      "repo": "actions/download-artifact",
       "latest": "v5.0.0",
       "major": "5",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-08-05T21:38:42Z",
-      "changelog": "## What's Changed\r\n* Update README.md by @nebuk89 in https://github.com/actions/download-artifact/pull/407\r\n* BREAKING fix: inconsistent path behavior for single artifact downloads by ID by @GrantBirki in https://github.com/actions/download-artifact/pull/416\r\n\r\n## v5.0.0\r\n\r\n### 🚨 Breaking Change\r\n\r\nThis release fixes an inconsistency in path behavior for single artifact downloads by ID. **If you're downloading single artifacts by ID, the output path may change.**\r\n\r\n#### What Changed\r\n\r\nPreviously, **single artifact downloads** behaved differently depending on how you specified the artifact:\r\n\r\n- **By name**: `name: my-artifact` → extracted to `path/` (direct)\r\n- **By ID**: `artifact-ids: 12345` → extracted to `path/my-artifact/` (nested)\r\n\r\nNow both methods are consistent:\r\n\r\n- **By name**: `name: my-artifact` → extracted to `path/` (unchanged)\r\n- **By ID**: `artifact-ids: 12345` → extracted to `path/` (fixed - now direct)\r\n\r\n#### Migration Guide\r\n\r\n##### ✅ No Action Needed If:\r\n\r\n- You download artifacts by **name**\r\n- You download **multiple** artifacts by ID\r\n- You already use `merge-multiple: true` as a workaround\r\n\r\n##### ⚠️ Action Required If:\r\n\r\nYou download **single artifacts by ID** and your workflows expect the nested directory structure.\r\n\r\n**Before v5 (nested structure):**\r\n\r\n```yaml\r\n- uses: actions/download-artifact@v4\r\n  with:\r\n    artifact-ids: 12345\r\n    path: dist\r\n# Files were in: dist/my-artifact/\r\n```\r\n\r\n> Where `my-artifact` is the name of the artifact you previously uploaded\r\n\r\n**To maintain old behavior (if needed):**\r\n\r\n```yaml\r\n- uses: actions/download-artifact@v5\r\n  with:\r\n    artifact-ids: 12345\r\n    path: dist/my-artifact  # Explicitly specify the nested path\r\n```\r\n\r\n## New Contributors\r\n* @nebuk89 made their first contribution in https://github.com/actions/download-artifact/pull/407\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v4...v5.0.0",
+      "releaseDate": "2025-10-24T18:19:29Z",
+      "changelog": "## What's Changed\r\n\r\n**BREAKING CHANGE:** this update supports Node `v24.x`. This is not a breaking change per-se but we're treating it as such.\r\n\r\n* Update README.md by @GhadimiR in https://github.com/actions/upload-artifact/pull/681\r\n* Update README.md by @nebuk89 in https://github.com/actions/upload-artifact/pull/712\r\n* Readme: spell out the first use of GHES by @danwkennedy in https://github.com/actions/upload-artifact/pull/727\r\n* Update GHES guidance to include reference to Node 20 version by @patrikpolyak in https://github.com/actions/upload-artifact/pull/725\r\n* Bump `@actions/artifact` to `v4.0.0`\r\n* Prepare `v5.0.0` by @danwkennedy in https://github.com/actions/upload-artifact/pull/734\r\n\r\n## New Contributors\r\n* @GhadimiR made their first contribution in https://github.com/actions/upload-artifact/pull/681\r\n* @nebuk89 made their first contribution in https://github.com/actions/upload-artifact/pull/712\r\n* @danwkennedy made their first contribution in https://github.com/actions/upload-artifact/pull/727\r\n* @patrikpolyak made their first contribution in https://github.com/actions/upload-artifact/pull/725\r\n\r\n**Full Changelog**: https://github.com/actions/upload-artifact/compare/v4...v5.0.0",
+      "docsUrl": "https://github.com/actions/upload-artifact"
+    },
+    {
+      "repo": "actions/download-artifact",
+      "latest": "v6.0.0",
+      "major": "6",
+      "description": null,
+      "status": "active",
+      "releaseDate": "2025-10-24T18:19:24Z",
+      "changelog": "## What's Changed\r\n\r\n**BREAKING CHANGE:** this update supports Node `v24.x`. This is not a breaking change per-se but we're treating it as such.\r\n\r\n* Update README for download-artifact v5 changes by @yacaovsnc in https://github.com/actions/download-artifact/pull/417\r\n* Update README with artifact extraction details by @yacaovsnc in https://github.com/actions/download-artifact/pull/424\r\n* Readme: spell out the first use of GHES by @danwkennedy in https://github.com/actions/download-artifact/pull/431\r\n* Bump `@actions/artifact` to `v4.0.0`\r\n* Prepare `v6.0.0` by @danwkennedy in https://github.com/actions/download-artifact/pull/438\r\n\r\n## New Contributors\r\n* @danwkennedy made their first contribution in https://github.com/actions/download-artifact/pull/431\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v5...v6.0.0",
       "docsUrl": "https://github.com/actions/download-artifact"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-10-21T01:42:04.709Z"
+  "updated": "2025-10-26T01:46:22.755Z"
 }

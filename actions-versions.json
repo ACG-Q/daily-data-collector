@@ -222,12 +222,12 @@
     },
     {
       "repo": "appleboy/ssh-action",
-      "latest": "v1.2.2",
+      "latest": "v1.2.3",
       "major": "1",
       "description": "GitHub Actions for executing remote ssh commands.",
       "status": "active",
-      "releaseDate": "2025-03-09T14:09:25Z",
-      "changelog": "## Changelog\n### Enhancements\n* b0a8f324e192469585a608d1f586061cf28a6571: chore: bump DRONE_SSH version to 1.8.1 (@appleboy)\n* 2ead5e36573f08b82fbfce1504f1a4b05a647c6f: chore: update action version across workflows and documentation (@appleboy)\n### Documentation updates\n* 9817ef4a1793d4009d854d26cfb0ba4b615d5791: docs(readme): set -e for script_stop functionality (#368) (@Setland34)\n* 92737056c0040ce12606ea20e76e4bcb9824d517: docs: improve documentation and defaults for execution and security (@appleboy)\n* d99ccf8c09d72749f8eed879283eceea73f4ca6e: docs: improve documentation clarity and consistency (@appleboy)\n* 01a53594ebd450be519b0d93972a7efca79d50ee: docs: enhance language support and improve documentation clarity (@appleboy)\n* 48992f2e2c17668bdf29d9b0159c70758d39cd02: docs: prioritize English in language selection options (@appleboy)\n* 039c9e07bb37b35054415f27cdbfd7645237832d: docs: update README with private key instructions in multiple languages (@appleboy)\n* a0a032693916dbcde4f0dd3e881dc58c97e35180: docs: clarify parameter descriptions for improved documentation (@appleboy)\n\n",
+      "releaseDate": "2025-11-08T02:32:57Z",
+      "changelog": "## Changelog\n### Features\n* 20d5c5bbc91841863c09aaa3a6797061bbf148a4: feat: add configurable curl insecure flag to GitHub action (@appleboy)\n### Bug fixes\n* 170eebb2ee3ce82216b41e857a289e0dca842c08: fix: enhance binary download flow with robust error handling (#394) (@appleboy)\n### Enhancements\n* b27b9f8968f508f19656348e47e978c4686dbd2f: chore: refactor system to improve efficiency and update API usage (@appleboy)\n* 0e19dd962da42eb2f2b775d6e133dc9dfd424aa6: chore: improve robustness and consistency across multiple scripts (@appleboy)\n### Refactor\n* b6690ee817812c18c1bcc05cd08d0011e6aabc63: refactor: improve error handling and code readability across scripts (#374) (@appleboy)\n### Build process updates\n* 2b3c6504b3e1405c32b38787b6d20b223a1ecebc: ci: unify and enhance GitHub workflow configurations (@appleboy)\n* ffd1eec36471c1bfbebcf1941411db862c9b0e38: ci: add workflow step for multi-command SSH testing (#386) (@appleboy)\n* 53f5c5cedfd3f9032989483701c0a25764f2d4e3: ci: add automated Trivy security scanning via GitHub Actions (@appleboy)\n### Documentation updates\n* 52a1840ca6cafe7e0e1e15e8649b935ba4e33077: docs: update SSH action version to v1 in all README files (#372) (@appleboy)\n* 689de3cf649b7be1e792eeea9fc0571dcc0c3e4f: docs: improve CLI messaging and error clarity for users (@appleboy)\n* 9ca1cd21746f53919166547633817ce20c8b5394: docs: document the new `curl_insecure` configuration option (@appleboy)\n* bd83ba7e2b3b59ec4007ddc30c72ef12e5d2fff7: docs: document and configure drone-ssh version usage (#381) (@appleboy)\n* b80f638dc49d3b3a0321d26532f97c8eecb7276b: docs: rewrite and unify documentation across all supported languages (@appleboy)\n* c7fbbc9208e4020c3b78e5db9e7042248c991866: docs: add table of contents to multilingual README files (@appleboy)\n* 4d84f0522a5d50416e14452c3285361e7fdff665: docs: revamp and unify multi-language readme documentation (@appleboy)\n* 8f3cc07719a6ef0a247c6a0b146041bf14ea6211: docs: add comprehensive tables of contents to all README files (@appleboy)\n* 8745f9583c033551b991c73d76d23dd610c9f26e: docs: restructure and clarify parameter documentation across all readmes (@appleboy)\n* 57f6f3556d4a3e900b37a8dcf9e06ec7da87d6e7: docs(readme): better wording for script_path property (#387) (@kontur)\n* 3ca8a7c5359ac6ad91aa47f1946ece1c3b025004: docs: clarify script_path usage in Chinese remote execution docs (@appleboy)\n* c680069d84038812d68d6f1360d230ea50fb6005: docs: add comprehensive documentation for project setup and usage (@appleboy)\n* 91f3272fc5907f4699dcf59761eb622a07342f5a: docs: add Trivy security scan badge to all documentation (@appleboy)\n\n",
       "docsUrl": "https://github.com/appleboy/ssh-action"
     },
     {
@@ -282,12 +282,12 @@
     },
     {
       "repo": "softprops/action-gh-release",
-      "latest": "v2.4.1",
+      "latest": "v2.4.2",
       "major": "2",
       "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "status": "active",
-      "releaseDate": "2025-10-11T15:41:11Z",
-      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Other Changes 🔄\r\n* fix(util): support brace expansion globs containing commas in parseInputFiles by @Copilot in https://github.com/softprops/action-gh-release/pull/672\r\n* fix: gracefully fallback to body when body_path cannot be read by @Copilot in https://github.com/softprops/action-gh-release/pull/671\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2...v2.4.1",
+      "releaseDate": "2025-11-08T19:22:46Z",
+      "changelog": "## What's Changed\r\n\r\n### Exciting New Features 🎉\r\n\r\n* feat: Ensure generated release notes cannot be over 125000 characters by @BeryJu in https://github.com/softprops/action-gh-release/pull/684\r\n\r\n### Other Changes 🔄\r\n\r\n- dependency updates\r\n\r\n## New Contributors\r\n* @BeryJu made their first contribution in https://github.com/softprops/action-gh-release/pull/684\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2.4.1...v2.4.2",
       "docsUrl": "https://github.com/softprops/action-gh-release"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-11-06T01:59:59.421Z"
+  "updated": "2025-11-11T01:45:44.314Z"
 }

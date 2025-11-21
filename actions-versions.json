@@ -2,12 +2,12 @@
   "actions": [
     {
       "repo": "actions/checkout",
-      "latest": "v6-beta",
-      "major": "6-beta",
+      "latest": "v6.0.0",
+      "major": "6",
       "description": "Action for checking out a repo",
       "status": "active",
-      "releaseDate": "2025-11-03T19:42:16Z",
-      "changelog": "## What's Changed\r\n\r\nUpdated persist-credentials to store the credentials under `$RUNNER_TEMP` instead of directly in the local git config.\r\n\r\nThis requires a minimum Actions Runner version of [v2.329.0](https://github.com/actions/runner/releases/tag/v2.329.0) to access the persisted credentials for [Docker container action](https://docs.github.com/en/actions/tutorials/use-containerized-services/create-a-docker-container-action) scenarios.",
+      "releaseDate": "2025-11-20T16:24:08Z",
+      "changelog": "## What's Changed\r\n* Update README to include Node.js 24 support details and requirements by @salmanmkc in https://github.com/actions/checkout/pull/2248\r\n* Persist creds to a separate file by @ericsciple in https://github.com/actions/checkout/pull/2286\r\n* v6-beta by @ericsciple in https://github.com/actions/checkout/pull/2298\r\n* update readme/changelog for v6 by @ericsciple in https://github.com/actions/checkout/pull/2311\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v5.0.0...v6.0.0",
       "docsUrl": "https://github.com/actions/checkout"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-11-16T02:17:11.040Z"
+  "updated": "2025-11-21T01:44:20.825Z"
 }

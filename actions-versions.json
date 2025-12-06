@@ -2,22 +2,22 @@
   "actions": [
     {
       "repo": "actions/checkout",
-      "latest": "v6.0.0",
+      "latest": "v6.0.1",
       "major": "6",
       "description": "Action for checking out a repo",
       "status": "active",
-      "releaseDate": "2025-11-20T16:24:08Z",
-      "changelog": "## What's Changed\r\n* Update README to include Node.js 24 support details and requirements by @salmanmkc in https://github.com/actions/checkout/pull/2248\r\n* Persist creds to a separate file by @ericsciple in https://github.com/actions/checkout/pull/2286\r\n* v6-beta by @ericsciple in https://github.com/actions/checkout/pull/2298\r\n* update readme/changelog for v6 by @ericsciple in https://github.com/actions/checkout/pull/2311\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v5.0.0...v6.0.0",
+      "releaseDate": "2025-12-02T16:38:59Z",
+      "changelog": "## What's Changed\r\n* Update all references from v5 and v4 to v6 by @ericsciple in https://github.com/actions/checkout/pull/2314\r\n* Add worktree support for persist-credentials includeIf by @ericsciple in https://github.com/actions/checkout/pull/2327\r\n* Clarify v6 README by @ericsciple in https://github.com/actions/checkout/pull/2328\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v6...v6.0.1",
       "docsUrl": "https://github.com/actions/checkout"
     },
     {
       "repo": "actions/setup-node",
-      "latest": "v6.0.0",
+      "latest": "v6.1.0",
       "major": "6",
       "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "status": "active",
-      "releaseDate": "2025-10-14T02:55:17Z",
-      "changelog": "## What's Changed\r\n\r\n**Breaking Changes**\r\n\r\n- Limit automatic caching to npm, update workflows and documentation by @priyagupta108 in https://github.com/actions/setup-node/pull/1374\r\n\r\n**Dependency Upgrades**\r\n\r\n- Upgrade ts-jest from 29.1.2 to 29.4.1 and document breaking changes in v5 by @dependabot[bot] in [#1336](https://github.com/actions/setup-node/pull/1336)\r\n- Upgrade prettier from 2.8.8 to 3.6.2 by @dependabot[bot] in [#1334](https://github.com/actions/setup-node/pull/1334)\r\n- Upgrade actions/publish-action from 0.3.0 to 0.4.0 by @dependabot[bot] in [#1362](https://github.com/actions/setup-node/pull/1362)\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v5...v6.0.0",
+      "releaseDate": "2025-12-03T03:19:20Z",
+      "changelog": "## What's Changed\r\n### Enhancement:\r\n* Remove always-auth configuration handling by @priyagupta108 in https://github.com/actions/setup-node/pull/1436\r\n\r\n### Dependency updates:\r\n* Upgrade @actions/cache from 4.0.3 to 4.1.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1384\r\n* Upgrade actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1439\r\n* Upgrade js-yaml from 3.14.1 to 3.14.2 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1435\r\n\r\n### Documentation update:\r\n* Add example for restore-only cache in documentation by @aparnajyothi-y in https://github.com/actions/setup-node/pull/1419\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v6...v6.1.0",
       "docsUrl": "https://github.com/actions/setup-node"
     },
     {
@@ -42,12 +42,12 @@
     },
     {
       "repo": "actions/setup-java",
-      "latest": "v5.0.0",
+      "latest": "v5.1.0",
       "major": "5",
       "description": "Set up your GitHub Actions workflow with a specific version of Java",
       "status": "active",
-      "releaseDate": "2025-08-21T03:19:48Z",
-      "changelog": "## What's Changed\r\n\r\n### Breaking Changes\r\n* Upgrade to node 24 by @salmanmkc in https://github.com/actions/setup-java/pull/888\r\n\r\nMake sure your runner is updated to this version or newer to use this release. v2.327.1 [Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\n### Dependency Upgrades\r\n* Upgrade Publish Immutable Action by @HarithaVattikuti in https://github.com/actions/setup-java/pull/798\r\n* Upgrade eslint-plugin-jest from 27.9.0 to 28.11.0 by @dependabot[bot] in https://github.com/actions/setup-java/pull/730\r\n* Upgrade undici from 5.28.5 to 5.29.0 by @dependabot[bot] in https://github.com/actions/setup-java/pull/833\r\n* Upgrade form-data to bring in fix for critical vulnerability by @gowridurgad in https://github.com/actions/setup-java/pull/887\r\n* Upgrade actions/checkout from 4 to 5 by @dependabot[bot] in https://github.com/actions/setup-java/pull/896\r\n\r\n### Bug Fixes\r\n* Prevent default installation of JetBrains pre-releases by @priyagupta108 in https://github.com/actions/setup-java/pull/859\r\n* Improve Error Handling for Setup-Java Action to Help Debug Intermittent Failures by @gowridurgad in https://github.com/actions/setup-java/pull/848\r\n\r\n## New Contributors\r\n* @gowridurgad made their first contribution in https://github.com/actions/setup-java/pull/848\r\n* @salmanmkc made their first contribution in https://github.com/actions/setup-java/pull/888\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v4...v5.0.0",
+      "releaseDate": "2025-12-04T02:55:06Z",
+      "changelog": "## What's Changed\r\n\r\n### New Features\r\n\r\n* Add support for `.sdkmanrc` file in `java-version-file` parameter by @guicamest in https://github.com/actions/setup-java/pull/736\r\n* Add support for Microsoft OpenJDK 25 builds by @the-mod in https://github.com/actions/setup-java/pull/927\r\n\r\n### Bug Fixes & Improvements\r\n* Update Regex to Support All ASDF Versions for the supported distributions in tool-versions File by @aparnajyothi-y in https://github.com/actions/setup-java/pull/767\r\n* Enhance error logging for network failures to include endpoint/IP details, add retry mechanism and update workflows to use macos-15-intel by @priya-kinthali in https://github.com/actions/setup-java/pull/946\r\n* Update SapMachine URLs by @RealCLanger in https://github.com/actions/setup-java/pull/955\r\n* Add GitHub Token Support for GraalVM and Refactor Code by @mahabaleshwars in https://github.com/actions/setup-java/pull/849\r\n\r\n\r\n### Documentation changes\r\n* Update documentation to use checkout and Java v5 by @lmvysakh in https://github.com/actions/setup-java/pull/903\r\n* Clarify JAVA_HOME and PATH setup in README by @chiranjib-swain in https://github.com/actions/setup-java/pull/841\r\n\r\n### Dependency updates\r\n* Upgrade prettier from 2.8.8 to 3.6.2 and document breaking changes in v5 by @dependabot in https://github.com/actions/setup-java/pull/873\r\n* Upgrade actions/publish-action from 0.3.0 to 0.4.0  by @dependabot in https://github.com/actions/setup-java/pull/912\r\n\r\n## New Contributors\r\n* @lmvysakh made their first contribution in https://github.com/actions/setup-java/pull/903\r\n* @chiranjib-swain made their first contribution in https://github.com/actions/setup-java/pull/841\r\n* @the-mod made their first contribution in https://github.com/actions/setup-java/pull/927\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-java/pull/946\r\n* @guicamest made their first contribution in https://github.com/actions/setup-java/pull/736\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v5...v5.1.0",
       "docsUrl": "https://github.com/actions/setup-java"
     },
     {
@@ -262,12 +262,12 @@
     },
     {
       "repo": "actions/stale",
-      "latest": "v10.1.0",
+      "latest": "v10.1.1",
       "major": "10",
       "description": "Marks issues and pull requests that have not had recent interaction",
       "status": "active",
-      "releaseDate": "2025-10-03T19:45:27Z",
-      "changelog": "## What's Changed\r\n* Add `only-issue-types` option to filter issues by type by @Bibo-Joshi in https://github.com/actions/stale/pull/1255\r\n\r\n## New Contributors\r\n* @Bibo-Joshi made their first contribution in https://github.com/actions/stale/pull/1255\r\n\r\n**Full Changelog**: https://github.com/actions/stale/compare/v10...v10.1.0",
+      "releaseDate": "2025-12-03T03:26:23Z",
+      "changelog": "## What's Changed\r\n  \r\n  ### Bug Fix\r\n  * Add Missing Input Reading for `only-issue-types` by @Bibo-Joshi in https://github.com/actions/stale/pull/1298\r\n  ### Improvement\r\n  * Improves error handling when rate limiting is disabled on GHES. by @chiranjib-swain in https://github.com/actions/stale/pull/1300\r\n  ### Dependency Upgrades\r\n  * Upgrade eslint-config-prettier from 8.10.0 to 10.1.8 by @dependabot in https://github.com/actions/stale/pull/1276\r\n  * Upgrade @types/node from 20.10.3 to 24.2.0 and document breaking changes in v10 by @dependabot in https://github.com/actions/stale/pull/1280\r\n  * Upgrade actions/publish-action from 0.3.0 to 0.4.0 by @dependabot in https://github.com/actions/stale/pull/1291\r\n  * Upgrade actions/checkout from 4 to 6 by @dependabot in https://github.com/actions/stale/pull/1306\r\n  \r\n  ## New Contributors\r\n  * @chiranjib-swain made their first contribution in https://github.com/actions/stale/pull/1300\r\n  \r\n  **Full Changelog**: https://github.com/actions/stale/compare/v10...v10.1.1",
       "docsUrl": "https://github.com/actions/stale"
     },
     {
@@ -282,12 +282,12 @@
     },
     {
       "repo": "softprops/action-gh-release",
-      "latest": "v2.4.2",
+      "latest": "v2.5.0",
       "major": "2",
       "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "status": "active",
-      "releaseDate": "2025-11-08T19:22:46Z",
-      "changelog": "## What's Changed\r\n\r\n### Exciting New Features 🎉\r\n\r\n* feat: Ensure generated release notes cannot be over 125000 characters by @BeryJu in https://github.com/softprops/action-gh-release/pull/684\r\n\r\n### Other Changes 🔄\r\n\r\n- dependency updates\r\n\r\n## New Contributors\r\n* @BeryJu made their first contribution in https://github.com/softprops/action-gh-release/pull/684\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2.4.1...v2.4.2",
+      "releaseDate": "2025-12-01T06:03:39Z",
+      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Exciting New Features 🎉\r\n* feat: mark release as draft until all artifacts are uploaded by @dumbmoron in https://github.com/softprops/action-gh-release/pull/692\r\n### Other Changes 🔄\r\n* chore(deps): bump the npm group across 1 directory with 5 updates by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/697\r\n* chore(deps): bump actions/checkout from 5.0.0 to 5.0.1 in the github-actions group by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/689\r\n\r\n## New Contributors\r\n* @dumbmoron made their first contribution in https://github.com/softprops/action-gh-release/pull/692\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2.4.2...v2.5.0",
       "docsUrl": "https://github.com/softprops/action-gh-release"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-12-01T02:58:05.916Z"
+  "updated": "2025-12-06T01:42:35.206Z"
 }

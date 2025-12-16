@@ -52,32 +52,32 @@
     },
     {
       "repo": "actions/cache",
-      "latest": "v4.3.0",
-      "major": "4",
+      "latest": "v5.0.1",
+      "major": "5",
       "description": "Cache dependencies and build outputs in GitHub Actions",
       "status": "active",
-      "releaseDate": "2025-09-24T13:48:50Z",
-      "changelog": "## What's Changed\r\n\r\n* Add note on runner versions by @GhadimiR in https://github.com/actions/cache/pull/1642\r\n* Prepare `v4.3.0` release by @Link- in https://github.com/actions/cache/pull/1655\r\n\r\n## New Contributors\r\n\r\n* @GhadimiR made their first contribution in https://github.com/actions/cache/pull/1642\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v4...v4.3.0",
+      "releaseDate": "2025-12-12T16:52:38Z",
+      "changelog": "> [!IMPORTANT]\r\n> **`actions/cache@v5` runs on the Node.js 24 runtime and requires a minimum Actions Runner version of `2.327.1`.**\r\n>  \r\n> If you are using self-hosted runners, ensure they are updated before upgrading.\r\n\r\n---\r\n\r\n# v5.0.1\r\n\r\n## What's Changed\r\n* fix: update @actions/cache for Node.js 24 punycode deprecation by @salmanmkc in https://github.com/actions/cache/pull/1685\r\n* prepare release v5.0.1 by @salmanmkc in https://github.com/actions/cache/pull/1686\r\n\r\n# v5.0.0\r\n\r\n## What's Changed\r\n* Upgrade to use node24 by @salmanmkc in https://github.com/actions/cache/pull/1630\r\n* Prepare v5.0.0 release by @salmanmkc in https://github.com/actions/cache/pull/1684\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v5...v5.0.1",
       "docsUrl": "https://github.com/actions/cache"
     },
     {
       "repo": "actions/upload-artifact",
-      "latest": "v5.0.0",
-      "major": "5",
-      "description": null,
-      "status": "active",
-      "releaseDate": "2025-10-24T18:19:29Z",
-      "changelog": "## What's Changed\r\n\r\n**BREAKING CHANGE:** this update supports Node `v24.x`. This is not a breaking change per-se but we're treating it as such.\r\n\r\n* Update README.md by @GhadimiR in https://github.com/actions/upload-artifact/pull/681\r\n* Update README.md by @nebuk89 in https://github.com/actions/upload-artifact/pull/712\r\n* Readme: spell out the first use of GHES by @danwkennedy in https://github.com/actions/upload-artifact/pull/727\r\n* Update GHES guidance to include reference to Node 20 version by @patrikpolyak in https://github.com/actions/upload-artifact/pull/725\r\n* Bump `@actions/artifact` to `v4.0.0`\r\n* Prepare `v5.0.0` by @danwkennedy in https://github.com/actions/upload-artifact/pull/734\r\n\r\n## New Contributors\r\n* @GhadimiR made their first contribution in https://github.com/actions/upload-artifact/pull/681\r\n* @nebuk89 made their first contribution in https://github.com/actions/upload-artifact/pull/712\r\n* @danwkennedy made their first contribution in https://github.com/actions/upload-artifact/pull/727\r\n* @patrikpolyak made their first contribution in https://github.com/actions/upload-artifact/pull/725\r\n\r\n**Full Changelog**: https://github.com/actions/upload-artifact/compare/v4...v5.0.0",
-      "docsUrl": "https://github.com/actions/upload-artifact"
-    },
-    {
-      "repo": "actions/download-artifact",
       "latest": "v6.0.0",
       "major": "6",
       "description": null,
       "status": "active",
-      "releaseDate": "2025-10-24T18:19:24Z",
-      "changelog": "## What's Changed\r\n\r\n**BREAKING CHANGE:** this update supports Node `v24.x`. This is not a breaking change per-se but we're treating it as such.\r\n\r\n* Update README for download-artifact v5 changes by @yacaovsnc in https://github.com/actions/download-artifact/pull/417\r\n* Update README with artifact extraction details by @yacaovsnc in https://github.com/actions/download-artifact/pull/424\r\n* Readme: spell out the first use of GHES by @danwkennedy in https://github.com/actions/download-artifact/pull/431\r\n* Bump `@actions/artifact` to `v4.0.0`\r\n* Prepare `v6.0.0` by @danwkennedy in https://github.com/actions/download-artifact/pull/438\r\n\r\n## New Contributors\r\n* @danwkennedy made their first contribution in https://github.com/actions/download-artifact/pull/431\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v5...v6.0.0",
+      "releaseDate": "2025-12-12T18:51:31Z",
+      "changelog": "## v6 - What's new\r\n\r\n> [!IMPORTANT]\r\n> actions/upload-artifact@v6 now runs on Node.js 24 (`runs.using: node24`) and requires a minimum Actions Runner version of 2.327.1. If you are using self-hosted runners, ensure they are updated before upgrading.\r\n### Node.js 24\r\n\r\nThis release updates the runtime to Node.js 24. v5 had preliminary support for Node.js 24, however this action was by default still running on Node.js 20. Now this action by default will run on Node.js 24.\r\n\r\n## What's Changed\r\n* Upload Artifact Node 24 support by @salmanmkc in https://github.com/actions/upload-artifact/pull/719\r\n* fix: update @actions/artifact for Node.js 24 punycode deprecation by @salmanmkc in https://github.com/actions/upload-artifact/pull/744\r\n* prepare release v6.0.0 for Node.js 24 support by @salmanmkc in https://github.com/actions/upload-artifact/pull/745\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/upload-artifact/compare/v5.0.0...v6.0.0",
+      "docsUrl": "https://github.com/actions/upload-artifact"
+    },
+    {
+      "repo": "actions/download-artifact",
+      "latest": "v7.0.0",
+      "major": "7",
+      "description": null,
+      "status": "active",
+      "releaseDate": "2025-12-12T18:49:01Z",
+      "changelog": "## v7 - What's new\r\n\r\n> [!IMPORTANT]\r\n> actions/download-artifact@v7 now runs on Node.js 24 (`runs.using: node24`) and requires a minimum Actions Runner version of 2.327.1. If you are using self-hosted runners, ensure they are updated before upgrading.\r\n### Node.js 24\r\n\r\nThis release updates the runtime to Node.js 24. v6 had preliminary support for Node 24, however this action was by default still running on Node.js 20. Now this action by default will run on Node.js 24.\r\n\r\n## What's Changed\r\n* Update GHES guidance to include reference to Node 20 version by @patrikpolyak in https://github.com/actions/download-artifact/pull/440\r\n* Download Artifact Node24 support by @salmanmkc in https://github.com/actions/download-artifact/pull/415\r\n* fix: update @actions/artifact to fix Node.js 24 punycode deprecation by @salmanmkc in https://github.com/actions/download-artifact/pull/451\r\n* prepare release v7.0.0 for Node.js 24 support by @salmanmkc in https://github.com/actions/download-artifact/pull/452\r\n\r\n## New Contributors\r\n* @patrikpolyak made their first contribution in https://github.com/actions/download-artifact/pull/440\r\n* @salmanmkc made their first contribution in https://github.com/actions/download-artifact/pull/415\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v6.0.0...v7.0.0",
       "docsUrl": "https://github.com/actions/download-artifact"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2025-12-11T01:52:43.833Z"
+  "updated": "2025-12-16T01:52:13.154Z"
 }

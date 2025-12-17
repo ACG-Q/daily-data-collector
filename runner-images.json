@@ -1,9 +1,6 @@
 {
   "sources": "actions/runner-images",
   "labels": [
-    "macos-13",
-    "macos-13-large",
-    "macos-13-xlarge",
     "macos-14",
     "macos-14-large",
     "macos-14-xlarge",
@@ -54,7 +51,7 @@
         ]
       },
       {
-        "image": "Windows Server 2019 ![Deprecated](https://img.shields.io/badge/-Deprecated-red)",
+        "image": "Windows Server 2019 [![Deprecated badge](https://img.shields.io/badge/-Deprecated-red)](https://github.com/actions/runner-images/issues/12045)",
         "yamlLabels": [
           "windows-2019"
         ]
@@ -96,22 +93,9 @@
           "macos-14",
           "macos-14-xlarge"
         ]
-      },
-      {
-        "image": "macOS 13 ![Deprecated](https://img.shields.io/badge/-Deprecated-red)",
-        "yamlLabels": [
-          "macos-13",
-          "macos-13-large"
-        ]
-      },
-      {
-        "image": "macOS 13 Arm64 ![Deprecated](https://img.shields.io/badge/-Deprecated-red)",
-        "yamlLabels": [
-          "macos-13-xlarge"
-        ]
       }
     ],
     "other": []
   },
-  "updated": "2025-12-16T01:43:06.055Z"
+  "updated": "2025-12-17T01:38:52.299Z"
 }

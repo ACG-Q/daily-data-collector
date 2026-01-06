@@ -92,12 +92,12 @@
     },
     {
       "repo": "dorny/test-reporter",
-      "latest": "v2.3.0",
+      "latest": "v2.5.0",
       "major": "2",
       "description": "Displays test results from popular testing frameworks directly in GitHub",
       "status": "active",
-      "releaseDate": "2025-11-30T00:53:37Z",
-      "changelog": "## What's Changed\r\n* Fix short summary formatting when a report title is present by @micmarc in https://github.com/dorny/test-reporter/pull/645\r\n* Python support based on Java JUnit parser by @micmarc in https://github.com/dorny/test-reporter/pull/643\r\n* Update sax.js to fix large XML file parsing by @phactum-mnestler in https://github.com/dorny/test-reporter/pull/681\r\n* Enhance pytest support by @micmarc in https://github.com/dorny/test-reporter/pull/683\r\n* Bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/dorny/test-reporter/pull/687\r\n* Add missing golang-json reporter to action.yml by @jozefizso in https://github.com/dorny/test-reporter/pull/690\r\n* Bump js-yaml from 3.14.0 to 3.14.2 in /reports/jest by @dependabot[bot] in https://github.com/dorny/test-reporter/pull/685\r\n* Complete documentation for all supported reporters by @jozefizso in https://github.com/dorny/test-reporter/pull/691\r\n* Bump js-yaml and mocha in /reports/mocha by @dependabot[bot] in https://github.com/dorny/test-reporter/pull/682\r\n\r\n## New Contributors\r\n* @phactum-mnestler made their first contribution in https://github.com/dorny/test-reporter/pull/681\r\n\r\n**Full Changelog**: https://github.com/dorny/test-reporter/compare/v2.2.0...v2.3.0",
+      "releaseDate": "2026-01-03T13:44:59Z",
+      "changelog": "## What's Changed\r\n\r\n### Features\r\n* Add Nette Tester JUnit Reporter by @jozefizso in https://github.com/dorny/test-reporter/pull/707\r\n\r\n\r\n### Project maintanance\r\n* Bump actions/upload-artifact from 5 to 6 by @dependabot[bot] in https://github.com/dorny/test-reporter/pull/695\r\n\r\n\r\n**Full Changelog**: https://github.com/dorny/test-reporter/compare/v2.4.0...v2.5.0",
       "docsUrl": "https://github.com/dorny/test-reporter"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2026-01-01T02:36:28.616Z"
+  "updated": "2026-01-06T01:54:45.152Z"
 }

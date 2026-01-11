@@ -2,12 +2,12 @@
   "actions": [
     {
       "repo": "actions/checkout",
-      "latest": "v6.0.1",
+      "latest": "v6.0.2",
       "major": "6",
       "description": "Action for checking out a repo",
       "status": "active",
-      "releaseDate": "2025-12-02T16:38:59Z",
-      "changelog": "## What's Changed\r\n* Update all references from v5 and v4 to v6 by @ericsciple in https://github.com/actions/checkout/pull/2314\r\n* Add worktree support for persist-credentials includeIf by @ericsciple in https://github.com/actions/checkout/pull/2327\r\n* Clarify v6 README by @ericsciple in https://github.com/actions/checkout/pull/2328\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v6...v6.0.1",
+      "releaseDate": "2026-01-09T19:53:28Z",
+      "changelog": "## What's Changed\r\n* Add orchestration_id to git user-agent when ACTIONS_ORCHESTRATION_ID is set by @TingluoHuang in https://github.com/actions/checkout/pull/2355\r\n* Fix tag handling: preserve annotations and explicit fetch-tags by @ericsciple in https://github.com/actions/checkout/pull/2356\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v6.0.1...v6.0.2",
       "docsUrl": "https://github.com/actions/checkout"
     },
     {
@@ -142,12 +142,12 @@
     },
     {
       "repo": "JamesIves/github-pages-deploy-action",
-      "latest": "v4.7.6",
+      "latest": "v4.8.0",
       "major": "4",
       "description": "🚀 Automatically deploy your project to GitHub Pages using GitHub Actions. This action can be configured to push your production-ready code into any branch you'd like.",
       "status": "active",
-      "releaseDate": "2025-12-09T19:41:50Z",
-      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at releases/v4 -->\r\n\r\n## What's Changed\r\n### Build 🔧\r\n* build(deps): bump typescript-eslint from 8.48.1 to 8.49.0 in the typescript group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1930\r\n\r\n\r\n**Full Changelog**: https://github.com/JamesIves/github-pages-deploy-action/compare/v4...v4.7.6",
+      "releaseDate": "2026-01-09T19:28:42Z",
+      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at releases/v4 -->\r\n\r\n## What's Changed\r\n\r\n### Build 🔧\r\n* **Migrate from Node.js 20 to Node.js 24 LTS** \r\n* build(deps-dev): bump the eslint group with 3 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1920\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1931\r\n* build(deps): bump @actions/core from 2.0.0 to 2.0.1 in the actions group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1933\r\n* build(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1932\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1942\r\n* build(deps): bump the eslint group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1938\r\n* build(deps): bump typescript-eslint from 8.49.0 to 8.50.0 in the typescript group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1937\r\n* build(deps): bump actions/download-artifact from 6.0.0 to 7.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1936\r\n* build(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1935\r\n\r\n**Full Changelog**: https://github.com/JamesIves/github-pages-deploy-action/compare/v4...v4.8.0",
       "docsUrl": "https://github.com/JamesIves/github-pages-deploy-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2026-01-06T02:16:47.374Z"
+  "updated": "2026-01-11T02:04:23.709Z"
 }

@@ -2,12 +2,12 @@
   "data": [
     {
       "name": "runner-images",
-      "description": "GitHub Actions Runner OS Versions",
-      "description_zh": "GitHub Actions Runner 操作系统版本",
+      "description": "BitTorrent Trackers List",
+      "description_zh": "BitTorrent 追踪器列表",
       "path": [
-        "runner-images.json"
+        "trackers.txt"
       ],
-      "updated": "2026-01-14T01:49:52.153Z"
+      "updated": "2026-01-15T01:02:36.123Z"
     },
     {
       "name": "actions-versions",

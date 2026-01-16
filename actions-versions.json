@@ -12,12 +12,12 @@
     },
     {
       "repo": "actions/setup-node",
-      "latest": "v6.1.0",
+      "latest": "v6.2.0",
       "major": "6",
       "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "status": "active",
-      "releaseDate": "2025-12-03T03:19:20Z",
-      "changelog": "## What's Changed\r\n### Enhancement:\r\n* Remove always-auth configuration handling by @priyagupta108 in https://github.com/actions/setup-node/pull/1436\r\n\r\n### Dependency updates:\r\n* Upgrade @actions/cache from 4.0.3 to 4.1.0 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1384\r\n* Upgrade actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1439\r\n* Upgrade js-yaml from 3.14.1 to 3.14.2 by @dependabot[bot] in https://github.com/actions/setup-node/pull/1435\r\n\r\n### Documentation update:\r\n* Add example for restore-only cache in documentation by @aparnajyothi-y in https://github.com/actions/setup-node/pull/1419\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v6...v6.1.0",
+      "releaseDate": "2026-01-15T03:07:32Z",
+      "changelog": "## What's Changed\r\n\r\n### Documentation\r\n* Documentation update related to absence of Lockfile by @mahabaleshwars in https://github.com/actions/setup-node/pull/1454\r\n* Correct mirror option typos by @MikeMcC399 in https://github.com/actions/setup-node/pull/1442\r\n* Readme update on checkout version v6 by @deining in https://github.com/actions/setup-node/pull/1446\r\n* Readme typo fixes @munyari in https://github.com/actions/setup-node/pull/1226\r\n* Advanced document update on checkout version v6 by @aparnajyothi-y  in https://github.com/actions/setup-node/pull/1468\r\n\r\n### Dependency updates:\r\n* Upgrade @actions/cache to v5.0.1 by @salmanmkc in https://github.com/actions/setup-node/pull/1449\r\n\r\n## New Contributors\r\n* @mahabaleshwars made their first contribution in https://github.com/actions/setup-node/pull/1454\r\n* @MikeMcC399 made their first contribution in https://github.com/actions/setup-node/pull/1442\r\n* @deining made their first contribution in https://github.com/actions/setup-node/pull/1446\r\n* @munyari made their first contribution in https://github.com/actions/setup-node/pull/1226\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v6...v6.2.0",
       "docsUrl": "https://github.com/actions/setup-node"
     },
     {
@@ -32,12 +32,12 @@
     },
     {
       "repo": "actions/setup-dotnet",
-      "latest": "v5.0.1",
+      "latest": "v5.1.0",
       "major": "5",
       "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk",
       "status": "active",
-      "releaseDate": "2025-11-25T02:50:59Z",
-      "changelog": "## What's Changed\r\n* Upgrade typescript from 5.4.2 to 5.9.2 and document breaking changes in v5 by @dependabot in https://github.com/actions/setup-dotnet/pull/624\r\n* Upgrade eslint-plugin-jest from 27.9.0 to 29.0.1 by @dependabot in https://github.com/actions/setup-dotnet/pull/648\r\n* Upgrade actions/publish-action from 0.3.0 to 0.4.0 and update macos-13 to macos-15-intel by @dependabot in https://github.com/actions/setup-dotnet/pull/665\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v5...v5.0.1",
+      "releaseDate": "2026-01-14T02:54:05Z",
+      "changelog": "## What's Changed\r\n\r\n### Documentation\r\n\r\n* Readme update for environment variable on self hosted linux runners by @priya-kinthali in https://github.com/actions/setup-dotnet/pull/689\r\n* Contributor icon updates by @Falco20019 in https://github.com/actions/setup-dotnet/pull/604\r\n\r\n### Dependency updates\r\n* Upgrade actions/checkout from 5 to 6 by @dependabot in https://github.com/actions/setup-dotnet/pull/684\r\n* Upgrade to latest actions packages by @salmanmkc in https://github.com/actions/setup-dotnet/pull/687\r\n* Upgrade dependencies in testproject and checkout in Readme by @priya-kinthali in https://github.com/actions/setup-dotnet/pull/692\r\n\r\n## New Contributors\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-dotnet/pull/689\r\n* @Falco20019 made their first contribution in https://github.com/actions/setup-dotnet/pull/604\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v5...v5.1.0",
       "docsUrl": "https://github.com/actions/setup-dotnet"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2026-01-11T02:13:11.622Z"
+  "updated": "2026-01-16T01:56:33.474Z"
 }

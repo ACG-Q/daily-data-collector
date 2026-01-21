@@ -52,12 +52,12 @@
     },
     {
       "repo": "actions/cache",
-      "latest": "v5.0.1",
+      "latest": "v5.0.2",
       "major": "5",
       "description": "Cache dependencies and build outputs in GitHub Actions",
       "status": "active",
-      "releaseDate": "2025-12-12T16:52:38Z",
-      "changelog": "> [!IMPORTANT]\r\n> **`actions/cache@v5` runs on the Node.js 24 runtime and requires a minimum Actions Runner version of `2.327.1`.**\r\n>  \r\n> If you are using self-hosted runners, ensure they are updated before upgrading.\r\n\r\n---\r\n\r\n# v5.0.1\r\n\r\n## What's Changed\r\n* fix: update @actions/cache for Node.js 24 punycode deprecation by @salmanmkc in https://github.com/actions/cache/pull/1685\r\n* prepare release v5.0.1 by @salmanmkc in https://github.com/actions/cache/pull/1686\r\n\r\n# v5.0.0\r\n\r\n## What's Changed\r\n* Upgrade to use node24 by @salmanmkc in https://github.com/actions/cache/pull/1630\r\n* Prepare v5.0.0 release by @salmanmkc in https://github.com/actions/cache/pull/1684\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/cache/compare/v5...v5.0.1",
+      "releaseDate": "2026-01-16T17:39:55Z",
+      "changelog": "# v5.0.2\r\n\r\n## What's Changed\r\n\r\nWhen creating cache entries, 429s returned from the cache service will not be retried.",
       "docsUrl": "https://github.com/actions/cache"
     },
     {
@@ -147,7 +147,7 @@
       "description": "🚀 Automatically deploy your project to GitHub Pages using GitHub Actions. This action can be configured to push your production-ready code into any branch you'd like.",
       "status": "active",
       "releaseDate": "2026-01-09T19:28:42Z",
-      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at releases/v4 -->\r\n\r\n## What's Changed\r\n\r\n### Build 🔧\r\n* **Migrate from Node.js 20 to Node.js 24 LTS** \r\n* build(deps-dev): bump the eslint group with 3 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1920\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1931\r\n* build(deps): bump @actions/core from 2.0.0 to 2.0.1 in the actions group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1933\r\n* build(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1932\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1942\r\n* build(deps): bump the eslint group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1938\r\n* build(deps): bump typescript-eslint from 8.49.0 to 8.50.0 in the typescript group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1937\r\n* build(deps): bump actions/download-artifact from 6.0.0 to 7.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1936\r\n* build(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1935\r\n\r\n**Full Changelog**: https://github.com/JamesIves/github-pages-deploy-action/compare/v4...v4.8.0",
+      "changelog": "<!-- Release notes generated using configuration in .github/release.yml at releases/v4 -->\r\n\r\n## What's Changed\r\n\r\n### Build 🔧\r\n* **Migrate from Node.js 20 to Node.js 24 runtime** \r\n* build(deps-dev): bump the eslint group with 3 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1920\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1931\r\n* build(deps): bump @actions/core from 2.0.0 to 2.0.1 in the actions group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1933\r\n* build(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1932\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1942\r\n* build(deps): bump the eslint group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1938\r\n* build(deps): bump typescript-eslint from 8.49.0 to 8.50.0 in the typescript group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1937\r\n* build(deps): bump actions/download-artifact from 6.0.0 to 7.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1936\r\n* build(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1935\r\n\r\n**Full Changelog**: https://github.com/JamesIves/github-pages-deploy-action/compare/v4...v4.8.0",
       "docsUrl": "https://github.com/JamesIves/github-pages-deploy-action"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2026-01-16T02:29:56.935Z"
+  "updated": "2026-01-21T01:59:08.024Z"
 }

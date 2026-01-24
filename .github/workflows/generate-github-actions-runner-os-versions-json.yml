@@ -54,7 +54,7 @@ jobs:
             // 解析 OS 版本
             function parseOSVersions(content) {
                 // 找到table的开始和结束位置
-                const tableStart = content.indexOf('| Image | YAML Label |');
+                const tableStart = content.indexOf('| Image | Architecture | YAML Label | Included Software |');
                 const tableEnd = content.indexOf('\n\n', tableStart);
                 const tableContent = content.slice(tableStart, tableEnd);
   
@@ -137,7 +137,7 @@ jobs:
                 try {
                     const readmeContent = await fetchReadme();
                     // Base64解密
-                    const readmeContentBase64 = Buffer.from(readmeContent).toString('base64');
+                    const readmeContentBase64 = Buffer.from(readmeContent, 'base64').toString('utf8');
                     const data = parseOSVersions(readmeContentBase64);
                 
                     // 将数据写入 JSON 文件

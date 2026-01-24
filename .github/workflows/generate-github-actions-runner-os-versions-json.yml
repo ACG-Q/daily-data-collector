@@ -136,7 +136,9 @@ jobs:
             (async ()=>{
                 try {
                     const readmeContent = await fetchReadme();
-                    const data = parseOSVersions(readmeContent);
+                    // Base64解密
+                    const readmeContentBase64 = Buffer.from(readmeContent).toString('base64');
+                    const data = parseOSVersions(readmeContentBase64);
                 
                     // 将数据写入 JSON 文件
                     fs.writeFileSync(process.env.JSON_FILE_PATH, JSON.stringify(data, null, 2));

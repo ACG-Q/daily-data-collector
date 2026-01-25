@@ -34,28 +34,28 @@
       "repo": "actions/setup-dotnet",
       "latest": "v5.1.0",
       "major": "5",
-      "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk",
       "status": "active",
+      "description": "Set up your GitHub Actions workflow with a specific version of the .NET core sdk",
       "releaseDate": "2026-01-14T02:54:05Z",
       "changelog": "## What's Changed\r\n\r\n### Documentation\r\n\r\n* Readme update for environment variable on self hosted linux runners by @priya-kinthali in https://github.com/actions/setup-dotnet/pull/689\r\n* Contributor icon updates by @Falco20019 in https://github.com/actions/setup-dotnet/pull/604\r\n\r\n### Dependency updates\r\n* Upgrade actions/checkout from 5 to 6 by @dependabot in https://github.com/actions/setup-dotnet/pull/684\r\n* Upgrade to latest actions packages by @salmanmkc in https://github.com/actions/setup-dotnet/pull/687\r\n* Upgrade dependencies in testproject and checkout in Readme by @priya-kinthali in https://github.com/actions/setup-dotnet/pull/692\r\n\r\n## New Contributors\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-dotnet/pull/689\r\n* @Falco20019 made their first contribution in https://github.com/actions/setup-dotnet/pull/604\r\n\r\n**Full Changelog**: https://github.com/actions/setup-dotnet/compare/v5...v5.1.0",
       "docsUrl": "https://github.com/actions/setup-dotnet"
     },
     {
       "repo": "actions/setup-java",
-      "latest": "v5.1.0",
+      "latest": "v5.2.0",
       "major": "5",
-      "description": "Set up your GitHub Actions workflow with a specific version of Java",
       "status": "active",
-      "releaseDate": "2025-12-04T02:55:06Z",
-      "changelog": "## What's Changed\r\n\r\n### New Features\r\n\r\n* Add support for `.sdkmanrc` file in `java-version-file` parameter by @guicamest in https://github.com/actions/setup-java/pull/736\r\n* Add support for Microsoft OpenJDK 25 builds by @the-mod in https://github.com/actions/setup-java/pull/927\r\n\r\n### Bug Fixes & Improvements\r\n* Update Regex to Support All ASDF Versions for the supported distributions in tool-versions File by @aparnajyothi-y in https://github.com/actions/setup-java/pull/767\r\n* Enhance error logging for network failures to include endpoint/IP details, add retry mechanism and update workflows to use macos-15-intel by @priya-kinthali in https://github.com/actions/setup-java/pull/946\r\n* Update SapMachine URLs by @RealCLanger in https://github.com/actions/setup-java/pull/955\r\n* Add GitHub Token Support for GraalVM and Refactor Code by @mahabaleshwars in https://github.com/actions/setup-java/pull/849\r\n\r\n\r\n### Documentation changes\r\n* Update documentation to use checkout and Java v5 by @lmvysakh in https://github.com/actions/setup-java/pull/903\r\n* Clarify JAVA_HOME and PATH setup in README by @chiranjib-swain in https://github.com/actions/setup-java/pull/841\r\n\r\n### Dependency updates\r\n* Upgrade prettier from 2.8.8 to 3.6.2 and document breaking changes in v5 by @dependabot in https://github.com/actions/setup-java/pull/873\r\n* Upgrade actions/publish-action from 0.3.0 to 0.4.0  by @dependabot in https://github.com/actions/setup-java/pull/912\r\n\r\n## New Contributors\r\n* @lmvysakh made their first contribution in https://github.com/actions/setup-java/pull/903\r\n* @chiranjib-swain made their first contribution in https://github.com/actions/setup-java/pull/841\r\n* @the-mod made their first contribution in https://github.com/actions/setup-java/pull/927\r\n* @priya-kinthali made their first contribution in https://github.com/actions/setup-java/pull/946\r\n* @guicamest made their first contribution in https://github.com/actions/setup-java/pull/736\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v5...v5.1.0",
+      "description": "Set up your GitHub Actions workflow with a specific version of Java",
+      "releaseDate": "2026-01-22T02:57:31Z",
+      "changelog": "## What's Changed\r\n### Enhancement\r\n\r\n* Retry on HTTP 522 Connection timed out by @findepi in https://github.com/actions/setup-java/pull/964\r\n\r\n### Documentation Changes\r\n* Update gradle caching by @priya-kinthali in https://github.com/actions/setup-java/pull/972\r\n* Update checkout to v6 by @mahabaleshwars in https://github.com/actions/setup-java/pull/973\r\n\r\n### Dependency Updates\r\n* Upgrade @actions/cache to v5 by @salmanmkc in https://github.com/actions/setup-java/pull/968\r\n* Upgrade actions/checkout from 5 to 6 by @dependabot in https://github.com/actions/setup-java/pull/961\r\n\r\n## New Contributors\r\n* @findepi made their first contribution in https://github.com/actions/setup-java/pull/964\r\n\r\n**Full Changelog**: https://github.com/actions/setup-java/compare/v5...v5.2.0",
       "docsUrl": "https://github.com/actions/setup-java"
     },
     {
       "repo": "actions/cache",
       "latest": "v5.0.2",
       "major": "5",
-      "description": "Cache dependencies and build outputs in GitHub Actions",
       "status": "active",
+      "description": "Cache dependencies and build outputs in GitHub Actions",
       "releaseDate": "2026-01-16T17:39:55Z",
       "changelog": "# v5.0.2\r\n\r\n## What's Changed\r\n\r\nWhen creating cache entries, 429s returned from the cache service will not be retried.",
       "docsUrl": "https://github.com/actions/cache"
@@ -64,8 +64,8 @@
       "repo": "actions/upload-artifact",
       "latest": "v6.0.0",
       "major": "6",
-      "description": null,
       "status": "active",
+      "description": null,
       "releaseDate": "2025-12-12T18:51:31Z",
       "changelog": "## v6 - What's new\r\n\r\n> [!IMPORTANT]\r\n> actions/upload-artifact@v6 now runs on Node.js 24 (`runs.using: node24`) and requires a minimum Actions Runner version of 2.327.1. If you are using self-hosted runners, ensure they are updated before upgrading.\r\n### Node.js 24\r\n\r\nThis release updates the runtime to Node.js 24. v5 had preliminary support for Node.js 24, however this action was by default still running on Node.js 20. Now this action by default will run on Node.js 24.\r\n\r\n## What's Changed\r\n* Upload Artifact Node 24 support by @salmanmkc in https://github.com/actions/upload-artifact/pull/719\r\n* fix: update @actions/artifact for Node.js 24 punycode deprecation by @salmanmkc in https://github.com/actions/upload-artifact/pull/744\r\n* prepare release v6.0.0 for Node.js 24 support by @salmanmkc in https://github.com/actions/upload-artifact/pull/745\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/upload-artifact/compare/v5.0.0...v6.0.0",
       "docsUrl": "https://github.com/actions/upload-artifact"
@@ -74,8 +74,8 @@
       "repo": "actions/download-artifact",
       "latest": "v7.0.0",
       "major": "7",
-      "description": null,
       "status": "active",
+      "description": null,
       "releaseDate": "2025-12-12T18:49:01Z",
       "changelog": "## v7 - What's new\r\n\r\n> [!IMPORTANT]\r\n> actions/download-artifact@v7 now runs on Node.js 24 (`runs.using: node24`) and requires a minimum Actions Runner version of 2.327.1. If you are using self-hosted runners, ensure they are updated before upgrading.\r\n### Node.js 24\r\n\r\nThis release updates the runtime to Node.js 24. v6 had preliminary support for Node 24, however this action was by default still running on Node.js 20. Now this action by default will run on Node.js 24.\r\n\r\n## What's Changed\r\n* Update GHES guidance to include reference to Node 20 version by @patrikpolyak in https://github.com/actions/download-artifact/pull/440\r\n* Download Artifact Node24 support by @salmanmkc in https://github.com/actions/download-artifact/pull/415\r\n* fix: update @actions/artifact to fix Node.js 24 punycode deprecation by @salmanmkc in https://github.com/actions/download-artifact/pull/451\r\n* prepare release v7.0.0 for Node.js 24 support by @salmanmkc in https://github.com/actions/download-artifact/pull/452\r\n\r\n## New Contributors\r\n* @patrikpolyak made their first contribution in https://github.com/actions/download-artifact/pull/440\r\n* @salmanmkc made their first contribution in https://github.com/actions/download-artifact/pull/415\r\n\r\n**Full Changelog**: https://github.com/actions/download-artifact/compare/v6.0.0...v7.0.0",
       "docsUrl": "https://github.com/actions/download-artifact"
@@ -84,8 +84,8 @@
       "repo": "codecov/codecov-action",
       "latest": "v5.5.2",
       "major": "5",
-      "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: ",
       "status": "active",
+      "description": "GitHub Action that uploads coverage to Codecov :open_umbrella: ",
       "releaseDate": "2025-12-09T19:21:50Z",
       "changelog": "## What's Changed\r\n* check gpg only when skip-validation = false by @maxweng-sentry in https://github.com/codecov/codecov-action/pull/1894\r\n* chore: `disable_search` alignment by @freemanzMrojo in https://github.com/codecov/codecov-action/pull/1881\r\n* chore(release): 5.5.2 by @thomasrockhu-codecov in https://github.com/codecov/codecov-action/pull/1902\r\n\r\n## New Contributors\r\n* @maxweng-sentry made their first contribution in https://github.com/codecov/codecov-action/pull/1894\r\n* @freemanzMrojo made their first contribution in https://github.com/codecov/codecov-action/pull/1881\r\n\r\n**Full Changelog**: https://github.com/codecov/codecov-action/compare/v5.5.1...v5.5.2",
       "docsUrl": "https://github.com/codecov/codecov-action"
@@ -94,8 +94,8 @@
       "repo": "dorny/test-reporter",
       "latest": "v2.5.0",
       "major": "2",
-      "description": "Displays test results from popular testing frameworks directly in GitHub",
       "status": "active",
+      "description": "Displays test results from popular testing frameworks directly in GitHub",
       "releaseDate": "2026-01-03T13:44:59Z",
       "changelog": "## What's Changed\r\n\r\n### Features\r\n* Add Nette Tester JUnit Reporter by @jozefizso in https://github.com/dorny/test-reporter/pull/707\r\n\r\n\r\n### Project maintanance\r\n* Bump actions/upload-artifact from 5 to 6 by @dependabot[bot] in https://github.com/dorny/test-reporter/pull/695\r\n\r\n\r\n**Full Changelog**: https://github.com/dorny/test-reporter/compare/v2.4.0...v2.5.0",
       "docsUrl": "https://github.com/dorny/test-reporter"
@@ -104,8 +104,8 @@
       "repo": "super-linter/super-linter",
       "latest": "v8.3.2",
       "major": "8",
-      "description": "Combination of multiple linters to run as a GitHub Action or standalone",
       "status": "active",
+      "description": "Combination of multiple linters to run as a GitHub Action or standalone",
       "releaseDate": "2025-12-24T19:17:59Z",
       "changelog": "## [8.3.2](https://github.com/super-linter/super-linter/compare/v8.3.1...v8.3.2) (2025-12-24)\n\n\n### 🐛 Bugfixes\n\n* centralize file array additions and fix type ([#7323](https://github.com/super-linter/super-linter/issues/7323)) ([ce80cf6](https://github.com/super-linter/super-linter/commit/ce80cf6842c49618adb1eef1c4a455fb7a32f51c)), closes [#7302](https://github.com/super-linter/super-linter/issues/7302)\n* create log groups for enabled languages only ([#7329](https://github.com/super-linter/super-linter/issues/7329)) ([7c85bf3](https://github.com/super-linter/super-linter/commit/7c85bf3695efa7784c55c760b591a26994eb1538)), closes [#7307](https://github.com/super-linter/super-linter/issues/7307)\n* initialize github_before_sha ([#7120](https://github.com/super-linter/super-linter/issues/7120)) ([a93b722](https://github.com/super-linter/super-linter/commit/a93b722492ae64610b681733132b03316b5a3f1a)), closes [#7118](https://github.com/super-linter/super-linter/issues/7118) [#7275](https://github.com/super-linter/super-linter/issues/7275)\n\n\n### ⬆️ Dependency updates\n\n* **bundler:** bump rubocop in /dependencies in the rubocop group ([#7313](https://github.com/super-linter/super-linter/issues/7313)) ([7fab96c](https://github.com/super-linter/super-linter/commit/7fab96c232891c27aa68d1ccb78a4df73fc8d845))\n* **docker:** bump clj-kondo/clj-kondo in the docker group ([#7325](https://github.com/super-linter/super-linter/issues/7325)) ([fa23c54](https://github.com/super-linter/super-linter/commit/fa23c5433efb749f5fb300cbec569e2c0874a335))\n* **docker:** bump the docker group with 4 updates ([#7318](https://github.com/super-linter/super-linter/issues/7318)) ([dc49a6d](https://github.com/super-linter/super-linter/commit/dc49a6d6bdd54b017a4b5a246f6f74cdd7a39b99))\n* **java:** bump com.puppycrawl.tools:checkstyle ([#7312](https://github.com/super-linter/super-linter/issues/7312)) ([ab58437](https://github.com/super-linter/super-linter/commit/ab584378be9a17bc1544a55d48a6daf69bf119bc))\n* **npm:** bump next from 16.0.10 to 16.1.0 in /dependencies ([#7316](https://github.com/super-linter/super-linter/issues/7316)) ([a8572e2](https://github.com/super-linter/super-linter/commit/a8572e292ba5ca18ef118b066eb3d1570b8de902))\n* **npm:** bump renovate ([#7300](https://github.com/super-linter/super-linter/issues/7300)) ([191338a](https://github.com/super-linter/super-linter/commit/191338acc8928b9e523533a22c8cea7f83daefec))\n* **npm:** bump the npm group across 1 directory with 10 updates ([#7322](https://github.com/super-linter/super-linter/issues/7322)) ([24d9e00](https://github.com/super-linter/super-linter/commit/24d9e00de99a2a9056c1717e69163f832d18756e))\n* **npm:** bump the npm group across 1 directory with 2 updates ([#7296](https://github.com/super-linter/super-linter/issues/7296)) ([0697485](https://github.com/super-linter/super-linter/commit/069748517af0b1ddbfae6ed6545a636162b99aa9))\n* **npm:** bump the npm group across 1 directory with 2 updates ([#7301](https://github.com/super-linter/super-linter/issues/7301)) ([4b2bf76](https://github.com/super-linter/super-linter/commit/4b2bf76ed4965f51047c2f8825b7f2181fd4591e))\n* **npm:** bump the npm group across 1 directory with 4 updates ([#7327](https://github.com/super-linter/super-linter/issues/7327)) ([07e73d6](https://github.com/super-linter/super-linter/commit/07e73d60033bef44a0c4224fb7f0ce1389714002))\n* **python:** bump ansible-lint ([#7326](https://github.com/super-linter/super-linter/issues/7326)) ([47962ea](https://github.com/super-linter/super-linter/commit/47962eae72ffee1ebc038c4b719d6394178658ee))\n* **python:** bump snakemake ([#7295](https://github.com/super-linter/super-linter/issues/7295)) ([3f92589](https://github.com/super-linter/super-linter/commit/3f925892e7f0f6020a698a69caef86eb3277cd9c))\n* **python:** bump the pip group across 1 directory with 2 updates ([#7299](https://github.com/super-linter/super-linter/issues/7299)) ([0ca0315](https://github.com/super-linter/super-linter/commit/0ca0315180d0039872dd5c0828f50530a2747722))\n* **python:** bump the pip group across 1 directory with 6 updates ([#7317](https://github.com/super-linter/super-linter/issues/7317)) ([ae7e8d8](https://github.com/super-linter/super-linter/commit/ae7e8d8e5c32255e2bc335540e2c92c49a095d6f))\n\n\n### 🧰 Maintenance\n\n* disable dependabot cooldown ([#7311](https://github.com/super-linter/super-linter/issues/7311)) ([e98f7d3](https://github.com/super-linter/super-linter/commit/e98f7d3c79423480207804b55cf282c76156bbac))\n* **docs:** mention conflicting tools in upgrades ([#7324](https://github.com/super-linter/super-linter/issues/7324)) ([7afe608](https://github.com/super-linter/super-linter/commit/7afe608fff92093619af9fe2aacf61a093419551)), closes [#7298](https://github.com/super-linter/super-linter/issues/7298)\n* **github-actions:** bump the dev-ci-tools group with 2 updates ([#7315](https://github.com/super-linter/super-linter/issues/7315)) ([4b07868](https://github.com/super-linter/super-linter/commit/4b07868ae26255da8c0d8a69d7c0a4aff02e1b04))\n* group eslint updates ([#7321](https://github.com/super-linter/super-linter/issues/7321)) ([20f25a3](https://github.com/super-linter/super-linter/commit/20f25a369053b8067ccfedf04e3ed98e7df71ff6))",
       "docsUrl": "https://github.com/super-linter/super-linter"
@@ -114,8 +114,8 @@
       "repo": "sonarsource/sonarqube-scan-action",
       "latest": "v7.0.0",
       "major": "7",
-      "description": null,
       "status": "active",
+      "description": null,
       "releaseDate": "2025-12-09T08:58:12Z",
       "changelog": "## What's Changed\r\n* SQSCANGHA-120 NO-JIRA Bump actions/setup-node from 4 to 5 by @dependabot[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/211\r\n* Update SonarScanner CLI to 7.3.0.5189 by @github-actions[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/212\r\n* SQSCANGHA-122 Include caveats for running SCA by @subdavis in https://github.com/SonarSource/sonarqube-scan-action/pull/213\r\n* SQSCANGHA-123 NO-JIRA Bump actions/setup-node from 5 to 6 by @dependabot[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/214\r\n* SQSCANGHA-126 Update SonarScanner CLI to 8.0.1.6346 by @github-actions[bot] in https://github.com/SonarSource/sonarqube-scan-action/pull/218\r\n\r\n## New Contributors\r\n* @subdavis made their first contribution in https://github.com/SonarSource/sonarqube-scan-action/pull/213\r\n\r\n**Full Changelog**: https://github.com/SonarSource/sonarqube-scan-action/compare/v6.0.0...v7.0.0",
       "docsUrl": "https://github.com/SonarSource/sonarqube-scan-action"
@@ -124,8 +124,8 @@
       "repo": "aquasecurity/trivy-action",
       "latest": "0.33.1",
       "major": "0",
-      "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities",
       "status": "active",
+      "description": "Runs Trivy as GitHub action to scan your Docker container image for vulnerabilities",
       "releaseDate": "2025-09-03T16:07:53Z",
       "changelog": "## What's Changed\r\n* Update setup-trivy action to version v0.2.4 by @martincostello in https://github.com/aquasecurity/trivy-action/pull/486\r\n\r\n\r\n**Full Changelog**: https://github.com/aquasecurity/trivy-action/compare/0.33.0...0.33.1",
       "docsUrl": "https://github.com/aquasecurity/trivy-action"
@@ -134,8 +134,8 @@
       "repo": "actions/deploy-pages",
       "latest": "v4.0.5",
       "major": "4",
-      "description": "GitHub Action to publish artifacts to GitHub Pages for deployments",
       "status": "active",
+      "description": "GitHub Action to publish artifacts to GitHub Pages for deployments",
       "releaseDate": "2024-03-18T15:43:13Z",
       "changelog": "# Changelog\r\n\r\n- On API error, the error message will surface the API request ID @TooManyBees (#324)\r\n- Bump the non-breaking-changes group with 2 updates @dependabot (#318)\r\n- Bump the non-breaking-changes group with 1 update @dependabot (#316)\r\n- Bump the non-breaking-changes group with 3 updates @dependabot (#314)\r\n- Bump release-drafter/release-drafter from 5.25.0 to 6.0.0 @dependabot (#311)\r\n\r\n---\r\n\r\nSee details of [all code changes](https://github.com/actions/deploy-pages/compare/v4.0.4...v4.0.5) since previous release.\r\n\r\n:warning: For use with products other than GitHub.com, such as GitHub Enterprise Server, please consult the [compatibility table](https://github.com/actions/deploy-pages/#compatibility).\r\n",
       "docsUrl": "https://github.com/actions/deploy-pages"
@@ -144,8 +144,8 @@
       "repo": "JamesIves/github-pages-deploy-action",
       "latest": "v4.8.0",
       "major": "4",
-      "description": "🚀 Automatically deploy your project to GitHub Pages using GitHub Actions. This action can be configured to push your production-ready code into any branch you'd like.",
       "status": "active",
+      "description": "🚀 Automatically deploy your project to GitHub Pages using GitHub Actions. This action can be configured to push your production-ready code into any branch you'd like.",
       "releaseDate": "2026-01-09T19:28:42Z",
       "changelog": "<!-- Release notes generated using configuration in .github/release.yml at releases/v4 -->\r\n\r\n## What's Changed\r\n\r\n### Build 🔧\r\n* **Migrate from Node.js 20 to Node.js 24 runtime** \r\n* build(deps-dev): bump the eslint group with 3 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1920\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1931\r\n* build(deps): bump @actions/core from 2.0.0 to 2.0.1 in the actions group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1933\r\n* build(deps): bump codecov/codecov-action from 5.5.1 to 5.5.2 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1932\r\n* build(deps): bump the actions group with 2 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1942\r\n* build(deps): bump the eslint group across 1 directory with 4 updates by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1938\r\n* build(deps): bump typescript-eslint from 8.49.0 to 8.50.0 in the typescript group by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1937\r\n* build(deps): bump actions/download-artifact from 6.0.0 to 7.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1936\r\n* build(deps): bump actions/upload-artifact from 5.0.0 to 6.0.0 by @dependabot[bot] in https://github.com/JamesIves/github-pages-deploy-action/pull/1935\r\n\r\n**Full Changelog**: https://github.com/JamesIves/github-pages-deploy-action/compare/v4...v4.8.0",
       "docsUrl": "https://github.com/JamesIves/github-pages-deploy-action"
@@ -154,8 +154,8 @@
       "repo": "docker/login-action",
       "latest": "v3.6.0",
       "major": "3",
-      "description": "GitHub Action to login against a Docker registry",
       "status": "active",
+      "description": "GitHub Action to login against a Docker registry",
       "releaseDate": "2025-09-29T10:34:04Z",
       "changelog": "* Add `registry-auth` input for raw authentication to registries by @crazy-max in https://github.com/docker/login-action/pull/887\r\n* Bump @aws-sdk/client-ecr to 3.890.0 in https://github.com/docker/login-action/pull/882 https://github.com/docker/login-action/pull/890\r\n* Bump @aws-sdk/client-ecr-public to 3.890.0 in https://github.com/docker/login-action/pull/882 https://github.com/docker/login-action/pull/890\r\n* Bump @docker/actions-toolkit from 0.62.1 to 0.63.0 in https://github.com/docker/login-action/pull/883\r\n* Bump brace-expansion from 1.1.11 to 1.1.12 in https://github.com/docker/login-action/pull/880\r\n* Bump undici from 5.28.4 to 5.29.0 in https://github.com/docker/login-action/pull/879\r\n* Bump tmp from 0.2.3 to 0.2.4 in https://github.com/docker/login-action/pull/881\r\n\r\n**Full Changelog**: https://github.com/docker/login-action/compare/v3.5.0...v3.6.0",
       "docsUrl": "https://github.com/docker/login-action"
@@ -164,8 +164,8 @@
       "repo": "docker/setup-buildx-action",
       "latest": "v3.12.0",
       "major": "3",
-      "description": "GitHub Action to set up Docker Buildx",
       "status": "active",
+      "description": "GitHub Action to set up Docker Buildx",
       "releaseDate": "2025-12-19T10:21:13Z",
       "changelog": "* Deprecate `install` input by @crazy-max in https://github.com/docker/setup-buildx-action/pull/455\r\n* Bump @docker/actions-toolkit from 0.62.1 to 0.63.0 in https://github.com/docker/setup-buildx-action/pull/434\r\n* Bump brace-expansion from 1.1.11 to 1.1.12 in https://github.com/docker/setup-buildx-action/pull/436\r\n* Bump form-data from 2.5.1 to 2.5.5 in https://github.com/docker/setup-buildx-action/pull/432\r\n* Bump undici from 5.28.4 to 5.29.0 in https://github.com/docker/setup-buildx-action/pull/435\r\n\r\n**Full Changelog**: https://github.com/docker/setup-buildx-action/compare/v3.11.1...v3.12.0",
       "docsUrl": "https://github.com/docker/setup-buildx-action"
@@ -174,8 +174,8 @@
       "repo": "docker/build-push-action",
       "latest": "v6.18.0",
       "major": "6",
-      "description": "GitHub Action to build and push Docker images with Buildx",
       "status": "active",
+      "description": "GitHub Action to build and push Docker images with Buildx",
       "releaseDate": "2025-05-27T16:39:16Z",
       "changelog": "* Bump @docker/actions-toolkit from 0.61.0 to 0.62.1 in https://github.com/docker/build-push-action/pull/1381\r\n\r\n> [!NOTE]\r\n> [Build summary](https://docs.docker.com/build/ci/github-actions/build-summary/) is now supported with [Docker Build Cloud](https://docs.docker.com/build-cloud/).\r\n\r\n**Full Changelog**: https://github.com/docker/build-push-action/compare/v6.17.0...v6.18.0",
       "docsUrl": "https://github.com/docker/build-push-action"
@@ -184,8 +184,8 @@
       "repo": "google-github-actions/deploy-appengine",
       "latest": "v3.0.1",
       "major": "3",
-      "description": "A GitHub Action that deploys source code to Google App Engine.",
       "status": "active",
+      "description": "A GitHub Action that deploys source code to Google App Engine.",
       "releaseDate": "2025-09-03T01:08:36Z",
       "changelog": "## What's Changed\n* Update README to reference newest version by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/393\n* Fix docsgen and remove deprecated field by @sethvargo in https://github.com/google-github-actions/deploy-appengine/pull/394\n* Release: v3.0.1 by @google-github-actions-bot in https://github.com/google-github-actions/deploy-appengine/pull/395\n\n\n**Full Changelog**: https://github.com/google-github-actions/deploy-appengine/compare/v3...v3.0.1",
       "docsUrl": "https://github.com/google-github-actions/deploy-appengine"
@@ -194,8 +194,8 @@
       "repo": "azure/webapps-deploy",
       "latest": "v2.2.17",
       "major": "2",
-      "description": "Enable GitHub developers to deploy to Azure WebApps using GitHub Actions",
       "status": "active",
+      "description": "Enable GitHub developers to deploy to Azure WebApps using GitHub Actions",
       "releaseDate": "2025-08-01T05:51:11Z",
       "changelog": "Changes:\r\nhttps://github.com/Azure/webapps-deploy/pull/488",
       "docsUrl": "https://github.com/Azure/webapps-deploy"
@@ -204,8 +204,8 @@
       "repo": "aws-actions/configure-aws-credentials",
       "latest": "v5.1.1",
       "major": "5",
-      "description": "Configure AWS credential environment variables for use in other GitHub Actions.",
       "status": "active",
+      "description": "Configure AWS credential environment variables for use in other GitHub Actions.",
       "releaseDate": "2025-11-24T18:36:44Z",
       "changelog": "## [5.1.1](https://github.com/aws-actions/configure-aws-credentials/compare/v5.1.0...v5.1.1) (2025-11-24)\n\n\n### Miscellaneous Chores\n\n* release 5.1.1 ([56d6a58](https://github.com/aws-actions/configure-aws-credentials/commit/56d6a583f00f6bad6d19d91d53a7bc3b8143d0e9))\n* various dependency updates",
       "docsUrl": "https://github.com/aws-actions/configure-aws-credentials"
@@ -214,8 +214,8 @@
       "repo": "aws-actions/aws-cloudformation-github-deploy",
       "latest": "v1.3.0",
       "major": "1",
-      "description": "Deploys AWS CloudFormation Stacks",
       "status": "active",
+      "description": "Deploys AWS CloudFormation Stacks",
       "releaseDate": "2024-02-06T16:29:39Z",
       "changelog": "See the CHANGELOG for more details on the release.",
       "docsUrl": "https://github.com/aws-actions/aws-cloudformation-github-deploy"
@@ -224,8 +224,8 @@
       "repo": "appleboy/ssh-action",
       "latest": "v1.2.4",
       "major": "1",
-      "description": "GitHub Actions for executing remote ssh commands.",
       "status": "active",
+      "description": "GitHub Actions for executing remote ssh commands.",
       "releaseDate": "2025-11-28T15:10:36Z",
       "changelog": "## Changelog\n### Enhancements\n* 4e3535e14ec03f79243a1a56045526c18d66d556: chore: bump default DRONE_SSH_VERSION to 1.8.2 (@appleboy)\n### Build process updates\n* 823bd89e131d8d508129f9443cad5855e9ba96f0: ci: trigger GitHub Actions workflows only on version tags (@appleboy)\n### Documentation updates\n* 652a0bee3c6aaba4fb2ae596f1de42c51f8e81ec: docs: update CI documentation and workflow references (@appleboy)\n* f6208e096db23f5766ae2e218bde93cb6a8d0944: docs: document and demonstrate capturing and using command output (@appleboy)\n\n",
       "docsUrl": "https://github.com/appleboy/ssh-action"
@@ -234,8 +234,8 @@
       "repo": "slackapi/slack-github-action",
       "latest": "v2.1.1",
       "major": "2",
-      "description": "Send data into Slack using this GitHub Action!",
       "status": "active",
+      "description": "Send data into Slack using this GitHub Action!",
       "releaseDate": "2025-07-09T23:53:11Z",
       "changelog": "## What's Changed\r\n\r\nThis release fixes an issue where substituted variables might've broken valid JSON or YAML parsings when using the `payload-file-path` input option.\r\n\r\n### 🐛 Bug fixes\r\n\r\n* fix: parse provided payloads before replacing templated variables in https://github.com/slackapi/slack-github-action/pull/449 - Thanks @zimeg!\r\n\r\n### 📚 Documentation\r\n\r\n* docs: fix channel mention formatting in https://github.com/slackapi/slack-github-action/pull/447 - Thanks @mwbrooks!\r\n* docs: remove links to pages that are no longer referenced in markdown in https://github.com/slackapi/slack-github-action/pull/459 - Thanks @zimeg!\r\n\r\n### 🤖 Dependencies\r\n\r\n* build(deps): bump undici from 5.28.5 to 5.29.0 in https://github.com/slackapi/slack-github-action/pull/442 - Thanks @dependabot!\r\n* build(deps): bump codecov/codecov-action from 5.4.2 to 5.4.3 in https://github.com/slackapi/slack-github-action/pull/443 - Thanks @dependabot!\r\n* build(deps-dev): bump mocha from 11.1.0 to 11.5.0 in https://github.com/slackapi/slack-github-action/pull/450 - Thanks @dependabot!\r\n* build(deps): bump @actions/github from 6.0.0 to 6.0.1 in https://github.com/slackapi/slack-github-action/pull/451 - Thanks @dependabot!\r\n* build(deps-dev): bump @types/node from 22.15.3 to 22.15.29 in https://github.com/slackapi/slack-github-action/pull/452 - Thanks @dependabot!\r\n* build(deps): bump @slack/web-api from 7.9.1 to 7.9.2 in https://github.com/slackapi/slack-github-action/pull/453 - Thanks @dependabot!\r\n* build(deps): bump @slack/web-api from 7.9.2 to 7.9.3 in https://github.com/slackapi/slack-github-action/pull/462 - Thanks @dependabot!\r\n* build(deps): bump axios from 1.9.0 to 1.10.0 in https://github.com/slackapi/slack-github-action/pull/465 - Thanks @dependabot!\r\n* build(deps-dev): bump @types/node from 22.15.29 to 24.0.3 in https://github.com/slackapi/slack-github-action/pull/466 - Thanks @dependabot!\r\n* build(deps-dev): bump mocha from 11.5.0 to 11.7.1 in https://github.com/slackapi/slack-github-action/pull/468 - Thanks @dependabot!\r\n* build(deps-dev): bump mocha-suppress-logs from 0.5.1 to 0.6.0 in https://github.com/slackapi/slack-github-action/pull/469 - Thanks @dependabot!\r\n* build(deps-dev): bump sinon from 20.0.0 to 21.0.0 in https://github.com/slackapi/slack-github-action/pull/471 - Thanks @dependabot!\r\n* build(deps-dev): bump @types/node from 24.0.3 to 24.0.8 in https://github.com/slackapi/slack-github-action/pull/472 - Thanks @dependabot!\r\n* build(deps-dev): bump @biomejs/biome from 1.9.4 to 2.0.6 in https://github.com/slackapi/slack-github-action/pull/470 - Thanks @dependabot!\r\n\r\n### 🧰 Maintenance\r\n\r\n* ci: pin action hashes and escape variables with minimum permission in https://github.com/slackapi/slack-github-action/pull/441 - Thanks @zimeg!\r\n* build: create separate release branches for tagged releases on publish in https://github.com/slackapi/slack-github-action/pull/457 - Thanks @zimeg!\r\n* build: clone repository \"docs\" and configuration when syncing project docs in https://github.com/slackapi/slack-github-action/pull/467 - Thanks @lukegalbraithrussell!\r\n* chore(release): tag version 2.1.1 in https://github.com/slackapi/slack-github-action/pull/474 - Thanks @zimeg!\r\n\r\n**Full Changelog**: https://github.com/slackapi/slack-github-action/compare/v2.1.0...v2.1.1",
       "docsUrl": "https://github.com/slackapi/slack-github-action"
@@ -244,8 +244,8 @@
       "repo": "actions/github-script",
       "latest": "v8",
       "major": "8",
-      "description": "Write workflows scripting the GitHub API in JavaScript",
       "status": "active",
+      "description": "Write workflows scripting the GitHub API in JavaScript",
       "releaseDate": "2025-09-04T14:57:03Z",
       "changelog": "## What's Changed\r\n* Update Node.js version support to 24.x by @salmanmkc in https://github.com/actions/github-script/pull/637\r\n* README for updating actions/github-script from v7 to v8 by @sneha-krip in https://github.com/actions/github-script/pull/653\r\n\r\n## ⚠️ Minimum Compatible Runner Version\r\n\r\n**v2.327.1**  \r\n[Release Notes](https://github.com/actions/runner/releases/tag/v2.327.1)\r\n\r\nMake sure your runner is updated to this version or newer to use this release.\r\n## New Contributors\r\n* @salmanmkc made their first contribution in https://github.com/actions/github-script/pull/637\r\n* @sneha-krip made their first contribution in https://github.com/actions/github-script/pull/653\r\n\r\n**Full Changelog**: https://github.com/actions/github-script/compare/v7.1.0...v8.0.0",
       "docsUrl": "https://github.com/actions/github-script"
@@ -254,8 +254,8 @@
       "repo": "actions/labeler",
       "latest": "v6.0.1",
       "major": "6",
-      "description": "An action for automatically labelling pull requests",
       "status": "active",
+      "description": "An action for automatically labelling pull requests",
       "releaseDate": "2025-09-04T17:56:16Z",
       "changelog": "## What's Changed\r\n* Upgrade publish-action from 0.2.2 to 0.4.0 by @aparnajyothi-y in https://github.com/actions/labeler/pull/901\r\n\r\n## New Contributors\r\n* @aparnajyothi-y made their first contribution in https://github.com/actions/labeler/pull/901\r\n\r\n**Full Changelog**: https://github.com/actions/labeler/compare/v6.0.0...v6.0.1",
       "docsUrl": "https://github.com/actions/labeler"
@@ -264,8 +264,8 @@
       "repo": "actions/stale",
       "latest": "v10.1.1",
       "major": "10",
-      "description": "Marks issues and pull requests that have not had recent interaction",
       "status": "active",
+      "description": "Marks issues and pull requests that have not had recent interaction",
       "releaseDate": "2025-12-03T03:26:23Z",
       "changelog": "## What's Changed\r\n  \r\n  ### Bug Fix\r\n  * Add Missing Input Reading for `only-issue-types` by @Bibo-Joshi in https://github.com/actions/stale/pull/1298\r\n  ### Improvement\r\n  * Improves error handling when rate limiting is disabled on GHES. by @chiranjib-swain in https://github.com/actions/stale/pull/1300\r\n  ### Dependency Upgrades\r\n  * Upgrade eslint-config-prettier from 8.10.0 to 10.1.8 by @dependabot in https://github.com/actions/stale/pull/1276\r\n  * Upgrade @types/node from 20.10.3 to 24.2.0 and document breaking changes in v10 by @dependabot in https://github.com/actions/stale/pull/1280\r\n  * Upgrade actions/publish-action from 0.3.0 to 0.4.0 by @dependabot in https://github.com/actions/stale/pull/1291\r\n  * Upgrade actions/checkout from 4 to 6 by @dependabot in https://github.com/actions/stale/pull/1306\r\n  \r\n  ## New Contributors\r\n  * @chiranjib-swain made their first contribution in https://github.com/actions/stale/pull/1300\r\n  \r\n  **Full Changelog**: https://github.com/actions/stale/compare/v10...v10.1.1",
       "docsUrl": "https://github.com/actions/stale"
@@ -274,8 +274,8 @@
       "repo": "actions/create-release",
       "latest": "v1.1.4",
       "major": "1",
-      "description": "An Action to create releases via the GitHub Release API",
       "status": "deprecated",
+      "description": "An Action to create releases via the GitHub Release API",
       "releaseDate": "2020-09-14T13:55:07Z",
       "changelog": "This release adds the ability to specify an owner/repo in your inputs to have an action run create releases on a different repository.",
       "docsUrl": "https://github.com/actions/create-release"
@@ -284,8 +284,8 @@
       "repo": "softprops/action-gh-release",
       "latest": "v2.5.0",
       "major": "2",
-      "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "status": "active",
+      "description": "📦 :octocat: GitHub Action for creating GitHub Releases",
       "releaseDate": "2025-12-01T06:03:39Z",
       "changelog": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n## What's Changed\r\n### Exciting New Features 🎉\r\n* feat: mark release as draft until all artifacts are uploaded by @dumbmoron in https://github.com/softprops/action-gh-release/pull/692\r\n### Other Changes 🔄\r\n* chore(deps): bump the npm group across 1 directory with 5 updates by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/697\r\n* chore(deps): bump actions/checkout from 5.0.0 to 5.0.1 in the github-actions group by @dependabot[bot] in https://github.com/softprops/action-gh-release/pull/689\r\n\r\n## New Contributors\r\n* @dumbmoron made their first contribution in https://github.com/softprops/action-gh-release/pull/692\r\n\r\n**Full Changelog**: https://github.com/softprops/action-gh-release/compare/v2.4.2...v2.5.0",
       "docsUrl": "https://github.com/softprops/action-gh-release"
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2026-01-25T11:26:22.755Z"
+  "updated": "2026-01-25T12:08:25.910Z"
 }

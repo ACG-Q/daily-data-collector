@@ -1,52 +1,51 @@
-name: Split BlackIP TXT to TXT
+name: 🛡️ Collect Blacklisted IPs
 
 on:
-    schedule:
-      - cron: "0 0 * * *" # 每天 UTC 时间 00:00 运行
-    workflow_dispatch: # 允许手动触发
-  
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 env:
-    # 雷池WAF社区版限制1000条
-    # 每个txt限制为1000条
-    LINE_LIMIT: 1000
+  # 雷池WAF社区版限制1000条
+  LINE_LIMIT: 1000
 
-    # 黑名单IPs 来源
-    SOURCES: '["https://blackip.ustc.edu.cn/list.php?txt"]'
+  # 黑名单IPs 来源
+  SOURCES: '["https://blackip.ustc.edu.cn/list.php?txt"]'
 
-    # 输出文件夹
-    OUTPUT_PATH: ${{ github.workspace }}/data/blackip
+  # 输出文件夹
+  OUTPUT_PATH: ${{ github.workspace }}/data/blackip
 
-    # 数据中心文件
-    DATA_CENTER_FILE: ${{ github.workspace }}/data/data.json
+  # 数据中心文件
+  DATA_CENTER_FILE: ${{ github.workspace }}/data/data.json
 
-    # 在数据中心的标识
-    DATA_CENTER_NAME: blackIPs
+  # 在数据中心的标识
+  DATA_CENTER_NAME: blackIPs
 
 jobs:
-    generate:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
-            
-            - name: Set up Node.js
-              uses: actions/setup-node@v4
-              with:
-                node-version: "22"
-            
-            - name: Install dependencies
-              run: npm install axios
-        
-            - name: Run script to generate JSON
-              run: node scripts/collect-blackip.js
-            
-            - name: Commit and push changes
-              run: |
-                git config --global user.name "GitHub Actions"
-                git config --global user.email "actions@github.com"
-                git add ${{ env.OUTPUT_PATH }}
-                git commit -m "Auto-generated JSON file [skip ci]"
-                git add ${{ env.DATA_CENTER_FILE }}
-                git commit -m "Update data center file [skip ci]"
-                git push
+  generate:
+    name: ⚙️ Generate BlackIP List
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 📦 Install Dependencies
+        run: npm install axios
+
+      - name: 🚀 Run Collection Script
+        run: node scripts/collect-blackip.js
+
+      - name: 📤 Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add ${{ env.OUTPUT_PATH }}
+          git commit -m "chore: auto-generated blackip list [skip ci]" || echo "No changes"
+          git add ${{ env.DATA_CENTER_FILE }}
+          git commit -m "chore: update data center [skip ci]" || echo "No data center changes"
+          git push

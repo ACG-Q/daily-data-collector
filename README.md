@@ -1,12 +1,3 @@
-### 本地运行
-
-你可以通过 Node.js 在本地运行所有数据收集器：
-
-```bash
-npm install
-node main.js
-```
-
 ### 项目结构
 
 - `scripts/`: 包含所有独立的数据收集脚本。
@@ -26,6 +17,7 @@ node main.js
 | actions-versions | GitHub Actions 版本信息    | [data/actions-versions.json](data/actions-versions.json)      |
 | holidays         | 中国节假日信息             | [data/holidays/holidays_2007.json](data/holidays/holidays_2007.json)... |
 | blackIPs         | 自动订阅黑名单IP地址，并按每1000条分割为多个文件 | [data/blackip/blackip_1_1.txt](data/blackip/blackip_1_1.txt)... |
+| trackers         | 自动订阅 trackers 列表 | [data/trackers.txt](data/trackers.txt) |
 
 ## Runner 操作系统版本信息
 
@@ -235,3 +227,25 @@ node main.js
 
 - 多个文件需同时使用
 - 注意与本地防火墙规则的兼容性
+
+
+## trackers 列表
+
+### 概述
+
+本服务提供 trackers 列表订阅功能，目前主要集成多个 trackers 列表，并去重后生成一个 trackers 列表
+
+### 数据特点
+
+1. 数据来源
+  - https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_all.txt
+  - https://raw.githubusercontent.com/XIU2/TrackersListCollection/refs/heads/master/all.txt
+  - https://newtrackon.com/api/all
+  - https://raw.githubusercontent.com/1265578519/OpenTracker/refs/heads/master/tracker.txt
+  - https://raw.githubusercontent.com/Tunglies/TrackersList/refs/heads/main/all.txt
+
+2. 每天更新
+
+### 使用说明
+
+- 可直接订阅使用

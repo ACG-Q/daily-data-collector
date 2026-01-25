@@ -1,9 +1,9 @@
-name: Generate GitHub Actions Runner OS Versions JSON
+name: 🖥️ Sync Runner OS Images
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天 UTC 时间 00:00 运行
-  workflow_dispatch: # 允许手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 env:
   # 保存地址
@@ -18,32 +18,31 @@ env:
   # 在数据中心的标识
   DATA_CENTER_NAME: runner-images
 
-
 jobs:
   generate:
+    name: ⚙️ Generate Runner Images JSON
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: 📥 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: 🟢 Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Install dependencies
+      - name: 📦 Install Dependencies
         run: npm install axios
 
-      - name: Run script to generate JSON
+      - name: 🚀 Run Collection Script
         run: node scripts/collect-runner-images.js
 
-      - name: Commit and push changes
+      - name: 📤 Commit and Push Changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add ${{ env.JSON_FILE_PATH }}
-          git commit -m "Auto-generated JSON file [skip ci]"
+          git commit -m "chore: auto-generated runner images JSON [skip ci]" || echo "No changes"
           git add ${{ env.DATA_CENTER_FILE }}
-          git commit -m "Update data center file [skip ci]"
+          git commit -m "chore: update data center [skip ci]" || echo "No data center changes"
           git push

@@ -1,9 +1,9 @@
-name: Update Trackers List
+name: 🛰️ Update Trackers List
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天 UTC 时间 00:00 运行
-  workflow_dispatch: # 允许手动触发
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 env:
   # 保存地址
@@ -13,40 +13,37 @@ env:
   DATA_CENTER_FILE: ${{ github.workspace }}/data/data.json
 
   # 在数据中心的标识
-  DATA_CENTER_NAME: runner-images
+  DATA_CENTER_NAME: trackers
 
 jobs:
   update:
+    name: ⚙️ Update Trackers
     runs-on: ubuntu-latest
-    timeout-minutes: 10  # 设置超时防止卡死
+    timeout-minutes: 10
     permissions:
-      contents: write  # 明确写入权限
+      contents: write
 
     steps:
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'  # 确保bash环境一致性
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # 获取完整提交历史
-        token: ${{ secrets.GITHUB_TOKEN }}  # 使用有写入权限的token
+      - name: 🟢 Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
-    - name: Run script to collect and validate trackers
-      run: |
-        # 安装依赖工具 (如果需要继续进行连通性测试，可以在脚本中实现或保持此步)
-        # sudo apt-get update && sudo apt-get install -y netcat-openbsd
-        node scripts/collect-trackers.js
+      - name: 🚀 Run Collection Script
+        run: node scripts/collect-trackers.js
 
-    - name: Commit and push
-      continue-on-error: true
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        git add ${{ env.FILE_PATH }}
-        git commit -m "Auto-update trackers list (${{ steps.timekeeper.outputs.NOW }})" || echo "No changes to commit"
-        git add ${{ env.DATA_CENTER_FILE }}
-        git commit -m "Update data center file [skip ci]"
-        git push
+      - name: 📤 Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add ${{ env.FILE_PATH }}
+          git commit -m "chore: auto-update trackers list [skip ci]" || echo "No changes"
+          git add ${{ env.DATA_CENTER_FILE }}
+          git commit -m "chore: update data center [skip ci]" || echo "No data center changes"
+          git push

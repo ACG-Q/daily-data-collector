@@ -14,9 +14,9 @@
       "description": "GitHub Actions Versions",
       "description_zh": "GitHub Actions 版本信息",
       "path": [
-        "actions-versions.json"
+        "/home/runner/work/daily-data-collector/daily-data-collector/data/actions-versions.json"
       ],
-      "updated": "2026-01-25T11:26:22.761Z"
+      "updated": "2026-01-25T12:08:25.911Z"
     },
     {
       "name": "holidays",

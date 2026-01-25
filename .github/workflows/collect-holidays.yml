@@ -1,0 +1,52 @@
+name: Generate Holidays JSON
+
+on:
+    schedule:
+        - cron: '0 20 15 * *' # 12点自动执行(UTC+8)
+    workflow_dispatch: # 允许手动触发
+
+env:
+    # 保存文件夹
+    OUTPUT_PATH: ${{ github.workspace }}/data/holidays/
+    
+    # 数据来源
+    SOURCE: https://www.gov.cn/
+
+    # 数据中心文件
+    DATA_CENTER_FILE: ${{ github.workspace }}/data/data.json
+
+    # 在数据中心的标识
+    DATA_CENTER_NAME: holidays
+
+jobs:
+    generate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.8"
+
+            - name: Install dependencies
+              working-directory: scripts/holidays
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements.txt
+
+            # 获取节假日数据并更新 JSON
+            - name: Run script to collect holidays
+              run: node scripts/collect-holidays.js
+                    
+            - name: Commit and push changes
+              run: |
+                git config --global user.name "GitHub Actions"
+                git config --global user.email "actions@github.com"
+                git add ${{ env.OUTPUT_PATH }}
+                git commit -m "Auto-generated JSON file [skip ci]"
+                git add ${{ env.DATA_CENTER_FILE }}
+                git commit -m "Update data center file [skip ci]"
+                git push
+              

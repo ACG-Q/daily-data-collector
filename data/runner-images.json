@@ -16,7 +16,6 @@
     "ubuntu-24.04",
     "ubuntu-latest",
     "ubuntu-slim",
-    "windows-2019",
     "windows-2022",
     "windows-2025",
     "windows-latest"
@@ -56,17 +55,11 @@
         "yamlLabels": [
           "windows-2022"
         ]
-      },
-      {
-        "image": "Windows Server 2019 [![Deprecated badge](https://img.shields.io/badge/-Deprecated-red)](https://github.com/actions/runner-images/issues/12045)",
-        "yamlLabels": [
-          "windows-2019"
-        ]
       }
     ],
     "macos": [
       {
-        "image": "macOS 26 Arm64 `beta`",
+        "image": "macOS 26 Arm64",
         "yamlLabels": [
           "macos-26",
           "macos-26-xlarge"
@@ -104,5 +97,5 @@
     ],
     "other": []
   },
-  "updated": "2026-01-19T01:51:31.886Z"
+  "updated": "2026-01-25T11:18:23.251Z"
 }

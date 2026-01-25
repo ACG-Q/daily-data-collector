@@ -2,21 +2,21 @@
   "data": [
     {
       "name": "runner-images",
-      "description": "BitTorrent Trackers List",
-      "description_zh": "BitTorrent 追踪器列表",
+      "description": "GitHub Actions Runner OS Versions",
+      "description_zh": "GitHub Actions Runner 操作系统版本",
       "path": [
-        "trackers.txt"
+        "runner-images.json"
       ],
-      "updated": "2026-01-24T01:03:10.744Z"
+      "updated": "2026-01-25T11:18:23.254Z"
     },
     {
       "name": "actions-versions",
-      "description": "Github Actions Versions",
-      "description_zh": "GitHub Actions Runner 操作系统版本",
+      "description": "GitHub Actions Versions",
+      "description_zh": "GitHub Actions 版本信息",
       "path": [
         "actions-versions.json"
       ],
-      "updated": "2026-01-21T02:24:57.087Z"
+      "updated": "2026-01-25T11:26:22.761Z"
     },
     {
       "name": "holidays",
@@ -66,7 +66,7 @@
         "blackip/blackip_1_8.txt",
         "blackip/blackip_1_9.txt"
       ],
-      "updated": "2026-01-24T01:10:20.135Z"
+      "updated": "2026-01-25T11:26:33.709Z"
     }
   ]
 }

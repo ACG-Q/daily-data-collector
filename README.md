@@ -1,4 +1,20 @@
-# daily-data-collector
+### 本地运行
+
+你可以通过 Node.js 在本地运行所有数据收集器：
+
+```bash
+npm install
+node main.js
+```
+
+### 项目结构
+
+- `scripts/`: 包含所有独立的数据收集脚本。
+- `utils/`: 包含通用的 JSON 处理和文件操作工具。
+- `data/`: 存放所有收集到的原始数据和生成的 JSON/TXT 文件。
+- `.github/workflows/`: 简化后的 GitHub Actions 工作流。
+- `data/data.json`: 汇总所有数据信息的索引文件。
+
 
 访问 [数据展示页面](https://acg-q.github.io/daily-data-collector/) 可实时查看以下数据
 
@@ -6,10 +22,10 @@
 
 | 名称             | 描述                     | 文件路径    |
 | ---------------- | ----------- | ------------------- |
-| runner-images    | GitHub Actions Runner 操作系统版本信息      | [runner-images.json](runner-images.json)   |
-| actions-versions | GitHub Actions 版本信息    | [actions-versions.json](actions-versions.json)      |
-| holidays         | 中国节假日信息             | [holidays/holidays_2007.json](holidays/holidays_2007.json)<br>[holidays/holidays_2008.json](holidays/holidays_2008.json)<br>[holidays/holidays_2009.json](holidays/holidays_2009.json)<br>[holidays/holidays_2010.json](holidays/holidays_2010.json)<br>[holidays/holidays_2011.json](holidays/holidays_2011.json)<br>[holidays/holidays_2012.json](holidays/holidays_2012.json)<br>[holidays/holidays_2013.json](holidays/holidays_2013.json)<br>[holidays/holidays_2014.json](holidays/holidays_2014.json)<br>[holidays/holidays_2015.json](holidays/holidays_2015.json)<br>[holidays/holidays_2016.json](holidays/holidays_2016.json)<br>[holidays/holidays_2017.json](holidays/holidays_2017.json)<br>[holidays/holidays_2018.json](holidays/holidays_2018.json)<br>[holidays/holidays_2019.json](holidays/holidays_2019.json)<br>[holidays/holidays_2020.json](holidays/holidays_2020.json)<br>[holidays/holidays_2021.json](holidays/holidays_2021.json)<br>[holidays/holidays_2022.json](holidays/holidays_2022.json)<br>[holidays/holidays_2023.json](holidays/holidays_2023.json)<br>[holidays/holidays_2024.json](holidays/holidays_2024.json)<br>[holidays/holidays_2025.json](holidays/holidays_2025.json)<br>[holidays/holidays_2026.json](holidays/holidays_2026.json) |
-| blackIPs         | 自动订阅黑名单IP地址，并按每1000条分割为多个文件，便于管理和使用。 | [blackip/blackip_1_1.txt](blackip/blackip_1_1.txt)<br>[blackip/blackip_1_2.txt](blackip/blackip_1_2.txt)<br>[blackip/blackip_1_3.txt](blackip/blackip_1_3.txt)<br>[blackip/blackip_1_4.txt](blackip/blackip_1_4.txt)<br>[blackip/blackip_1_5.txt](blackip/blackip_1_5.txt)<br>[blackip/blackip_1_6.txt](blackip/blackip_1_6.txt)<br>[blackip/blackip_1_7.txt](blackip/blackip_1_7.txt)<br>[blackip/blackip_1_8.txt](blackip/blackip_1_8.txt)   | 
+| runner-images    | GitHub Actions Runner 操作系统版本信息      | [data/runner-images.json](data/runner-images.json)   |
+| actions-versions | GitHub Actions 版本信息    | [data/actions-versions.json](data/actions-versions.json)      |
+| holidays         | 中国节假日信息             | [data/holidays/holidays_2007.json](data/holidays/holidays_2007.json)... |
+| blackIPs         | 自动订阅黑名单IP地址，并按每1000条分割为多个文件 | [data/blackip/blackip_1_1.txt](data/blackip/blackip_1_1.txt)... |
 
 ## Runner 操作系统版本信息
 

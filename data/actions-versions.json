@@ -4,8 +4,8 @@
       "repo": "actions/checkout",
       "latest": "v6.0.2",
       "major": "6",
-      "description": "Action for checking out a repo",
       "status": "active",
+      "description": "Action for checking out a repo",
       "releaseDate": "2026-01-09T19:53:28Z",
       "changelog": "## What's Changed\r\n* Add orchestration_id to git user-agent when ACTIONS_ORCHESTRATION_ID is set by @TingluoHuang in https://github.com/actions/checkout/pull/2355\r\n* Fix tag handling: preserve annotations and explicit fetch-tags by @ericsciple in https://github.com/actions/checkout/pull/2356\r\n\r\n**Full Changelog**: https://github.com/actions/checkout/compare/v6.0.1...v6.0.2",
       "docsUrl": "https://github.com/actions/checkout"
@@ -14,20 +14,20 @@
       "repo": "actions/setup-node",
       "latest": "v6.2.0",
       "major": "6",
-      "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "status": "active",
+      "description": "Set up your GitHub Actions workflow with a specific version of node.js",
       "releaseDate": "2026-01-15T03:07:32Z",
       "changelog": "## What's Changed\r\n\r\n### Documentation\r\n* Documentation update related to absence of Lockfile by @mahabaleshwars in https://github.com/actions/setup-node/pull/1454\r\n* Correct mirror option typos by @MikeMcC399 in https://github.com/actions/setup-node/pull/1442\r\n* Readme update on checkout version v6 by @deining in https://github.com/actions/setup-node/pull/1446\r\n* Readme typo fixes @munyari in https://github.com/actions/setup-node/pull/1226\r\n* Advanced document update on checkout version v6 by @aparnajyothi-y  in https://github.com/actions/setup-node/pull/1468\r\n\r\n### Dependency updates:\r\n* Upgrade @actions/cache to v5.0.1 by @salmanmkc in https://github.com/actions/setup-node/pull/1449\r\n\r\n## New Contributors\r\n* @mahabaleshwars made their first contribution in https://github.com/actions/setup-node/pull/1454\r\n* @MikeMcC399 made their first contribution in https://github.com/actions/setup-node/pull/1442\r\n* @deining made their first contribution in https://github.com/actions/setup-node/pull/1446\r\n* @munyari made their first contribution in https://github.com/actions/setup-node/pull/1226\r\n\r\n**Full Changelog**: https://github.com/actions/setup-node/compare/v6...v6.2.0",
       "docsUrl": "https://github.com/actions/setup-node"
     },
     {
       "repo": "actions/setup-python",
-      "latest": "v6.1.0",
+      "latest": "v6.2.0",
       "major": "6",
-      "description": "Set up your GitHub Actions workflow with a specific version of Python",
       "status": "active",
-      "releaseDate": "2025-11-25T02:46:03Z",
-      "changelog": "## What's Changed\r\n### Enhancements:\r\n* Add support for `pip-install` input by @gowridurgad in https://github.com/actions/setup-python/pull/1201\r\n* Add graalpy early-access and windows builds by @timfel in https://github.com/actions/setup-python/pull/880\r\n### Dependency and Documentation updates:\r\n* Enhanced wording and updated example usage for `allow-prereleases` by @yarikoptic in https://github.com/actions/setup-python/pull/979\r\n* Upgrade urllib3 from 1.26.19 to 2.5.0 and document breaking changes in v6 by @dependabot in https://github.com/actions/setup-python/pull/1139\r\n* Upgrade typescript from 5.4.2 to 5.9.3 and Documentation update by @dependabot in https://github.com/actions/setup-python/pull/1094\r\n* Upgrade actions/publish-action from 0.3.0 to 0.4.0 & Documentation update for pip-install input by @dependabot in https://github.com/actions/setup-python/pull/1199\r\n* Upgrade requests from 2.32.2 to 2.32.4 by @dependabot in https://github.com/actions/setup-python/pull/1130\r\n* Upgrade prettier from 3.5.3 to 3.6.2 by @dependabot in https://github.com/actions/setup-python/pull/1234\r\n* Upgrade @types/node from 24.1.0 to 24.9.1 and update macos-13 to macos-15-intel by @dependabot in https://github.com/actions/setup-python/pull/1235\r\n\r\n## New Contributors\r\n* @yarikoptic made their first contribution in https://github.com/actions/setup-python/pull/979\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v6...v6.1.0",
+      "description": "Set up your GitHub Actions workflow with a specific version of Python",
+      "releaseDate": "2026-01-22T03:04:50Z",
+      "changelog": "## What's Changed\r\n### Dependency Upgrades\r\n* Upgrade dependencies to Node 24 compatible versions by @salmanmkc in https://github.com/actions/setup-python/pull/1259\r\n* Upgrade urllib3 from 2.5.0 to 2.6.3 in `/__tests__/data` by @dependabot in https://github.com/actions/setup-python/pull/1253 and https://github.com/actions/setup-python/pull/1264\r\n\r\n\r\n**Full Changelog**: https://github.com/actions/setup-python/compare/v6...v6.2.0",
       "docsUrl": "https://github.com/actions/setup-python"
     },
     {
@@ -311,5 +311,5 @@
       "docsUrl": "https://github.com/subosito/flutter-action"
     }
   ],
-  "updated": "2026-01-21T02:24:56.472Z"
+  "updated": "2026-01-25T11:26:22.755Z"
 }

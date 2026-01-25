@@ -1,0 +1,150 @@
+name: Generate GitHub Actions Versions JSON
+
+on:
+  schedule:
+    - cron: "0 0 1,6,11,16,21,26 * *"
+  workflow_dispatch: # 允许手动触发
+
+env:
+  # 保存地址
+  JSON_FILE_PATH: ${{ github.workspace }}/data/actions-versions.json
+
+  # 数据中心文件
+  DATA_CENTER_FILE: ${{ github.workspace }}/data/data.json
+
+  # 在数据中心的标识
+  DATA_CENTER_NAME: actions-versions
+
+  # 捕获
+  GITHUB_REPOS: '["actions/checkout", "actions/setup-node", "actions/setup-python", "actions/setup-dotnet", "actions/setup-java", "actions/cache", "actions/upload-artifact", "actions/download-artifact", "codecov/codecov-action", "dorny/test-reporter", "super-linter/super-linter", "sonarsource/sonarqube-scan-action", "aquasecurity/trivy-action", "actions/deploy-pages", "JamesIves/github-pages-deploy-action", "docker/login-action", "docker/setup-buildx-action", "docker/build-push-action", "google-github-actions/deploy-appengine", "azure/webapps-deploy", "aws-actions/configure-aws-credentials", "aws-actions/aws-cloudformation-github-deploy", "appleboy/ssh-action", "slackapi/slack-github-action", "actions/github-script", "actions/labeler", "actions/stale", "actions/create-release", "softprops/action-gh-release", "dephraiim/translate-readme", "subosito/flutter-action"]'
+
+  # 捕获一个仓库所需请求数
+  REQUESTS_PER_REPO: 2
+
+  # 未验证身份的请求，最大值
+  UNAUTHENTICATED_REQUESTS_MAX: 60
+
+  # 最大作业
+  MAX_JOBS: 20
+
+  # 该Action最大API请求次数【一个存储库中所有操作在一小时内最多可以执行 1,000 条对 GitHub API 的请求】
+  MAX_API_REQUESTS: 500
+
+  # ISSUE_ID
+  ISSUE_ID: 1
+
+jobs:
+  # 根据GITHUB_REPOS进行分割
+  split:
+    runs-on: ubuntu-latest
+    outputs:
+      GITHUB_REPOS_LIST: ${{ steps.split.outputs.GITHUB_REPOS_LIST }}
+    steps:
+      # 每小时可捕获的仓库数量 = MAX_API_REQUESTS / REQUESTS_PER_REPO
+      # 判断是否超过最大值？给仓库所有者提醒
+      - name: Check if the number of repositories exceeds the maximum
+        uses: actions/github-script@v6
+        id: split
+        env:
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.repository }}
+        with:
+          script: |
+            // 所有者
+            const OWNER = process.env.OWNER;
+            const REPO = process.env.REPO.replace(`${OWNER}/`, "");
+            const MAX_API_REQUESTS = parseInt(process.env.MAX_API_REQUESTS);
+            const REQUESTS_PER_REPO = parseInt(process.env.REQUESTS_PER_REPO);
+            // 计算最大仓库数量[向下取整]
+            const MAX_GITHUB_REPOS = Math.floor(MAX_API_REQUESTS / REQUESTS_PER_REPO);
+            const GITHUB_REPOS = JSON.parse(process.env.GITHUB_REPOS);
+
+            if (GITHUB_REPOS.length > MAX_GITHUB_REPOS) {
+              // 向ISSUE #1 回复
+              await github.rest.issues.createComment({
+                owner: OWNER,
+                repo: REPO,
+                issue_number: process.env.ISSUE_ID,
+                body: `
+                  ### ⚠️ Warning: Too many repositories being monitored (${GITHUB_REPOS.length} > ${MAX_GITHUB_REPOS}).
+                `,
+              })
+             
+              throw new Error(`Too many repositories being monitored (${GITHUB_REPOS.length} > ${MAX_GITHUB_REPOS}).`);
+            }
+
+            const MAX_JOBS = parseInt(process.env.MAX_JOBS);
+            const UNAUTHENTICATED_REQUESTS_MAX = parseInt(process.env.UNAUTHENTICATED_REQUESTS_MAX);
+
+            // 每个JOB最多监听的仓库数量
+            const JOB_MAX_GITHUB_REPOS = Math.floor(UNAUTHENTICATED_REQUESTS_MAX / REQUESTS_PER_REPO) -1;
+
+            // 获取需要的多少个JOB
+            const NEED_JOBS = Math.ceil(GITHUB_REPOS.length / JOB_MAX_GITHUB_REPOS);
+
+            if(NEED_JOBS > MAX_JOBS){
+              await github.rest.issues.createComment({
+                owner: OWNER,
+                repo: REPO,
+                issue_number: process.env.ISSUE_ID,
+                body: `
+                  ### ⚠️ Warning: Too many jobs (${GITHUB_REPOS.length} > (${NEED_JOBS} > ${MAX_JOBS}).
+                `,
+              })
+
+              throw new Error(`Too many jobs (${GITHUB_REPOS.length} > (${NEED_JOBS} > ${MAX_JOBS}).`);
+            }
+
+            // 拆GITHUB_REPOS
+            const GITHUB_REPOS_LIST = []
+            for(let i = 0; i < NEED_JOBS; i++){
+              // 获取每个JOB的GITHUB_REPOS
+              GITHUB_REPOS_LIST.push({
+                index: i,
+                repos: GITHUB_REPOS.slice(i * JOB_MAX_GITHUB_REPOS, (i + 1) * JOB_MAX_GITHUB_REPOS)
+              })
+            }
+
+            core.setOutput('GITHUB_REPOS_LIST', JSON.stringify(GITHUB_REPOS_LIST))
+
+
+  generate:
+    needs: [split]
+    strategy:
+      max-parallel: 1
+      matrix:
+        job_config: ${{ fromJSON(needs.split.outputs.GITHUB_REPOS_LIST) }}
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_REPOS: ${{ toJson(matrix.job_config.repos) }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      # 保证当前仓库代码为最新
+      - name: Checkout repository
+        run: |
+          git pull --rebase
+
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install axios
+
+      - name: Run script to generate JSON
+        run: node scripts/collect-action-versions.js
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add ${{ env.JSON_FILE_PATH }}
+          git commit -m "Auto-generated JSON file [skip ci]"
+          git add ${{ env.DATA_CENTER_FILE }}
+          git commit -m "Update data center file [skip ci]"
+          git push

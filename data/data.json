@@ -5,9 +5,9 @@
       "description": "GitHub Actions Runner OS Versions",
       "description_zh": "GitHub Actions Runner 操作系统版本",
       "path": [
-        "runner-images.json"
+        "/home/runner/work/daily-data-collector/daily-data-collector/data/runner-images.json"
       ],
-      "updated": "2026-01-25T11:18:23.254Z"
+      "updated": "2026-01-25T12:07:20.801Z"
     },
     {
       "name": "actions-versions",
